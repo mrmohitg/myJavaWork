@@ -1,20 +1,20 @@
 
+Rsquid:S1659" Declare "b1" on a separate line.(æÙŞıÿÿÿÿH¸@RMINORZ
+CODE_SMELL
+gsquid:S1161T":Add the "@Override" annotation above this method signature(÷—H¹@RMAJORZ
+CODE_SMELL
+csquid:S1197,"8Move the array designator from the variable to the type.(˜ƒ|Hº@RMINORZ
+CODE_SMELL
+lsquid:S1161M":Add the "@Override" annotation above this method signature(ûÕş úÿÿÿÿH»@RMAJORZ
+CODE_SMELL
 j
-squid:S106U"9Replace this use of System.out or System.err by a logger.(áÂàÿÿÿÿÿH¯@RMAJORZ
+squid:S106U"9Replace this use of System.out or System.err by a logger.(áÂàÿÿÿÿÿH¼@RMAJORZ
 CODE_SMELL
-gsquid:S1161A":Add the "@Override" annotation above this method signature(í‰±H°@RMAJORZ
+gsquid:S1161A":Add the "@Override" annotation above this method signature(í‰±H½@RMAJORZ
 CODE_SMELL
-gsquid:S1161T":Add the "@Override" annotation above this method signature(÷—H±@RMAJORZ
+Ssquid:S1481"&Remove this unused "o" local variable.(ÂÕßÊH¾@RMINORZ
 CODE_SMELL
-csquid:S1197,"8Move the array designator from the variable to the type.(˜ƒ|H²@RMINORZ
+}squid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(“Õ ¢úÿÿÿÿH¿@RMAJORZ
 CODE_SMELL
-}squid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(“Õ ¢úÿÿÿÿH³@RMAJORZ
-CODE_SMELL
-Ssquid:S1481"&Remove this unused "o" local variable.(ÂÕßÊH´@RMINORZ
-CODE_SMELL
-Usquid:S1604"(Make this anonymous inner class a lambda(ğÁËîHµ@RMAJORZ
-CODE_SMELL
-lsquid:S1161M":Add the "@Override" annotation above this method signature(ûÕş úÿÿÿÿH¶@RMAJORZ
-CODE_SMELL
-Rsquid:S1659" Declare "b1" on a separate line.(æÙŞıÿÿÿÿH·@RMINORZ
+Usquid:S1604"(Make this anonymous inner class a lambda(ğÁËîHÀ@RMAJORZ
 CODE_SMELL
