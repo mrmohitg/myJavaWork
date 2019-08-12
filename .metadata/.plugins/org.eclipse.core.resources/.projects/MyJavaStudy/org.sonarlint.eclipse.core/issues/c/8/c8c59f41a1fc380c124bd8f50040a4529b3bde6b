@@ -1,0 +1,13 @@
+
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾Hû+RMAJORZ
+CODE_SMELL
+ksquid:S2276
+"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™úHú+RBLOCKERZBUG
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ø«ïHü+RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÍÖŒÍıÿÿÿÿHù+RMAJORZ
+CODE_SMELL
+gsquid:S1118":Add a private constructor to hide the implicit public one.(İŸÈöHø+RMAJORZ
+CODE_SMELL

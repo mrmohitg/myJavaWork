@@ -1,0 +1,21 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÍÖŒÍıÿÿÿÿHá+RMAJORZ
+CODE_SMELL
+ksquid:S2276
+"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™úHŞ+RBLOCKERZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÍÖŒÍıÿÿÿÿHİ+RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ø«ïHã+RMAJORZ
+CODE_SMELL
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾Hâ+RMAJORZ
+CODE_SMELL
+€squid:S4144"SUpdate this method so that its implementation is not identical to "show" on line 6.(©ìÎÅHÜ+RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ø«ïHà+RMAJORZ
+CODE_SMELL
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾Hß+RMAJORZ
+CODE_SMELL

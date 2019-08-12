@@ -1,0 +1,25 @@
+
+usquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Êâ¿ÄÿÿÿÿÿH§RBLOCKERZBUG
+j
+squid:S106*"9Replace this use of System.out or System.err by a logger.(—ê÷äúÿÿÿÿH´RMAJORZ
+CODE_SMELL
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéH¯RMAJORZ
+CODE_SMELL
+Wsquid:S2068" Remove this hard-coded password.(Êâ¿ÄÿÿÿÿÿH°RBLOCKERZVULNERABILITY
+jsquid:S1197!"8Move the array designator from the variable to the type.(°ÁóŒýÿÿÿÿH±RMINORZ
+CODE_SMELL
+}squid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(¿‹±òýÿÿÿÿH·RMAJORZ
+CODE_SMELL
+|squid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¡ëÊ¬üÿÿÿÿH¨RBLOCKERZBUG
+jsquid:S1197&"8Move the array designator from the variable to the type.(ò„ÙçúÿÿÿÿH³RMINORZ
+CODE_SMELL
+tsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(«¨ÜÚþÿÿÿÿH©RBLOCKERZBUG
+j
+squid:S1067"9Replace this use of System.out or System.err by a logger.(È÷ŠÒúÿÿÿÿH¶RMAJORZ
+CODE_SMELL
+j
+squid:S1065"9Replace this use of System.out or System.err by a logger.(÷ðÿÁûÿÿÿÿHµRMAJORZ
+CODE_SMELL
+ysquid:S00112/"FDefine and throw a dedicated exception instead of using a generic one.(Ž–ì¥þÿÿÿÿH®RMAJORZ
+CODE_SMELL
+usquid:S2674#"JCheck the return value of the "read" call to see how many bytes were read.(ƒ˜ú¯üÿÿÿÿH²RMINORZBUG

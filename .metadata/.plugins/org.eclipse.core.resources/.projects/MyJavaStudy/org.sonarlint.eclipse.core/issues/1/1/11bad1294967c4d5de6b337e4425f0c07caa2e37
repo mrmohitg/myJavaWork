@@ -1,0 +1,28 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ƒìùûÿÿÿÿH<RMAJORZ
+CODE_SMELL
+y"squid:ObjectFinalizeOverridenCheck"-Do not override the Object.finalize() method.(ÖÒ˜ÙùÿÿÿÿH‹<RCRITICALZ
+CODE_SMELL
+Ysquid:S1481"'Remove this unused "m2" local variable.(Û×øøÿÿÿÿH“<RMINORZ
+CODE_SMELL
+j
+squid:S106&"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿH’<RMAJORZ
+CODE_SMELL
+hsquid:S1854"6Remove this useless assignment to local variable "m2".(Û×øøÿÿÿÿH<RMAJORZ
+CODE_SMELL
+„squid:S1215#"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“H‘<RCRITICALZ
+CODE_SMELL
+Qsquid:S1659"Declare "y" on a separate line.(à‹šùÿÿÿÿHŠ<RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ù˜ÆùH<RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(í‘íùÿÿÿÿHŒ<RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ëıñêH<RMAJORZ
+CODE_SMELL
+squid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(ä¢é8íËØÿÇ-H–<RMAJORZ
+CODE_SMELL

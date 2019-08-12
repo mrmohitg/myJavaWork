@@ -1,0 +1,12 @@
+
+l
+squid:S106*"9Replace this use of System.out or System.err by a logger.(ì†øµ8ÑÉ¿ñ¹-H´RMAJORZ
+CODE_SMELL
+‘squid:UselessImportCheck"KRemove this unused import 'org.springframework.context.annotation.Profile'.(ØÝ¥Ýøÿÿÿÿ8ÑÉ¿ñ¹-H¡RMINORZ
+CODE_SMELL
+j
+squid:S106."9Replace this use of System.out or System.err by a logger.(½„Ñ¨þÿÿÿÿH¢RMAJORZ
+CODE_SMELL
+q
+squid:S106Q"9Replace this use of System.out or System.err by a logger.(‹š¸Óüÿÿÿÿ8èú˜õ¹-H£RMAJORZ
+CODE_SMELL

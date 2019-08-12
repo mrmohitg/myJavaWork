@@ -1,0 +1,22 @@
+
+usquid:S2166"CRename this class to remove "Exception" or correct its inheritance.(¦Åí·ÿÿÿÿÿHÜ=RMAJORZ
+CODE_SMELL
+¸%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Öá¡—øÿÿÿÿHÙ=RMINORZ
+CODE_SMELL
+´%squid:RedundantThrowsDeclarationCheck"hRemove the declaration of thrown exception 'java.lang.ArithmeticException' which is a runtime exception.(Öá¡—øÿÿÿÿHØ=RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(»àÔ¿HÛ=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿHÞ=RMAJORZ
+CODE_SMELL
+}squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(»‹¼ŸøÿÿÿÿHß=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÝ=RMAJORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(£©ŒûýÿÿÿÿHÚ=RMAJORZ
+CODE_SMELL

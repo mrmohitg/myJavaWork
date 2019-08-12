@@ -1,0 +1,11 @@
+
+ˆsquid:S4144"VUpdate this method so that its implementation is not identical to "display" on line 7.(½ªÒøÿÿÿÿHœ:RMAJORZ
+CODE_SMELL
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿH:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿH:RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿHŸ:RMINORZ
+CODE_SMELL

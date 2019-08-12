@@ -1,0 +1,24 @@
+// Explicit calling of main function of Test class in the ExplicitCallingMain class.  
+class Test
+{
+public static void main(String... a)
+{
+System.out.println("Hello Test");
+}
+}
+public class ExplicitCallingMain
+{
+public static void main(String args[])
+{
+System.out.println("Hello ExplicitCallingMain");
+Test.main();
+Test.main("ABC");
+Test.main("ABC","XYZ");
+}
+}
+/*Output
+Hello ExplicitCallingMain
+Hello Test
+Hello Test
+Hello Test
+*/

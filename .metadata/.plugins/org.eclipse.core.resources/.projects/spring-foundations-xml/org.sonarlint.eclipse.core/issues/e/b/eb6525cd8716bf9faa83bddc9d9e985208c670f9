@@ -1,0 +1,6 @@
+
+¶squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ºÐ’ÚøÿÿÿÿHßRCRITICALZ
+CODE_SMELL
+hsquid:S1068
+";Remove this unused "inventoryItemRepository" private field.( Ö§ÏHàRMAJORZ
+CODE_SMELL

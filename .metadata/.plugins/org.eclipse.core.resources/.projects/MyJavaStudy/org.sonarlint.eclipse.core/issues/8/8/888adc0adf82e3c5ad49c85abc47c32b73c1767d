@@ -1,0 +1,25 @@
+
+j
+squid:S106""9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÀ=RMAJORZ
+CODE_SMELL
+squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿†¢´Hº=RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÃöãýúÿÿÿÿH¿=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(†ý‡øýÿÿÿÿHÃ=RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(û‰ÚÝýÿÿÿÿHÂ=RMINORZ
+CODE_SMELL
+Isquid:S1165"Make this "Sal" field final.(âšŽ¨H¼=RMINORZ
+CODE_SMELL
+Isquid:S1165	"Make this "msg" field final.(ê¦¾»H½=RMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿHÁ=RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ì¦§›ÿÿÿÿÿHÄ=RMAJORZ
+CODE_SMELL
+|squid:S00116"NRename this field "Sal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âšŽ¨H¾=RMINORZ
+CODE_SMELL

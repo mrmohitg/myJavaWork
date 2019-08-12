@@ -1,0 +1,24 @@
+
+Ssquid:S1481"&Remove this unused "a" local variable.(”ßŒáH÷5RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢âÊ›Hó5RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ïà¸Hğ5RMAJORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "a1" local variable.(·ÅØŠHø5RMINORZ
+CODE_SMELL
+e
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(ğ™İšHñ5RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(²¾óëùÿÿÿÿHö5RMINORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "a1".(·ÅØŠHô5RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(şÂ ¤Hò5RMAJORZ
+CODE_SMELL
+bsquid:S1854"5Remove this useless assignment to local variable "a".(”ßŒáHõ5RMAJORZ
+CODE_SMELL

@@ -1,0 +1,9 @@
+
+l
+squid:S106 "9Replace this use of System.out or System.err by a logger.(¯ô¢ô8¦í×ð¹-HÓRMAJORZ
+CODE_SMELL
+l
+squid:S106!"9Replace this use of System.out or System.err by a logger.(æ¬Õ‡8ùªÙð¹-HÔRMAJORZ
+CODE_SMELL
+‰squid:S1450"PRemove the "s" field and declare it as a local variable in the relevant methods.(„ÔŽ³úÿÿÿÿ8¦í×ð¹-HÒRMINORZ
+CODE_SMELL

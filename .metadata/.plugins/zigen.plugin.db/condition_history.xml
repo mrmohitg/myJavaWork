@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_221" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.user_details</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList" id="ArrayList0"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="table">
+     <string>user_details</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.public.user_skills</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList">
+      <void method="add">
+       <string></string>
+      </void>
+     </object>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="schema">
+     <string>public</string>
+    </void>
+    <void property="table">
+     <string>user_skills</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.public.user_designation</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="schema">
+     <string>public</string>
+    </void>
+    <void property="table">
+     <string>user_designation</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:oracle:thin:@localhost:1521:xe.SYSTEM.EMPLOYEE</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:oracle:thin:@localhost:1521:xe</string>
+    </void>
+    <void property="schema">
+     <string>SYSTEM</string>
+    </void>
+    <void property="table">
+     <string>EMPLOYEE</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/mysqldb.mysqldb.employee</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/mysqldb</string>
+    </void>
+    <void property="schema">
+     <string>mysqldb</string>
+    </void>
+    <void property="table">
+     <string>employee</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.userdetails</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="table">
+     <string>userdetails</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.public.userdetails_setofskills</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="schema">
+     <string>public</string>
+    </void>
+    <void property="table">
+     <string>userdetails_setofskills</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:oracle:thin:@localhost:1521:xe.SYSTEM.EMPLOYEE3</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:oracle:thin:@localhost:1521:xe</string>
+    </void>
+    <void property="schema">
+     <string>SYSTEM</string>
+    </void>
+    <void property="table">
+     <string>EMPLOYEE3</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.public.user_details</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object idref="ArrayList0"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="schema">
+     <string>public</string>
+    </void>
+    <void property="table">
+     <string>user_details</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:oracle:thin:@localhost:1521:xe.SYSTEM.EMPLOYEE2</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:oracle:thin:@localhost:1521:xe</string>
+    </void>
+    <void property="schema">
+     <string>SYSTEM</string>
+    </void>
+    <void property="table">
+     <string>EMPLOYEE2</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:postgresql://localhost:5432/postgres.public.userdetails</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:postgresql://localhost:5432/postgres</string>
+    </void>
+    <void property="schema">
+     <string>public</string>
+    </void>
+    <void property="table">
+     <string>userdetails</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

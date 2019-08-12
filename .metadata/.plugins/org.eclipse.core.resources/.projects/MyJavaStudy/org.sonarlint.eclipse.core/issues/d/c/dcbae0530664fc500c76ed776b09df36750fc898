@@ -1,0 +1,12 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÍÖŒÍıÿÿÿÿHŞ,RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ø«ïHá,RMAJORZ
+CODE_SMELL
+lsquid:CallToDeprecatedMethod
+".Remove this use of "resume"; it is deprecated.(Ì‘—Hà,RMINORZ
+CODE_SMELL
+rsquid:CallToDeprecatedMethod	"/Remove this use of "suspend"; it is deprecated.(’´ñÏùÿÿÿÿHß,RMINORZ
+CODE_SMELL

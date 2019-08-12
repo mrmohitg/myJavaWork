@@ -1,0 +1,49 @@
+
+jsquid:S11978"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿHñ.RMINORZ
+CODE_SMELL
+j
+squid:S106D"9Replace this use of System.out or System.err by a logger.(ÃâšÂüÿÿÿÿHó.RMAJORZ
+CODE_SMELL
+bsquid:S2209."5Change this instance-reference to a static reference.(é–ÀˆHî.RMAJORZ
+CODE_SMELL
+bsquid:S2209"5Change this instance-reference to a static reference.(é–ÀˆHä.RMAJORZ
+CODE_SMELL
+Wsquid:S001082")Either remove or fill this block of code.(”ı¾Hğ.RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(é–ÀˆHã.RMAJORZ
+CODE_SMELL
+bsquid:S2209"5Change this instance-reference to a static reference.(é–ÀˆHé.RMAJORZ
+CODE_SMELL
+gsquid:S1161":Add the "@Override" annotation above this method signature(“–ışHç.RMAJORZ
+CODE_SMELL
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾Hæ.RMAJORZ
+CODE_SMELL
+zsquid:S1192"JDefine a constant instead of duplicating this literal " is dead." 4 times.(Âå÷ÅHà.RCRITICALZ
+CODE_SMELL
+e
+squid:S106 "9Replace this use of System.out or System.err by a logger.(Âå÷ÅHê.RMAJORZ
+CODE_SMELL
+gsquid:S1161+":Add the "@Override" annotation above this method signature(“–ışHì.RMAJORZ
+CODE_SMELL
+Wsquid:S00108!")Either remove or fill this block of code.(”ı¾Hë.RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Âå÷ÅHå.RMAJORZ
+CODE_SMELL
+j
+squid:S106A"9Replace this use of System.out or System.err by a logger.(›Óğ°şÿÿÿÿHò.RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(é–ÀˆHè.RMAJORZ
+CODE_SMELL
+Wsquid:S00108E")Either remove or fill this block of code.(”ı¾Hô.RMAJORZ
+CODE_SMELL
+e
+squid:S1061"9Replace this use of System.out or System.err by a logger.(Âå÷ÅHï.RMAJORZ
+CODE_SMELL
+gsquid:S1161":Add the "@Override" annotation above this method signature(“–ışHâ.RMAJORZ
+CODE_SMELL
+e
+squid:S106."9Replace this use of System.out or System.err by a logger.(é–ÀˆHí.RMAJORZ
+CODE_SMELL

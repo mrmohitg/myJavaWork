@@ -1,0 +1,7 @@
+
+squid:UselessImportCheck"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæéH²RMINORZ
+CODE_SMELL
+squid:UselessImportCheck"PRemove this unused import 'org.springframework.web.bind.annotation.RequestBody'.(â­½ÀıÿÿÿÿH°RMINORZ
+CODE_SMELL
+„squid:UselessImportCheck	"JRemove this unused import 'com.landonhotel.eventsapp.domain.QuoteRequest'.(ÏâÏ›H®RMINORZ
+CODE_SMELL

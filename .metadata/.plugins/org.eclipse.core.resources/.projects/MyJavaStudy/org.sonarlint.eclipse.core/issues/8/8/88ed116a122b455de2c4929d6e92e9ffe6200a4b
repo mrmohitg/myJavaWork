@@ -1,0 +1,31 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŒÜœæHÖ4RMAJORZ
+CODE_SMELL
+‰squid:S1845"ZRename method "c" to prevent any misunderstanding/clash with field "c" defined on line 21.(Èİ‚HÓ4RBLOCKERZ
+CODE_SMELL
+isquid:S1854&"7Remove this useless assignment to local variable "obj".(çü­øÿÿÿÿHÙ4RMAJORZ
+CODE_SMELL
+e
+squid:S106""9Replace this use of System.out or System.err by a logger.(ÌÍùáHØ4RMAJORZ
+CODE_SMELL
+‰squid:S1845"ZRename method "b" to prevent any misunderstanding/clash with field "b" defined on line 13.(´ËúèHÑ4RBLOCKERZ
+CODE_SMELL
+e
+squid:S106 "9Replace this use of System.out or System.err by a logger.(ù¿ªĞH×4RMAJORZ
+CODE_SMELL
+Zsquid:S1481&"(Remove this unused "obj" local variable.(çü­øÿÿÿÿHÚ4RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(èŞš«HĞ4RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¬©¯¢ùÿÿÿÿHÒ4RMAJORZ
+CODE_SMELL
+squid:S1845"YRename method "a" to prevent any misunderstanding/clash with field "a" defined on line 5.(£Şš»ıÿÿÿÿHÏ4RBLOCKERZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ƒìõ¤øÿÿÿÿHÔ4RMAJORZ
+CODE_SMELL
+lsquid:S1905"8Remove this unnecessary cast to "MultilevelInheritance".(ğÖ”Ş8è”ÄáÇ-Hè4RMINORZ
+CODE_SMELL

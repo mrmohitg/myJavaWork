@@ -1,0 +1,32 @@
+
+j
+squid:S106@"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÄ/RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(ì…ãüüÿÿÿÿH»/RMINORZ
+CODE_SMELL
+[squid:S24465"0"notify" may not wake up the appropriate thread.(óÄ£¶øÿÿÿÿHÁ/RMAJORZBUG
+j
+squid:S1062"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿH¼/RMAJORZ
+CODE_SMELL
+j
+squid:S106="9Replace this use of System.out or System.err by a logger.(ÞðÒèùÿÿÿÿHÆ/RMAJORZ
+CODE_SMELL
+ksquid:S2276<"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™úHÃ/RBLOCKERZBUG
+e
+squid:S1060"9Replace this use of System.out or System.err by a logger.(ýÚ÷HÀ/RMAJORZ
+CODE_SMELL
+j
+squid:S106B"9Replace this use of System.out or System.err by a logger.(’¸úíþÿÿÿÿHÂ/RMAJORZ
+CODE_SMELL
+j
+squid:S106:"9Replace this use of System.out or System.err by a logger.(˜§Ž‚øÿÿÿÿH¿/RMAJORZ
+CODE_SMELL
+isquid:S2274>":Remove this call to "wait" or move it into a "while" loop.(ç£ŠMHÅ/RCRITICALZ
+CODE_SMELL
+ksquid:S2276/"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™úH½/RBLOCKERZBUG
+j
+squid:S1064"9Replace this use of System.out or System.err by a logger.(’¸úíþÿÿÿÿH¾/RMAJORZ
+CODE_SMELL
+j
+squid:S106-"9Replace this use of System.out or System.err by a logger.(˜§Ž‚øÿÿÿÿHÇ/RMAJORZ
+CODE_SMELL

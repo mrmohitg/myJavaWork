@@ -1,0 +1,9 @@
+
+rsquid:S2133"@Remove this object instantiation and use "Marker.class" instead.(¤╫б┤     HЯRMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Б┴урHаRMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ц╬ўАHбRMAJORZ
+CODE_SMELL

@@ -1,0 +1,61 @@
+package myJava.collections.map.sortedmap;
+
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+
+class Employee1 
+{
+	int id;
+	String name;
+	int salary;
+	
+	public Employee1(int id, String name, int salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+}
+
+class MyTreeDemo implements Comparator<Object>
+{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		Employee1 employee1 = (Employee1)o1;
+		Employee1 employee2 = (Employee1)o2;
+		if(employee1.salary > employee2.salary)
+			return 1;
+		else if(employee1.salary < employee2.salary)
+			return -1;
+		else
+			return 0;
+	}
+	
+}
+
+public class TreeMapDemo3 {
+	
+	
+	public static void main(String[] args) {
+		
+		TreeMap<Employee, String> treemap = new TreeMap<>();
+		treemap.put(new Employee(101, "Nikhil", 90000),"1004");
+		treemap.put(new Employee(102, "Mohit", 30000),"1002");
+		treemap.put(new Employee(103, "Anurag", 60000),"1001");
+		treemap.put(new Employee(105, "Vipul", 100000),"1005");
+		treemap.put(new Employee(104, "Nishant", 80000),"1003");
+		
+		Set<Entry<Employee,String>> set = treemap.entrySet();
+		Iterator<Entry<Employee,String>> iterator = set.iterator();
+		while (iterator.hasNext()) {
+			Map.Entry<Employee,String> entry = iterator.next();
+			System.out.println(entry.getKey().id +" - "+ entry.getKey().name+" - "+entry.getKey().salary+" - "+entry.getValue());
+		}
+	}
+}

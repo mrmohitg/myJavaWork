@@ -1,0 +1,26 @@
+
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH…=RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÚÆ´HŒ=RMAJORZ
+CODE_SMELL
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(Û ÏæûÿÿÿÿH‡=RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ğÒ©H‹=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÍÔüÿÿÿÿHŠ=RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.( şÏÄùÿÿÿÿH‰=RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŞªìÈÿÿÿÿÿHˆ=RMAJORZ
+CODE_SMELL
+Ssquid:S1148"#Use a logger to log this exception.(…üšòHƒ=RMINORZVULNERABILITY
+usquid:S2166"CRename this class to remove "Exception" or correct its inheritance.(œõ¶èÿÿÿÿÿH„=RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(€¶¹H†=RMAJORZ
+CODE_SMELL

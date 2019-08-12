@@ -1,0 +1,45 @@
+
+e
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(Ğİ‰´Hï:RMAJORZ
+CODE_SMELL
+bsquid:S1854"5Remove this useless assignment to local variable "z".(Šû´Hè:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨×ÕÃıÿÿÿÿHò:RMAJORZ
+CODE_SMELL
+Qsquid:S1659"$Declare "result" on a separate line.(ø…ãëHì:RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Öı•óùÿÿÿÿHí:RMAJORZ
+CODE_SMELL
+Qsquid:S1659"Declare "d" on a separate line.(ÅºÆ…ùÿÿÿÿHë:RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨×ÕÃıÿÿÿÿHõ:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŞÖªøÿÿÿÿHî:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŞÖªøÿÿÿÿHñ:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ã¢üŠúÿÿÿÿHó:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(äª÷ÅøÿÿÿÿH÷:RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿHé:RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Öı•óùÿÿÿÿHğ:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ã¢üŠúÿÿÿÿHö:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ù›¸÷ûÿÿÿÿHô:RMAJORZ
+CODE_SMELL
+Lsquid:S1659"Declare "b" on a separate line.(²ŞÔHê:RMINORZ
+CODE_SMELL

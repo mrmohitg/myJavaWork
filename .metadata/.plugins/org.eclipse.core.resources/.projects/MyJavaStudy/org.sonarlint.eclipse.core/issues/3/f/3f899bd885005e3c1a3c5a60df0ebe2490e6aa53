@@ -1,0 +1,13 @@
+
+_squid:S4973"9Use the "equals" method if value comparison was intended.(Ø¾÷HØ>RMAJORZBUG
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(ËáZHÜ>RMAJORZ
+CODE_SMELL
+{squid:S1192"KDefine a constant instead of duplicating this literal "headstrong" 3 times.(®—»H×>RCRITICALZ
+CODE_SMELL
+e
+squid:S106	"9Replace this use of System.out or System.err by a logger.(ûåóˆHÚ>RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(äã–HÛ>RMAJORZ
+CODE_SMELL

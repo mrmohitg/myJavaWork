@@ -1,0 +1,22 @@
+
+vsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(œïì”8Íù”ßÅ-H™RBLOCKERZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿHŒRMAJORZ
+CODE_SMELL
+j
+squid:S106("9Replace this use of System.out or System.err by a logger.(Ï‚ìùşÿÿÿÿH‹RMAJORZ
+CODE_SMELL
+{squid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8Íù”ßÅ-H˜RBLOCKERZBUG
+e
+squid:S106+"9Replace this use of System.out or System.err by a logger.(‘Ã£·HRMAJORZ
+CODE_SMELL
+^squid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿ8Íù”ßÅ-HšRBLOCKERZVULNERABILITY
+tsquid:S00112#"FDefine and throw a dedicated exception instead of using a generic one.(ÔÎÌ’HˆRMAJORZ
+CODE_SMELL
+|squid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿ8Íù”ßÅ-H—RBLOCKERZBUG
+Ÿ squid:ForLoopCounterChangedCheck*"XRefactor the code in order to not assign to this loop counter from within the loop body.(ş×¼ÛÿÿÿÿÿHƒRMAJORZ
+CODE_SMELL
+Ÿ squid:ForLoopCounterChangedCheck*"XRefactor the code in order to not assign to this loop counter from within the loop body.(ş×¼ÛÿÿÿÿÿH‚RMAJORZ
+CODE_SMELL
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéH‰RMAJORZ
+CODE_SMELL

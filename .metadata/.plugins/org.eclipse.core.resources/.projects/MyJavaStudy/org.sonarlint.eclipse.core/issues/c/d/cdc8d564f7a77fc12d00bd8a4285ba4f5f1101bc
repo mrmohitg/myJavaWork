@@ -1,0 +1,11 @@
+
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHç*RMAJORZ
+CODE_SMELL
+lsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€Hæ*RMAJORZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(›Óð°þÿÿÿÿHè*RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(êìªëøÿÿÿÿHé*RMAJORZ
+CODE_SMELL

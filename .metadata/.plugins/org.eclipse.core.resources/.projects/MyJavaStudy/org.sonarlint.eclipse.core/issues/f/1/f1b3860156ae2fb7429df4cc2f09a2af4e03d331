@@ -1,0 +1,22 @@
+
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéH RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÂÒàùÿÿÿÿH¤RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(š²á«H£RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(•·…ŒıÿÿÿÿH¢RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÂÒàùÿÿÿÿH¦RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿH¥RMAJORZ
+CODE_SMELL
+|squid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿ8«¯ÁßÅ-H³RBLOCKERZBUG
+{squid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ù½í©ÿÿÿÿÿ8«¯ÁßÅ-H´RBLOCKERZBUG
+{squid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8«¯ÁßÅ-HµRBLOCKERZBUG
+^squid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿ8«¯ÁßÅ-H¶RBLOCKERZVULNERABILITY

@@ -1,0 +1,17 @@
+
+psquid:S2166"CRename this class to remove "Exception" or correct its inheritance.(½¨®¤H©=RMAJORZ
+CODE_SMELL
+msquid:S1193"@Replace the usage of the "instanceof" operator by a catch block.(Š›âÕHª=RMAJORZ
+CODE_SMELL
+msquid:S1193!"@Replace the usage of the "instanceof" operator by a catch block.(§‘“ÕH®=RMAJORZ
+CODE_SMELL
+j
+squid:S106""9Replace this use of System.out or System.err by a logger.(€ËÚýûÿÿÿÿH¯=RMAJORZ
+CODE_SMELL
+msquid:S1193"@Replace the usage of the "instanceof" operator by a catch block.(Š›âÕH«=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(»üäâýÿÿÿÿH¬=RMAJORZ
+CODE_SMELL
+msquid:S1193!"@Replace the usage of the "instanceof" operator by a catch block.(§‘“ÕH­=RMAJORZ
+CODE_SMELL

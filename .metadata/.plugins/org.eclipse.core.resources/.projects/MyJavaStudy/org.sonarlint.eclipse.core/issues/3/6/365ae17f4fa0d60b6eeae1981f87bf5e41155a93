@@ -1,0 +1,17 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(İñœşÿÿÿÿH„6RMAJORZ
+CODE_SMELL
+Usquid:S1481"(Remove this unused "obj" local variable.(›º˜H‰6RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ğŒÔöH…6RMAJORZ
+CODE_SMELL
+dsquid:S1854"7Remove this useless assignment to local variable "obj".(›º˜H†6RMAJORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(ä–•
+Hˆ6RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH‡6RMINORZ
+CODE_SMELL

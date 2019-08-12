@@ -1,0 +1,22 @@
+
+Lsquid:S1659"Declare "z" on a separate line.(šË”»HÔ:RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(û§²±H×:RMAJORZ
+CODE_SMELL
+Lsquid:S1659"Declare "y" on a separate line.(šË”»HÓ:RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ËÌµ±ıÿÿÿÿHÙ:RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ñı…¬üÿÿÿÿHÕ:RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(›ƒİHØ:RMAJORZ
+CODE_SMELL
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(ÄÒ§üÿÿÿÿHÖ:RMAJORZ
+CODE_SMELL
+squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‘ŸÉ·8ÕüÆÿÇ-HÚ:RMAJORZ
+CODE_SMELL

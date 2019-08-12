@@ -1,0 +1,8 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Éê—H€=RMAJORZ
+CODE_SMELL
+csquid:S1143
+"5Remove this return statement from this finally block.(®ÿİ¬şÿÿÿÿHÿ<RCRITICALZBUG
+‹squid:S1488"YImmediately return this expression instead of assigning it to the temporary variable "x".(ıÿÇÅÿÿÿÿÿHı<RMINORZ
+CODE_SMELL

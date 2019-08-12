@@ -1,0 +1,19 @@
+
+e
+squid:S1060"9Replace this use of System.out or System.err by a logger.(üØ‰ÚH´RMAJORZ
+CODE_SMELL
+Lsquid:S2097"Add a type test to this method.(ÜÑã8àî¬¾²-H²RMINORZBUG
+e
+squid:S1069"9Replace this use of System.out or System.err by a logger.(¼¡¨òHºRMAJORZ
+CODE_SMELL
+dsquid:S19058"+Remove this unnecessary cast to "Employee".(¤¸òÓøÿÿÿÿ8Ú·µ¾²-HµRMINORZ
+CODE_SMELL
+zsquid:S1126"AReplace this if-then-else statement by a single return statement.(§Ëä¢ùÿÿÿÿ8Ë¿§¾²-H¹RMINORZ
+CODE_SMELL
+osquid:S3516"9Refactor this method to not always return the same value.(ÜÑã8àî¬¾²-H¶RBLOCKERZ
+CODE_SMELL
+squid:S3923"[Remove this conditional structure or edit its code blocks so that they're not all the same.(§Ëä¢ùÿÿÿÿ8àî¬¾²-H³RMAJORZBUG
+e
+squid:S1064"9Replace this use of System.out or System.err by a logger.(ş›‹H·RMAJORZ
+CODE_SMELL
+usquid:S2259"CA "NullPointerException" could be thrown; "other" is nullable here.(§Ëä¢ùÿÿÿÿ8àî¬¾²-H¸RMAJORZBUG

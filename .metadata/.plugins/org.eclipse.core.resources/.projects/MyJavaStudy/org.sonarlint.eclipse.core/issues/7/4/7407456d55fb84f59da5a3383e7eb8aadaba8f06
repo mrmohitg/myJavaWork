@@ -1,0 +1,15 @@
+
+csquid:S1854"6Remove this useless assignment to local variable "t1".(ÅŠŒ„H‹-RMAJORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "t2" local variable.(„ş©ğH-RMINORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "t3".(‹¶ÀH‰-RMAJORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "t1" local variable.(ÅŠŒ„H-RMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿHŒ-RMINORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "t2".(„ş©ğHŠ-RMAJORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "t3" local variable.(‹¶ÀH-RMINORZ
+CODE_SMELL

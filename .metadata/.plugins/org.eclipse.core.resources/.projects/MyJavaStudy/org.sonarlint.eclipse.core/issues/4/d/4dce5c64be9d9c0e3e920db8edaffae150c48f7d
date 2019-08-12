@@ -1,0 +1,16 @@
+
+t"squid:ObjectFinalizeOverridenCheck	"-Do not override the Object.finalize() method.(ÈêúÿH™<RCRITICALZ
+CODE_SMELL
+„squid:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“H<RCRITICALZ
+CODE_SMELL
+Vsquid:S1174	"&Make this finalize() method protected.(ÈêúÿH˜<RCRITICALZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦å¯Hœ<RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(êºùûşÿÿÿÿH›<RMAJORZ
+CODE_SMELL
+ksquid:S2696
+"6Make the enclosing method "static" or remove this set.(¨Ò÷´øÿÿÿÿHš<RCRITICALZ
+CODE_SMELL

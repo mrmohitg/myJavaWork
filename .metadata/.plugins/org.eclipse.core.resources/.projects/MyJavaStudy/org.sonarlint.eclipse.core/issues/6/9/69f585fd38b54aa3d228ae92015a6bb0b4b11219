@@ -1,0 +1,20 @@
+
+ysquid:S1223	"LRename this method to prevent any misunderstanding or make it a constructor.(ø¥ÊëH¸6RMAJORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(Æ¦ıëûÿÿÿÿH¼6RMAJORZ
+CODE_SMELL
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏıäÃıÿÿÿÿH¹6RMINORZ
+CODE_SMELL
+|squid:S00100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¥ÊëH»6RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïßõÂHº6RMAJORZ
+CODE_SMELL
+~squid:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ÏıäÃıÿÿÿÿH·6RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH¿6RMINORZ
+CODE_SMELL
+„squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(àÆËÆıÿÿÿÿ8¯ôãâÇ-HÑ6RMAJORZ
+CODE_SMELL

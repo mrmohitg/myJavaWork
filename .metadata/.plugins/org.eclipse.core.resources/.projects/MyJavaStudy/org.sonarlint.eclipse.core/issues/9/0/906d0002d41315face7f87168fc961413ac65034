@@ -1,0 +1,16 @@
+
+vsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(’§†Ş8ª¼ŠŞÅ-HRBLOCKERZBUG
+|squid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿ8ª¼ŠŞÅ-H‹RBLOCKERZBUG
+asquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄé8‡ÌˆŞÅ-HşRMAJORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÅñÌ8‡ÌˆŞÅ-HRMAJORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8‡ÌˆŞÅ-H‚RMAJORZ
+CODE_SMELL
+{squid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8ª¼ŠŞÅ-HŒRBLOCKERZBUG
+^squid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿ8ª¼ŠŞÅ-HRBLOCKERZVULNERABILITY
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(ü†óÌşÿÿÿÿ8‡ÌˆŞÅ-H€RMAJORZ
+CODE_SMELL

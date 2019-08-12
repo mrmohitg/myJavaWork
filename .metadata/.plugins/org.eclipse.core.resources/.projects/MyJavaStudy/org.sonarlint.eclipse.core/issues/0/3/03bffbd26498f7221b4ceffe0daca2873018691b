@@ -1,0 +1,15 @@
+
+j
+squid:S106 "9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿHŸ3RMAJORZ
+CODE_SMELL
+jsquid:S1197&"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH 3RMINORZ
+CODE_SMELL
+j
+squid:S106-"9Replace this use of System.out or System.err by a logger.(öçûÿÿÿÿÿH¢3RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿH3RMAJORZ
+CODE_SMELL
+j
+squid:S106+"9Replace this use of System.out or System.err by a logger.(öçûÿÿÿÿÿH¡3RMAJORZ
+CODE_SMELL

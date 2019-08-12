@@ -1,0 +1,25 @@
+
+~squid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(“â÷—8·ñ­ìÃ-HõRBLOCKERZBUG
+{squid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(œ©ûÿÿÿÿ8·ñ­ìÃ-HøRBLOCKERZBUG
+asquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄé8·ñ­ìÃ-HüRMAJORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(×Ô›¾8·ñ­ìÃ-H€RMAJORZ
+CODE_SMELL
+|squid:S2095	"HUse try-with-resources or close this "Connection" in a "finally" clause.(àıÕôÿÿÿÿÿ8·ñ­ìÃ-HöRBLOCKERZBUG
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(å‰ü½ûÿÿÿÿ8·ñ­ìÃ-HÿRMAJORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8·ñ­ìÃ-HRMAJORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8·ñ­ìÃ-HşRMAJORZ
+CODE_SMELL
+qsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8·ñ­ìÃ-HúRMINORZ
+CODE_SMELL
+~squid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(“ú×’8·ñ­ìÃ-HùRBLOCKERZBUG
+xsquid:S2147"DCombine this catch with the one at line 27, which has the same body.(”ı¾8·ñ­ìÃ-HûRMINORZ
+CODE_SMELL
+^squid:S2068	" Remove this hard-coded password.(àıÕôÿÿÿÿÿ8·ñ­ìÃ-HıRBLOCKERZVULNERABILITY
+vsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(·¦Ã…8·ñ­ìÃ-H÷RBLOCKERZBUG

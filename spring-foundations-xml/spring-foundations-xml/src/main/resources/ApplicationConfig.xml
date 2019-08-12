@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="customerRepository" class="springintroxml.spring_foundations_xml.data.repository.CustomerRepository"></bean>
+<bean id="inventoryItemRepository" class="springintroxml.spring_foundations_xml.data.repository.InventoryItemRepository"></bean>
+<bean id="salesOrderRepository" class="springintroxml.spring_foundations_xml.data.repository.SalesOrderRepository"></bean>
+
+<bean id="inventoryService" class="springintroxml.spring_foundations_xml.services.impl.InventoryServiceImpl">
+	<constructor-arg ref="inventoryItemRepository"></constructor-arg>
+</bean>
+
+<bean id="orderService" class="springintroxml.spring_foundations_xml.services.impl.OrderServiceImpl">
+	<constructor-arg name="inventoryService" ref="inventoryService"></constructor-arg>
+	<constructor-arg name="customerRepository" ref="customerRepository"></constructor-arg>
+	<constructor-arg name="salesOrderRepository" ref="salesOrderRepository"></constructor-arg>
+</bean>
+
+</beans>

@@ -1,0 +1,17 @@
+
+dsquid:S19056"+Remove this unnecessary cast to "Employee".(¤¸òÓøÿÿÿÿ8¤ßÔ­³-HÊRMINORZ
+CODE_SMELL
+e
+squid:S106,"9Replace this use of System.out or System.err by a logger.(Ò”µ°HÉRMAJORZ
+CODE_SMELL
+e
+squid:S1067"9Replace this use of System.out or System.err by a logger.(ã§Ö‚HÆRMAJORZ
+CODE_SMELL
+e
+squid:S1061"9Replace this use of System.out or System.err by a logger.(Ò”µ°HÅRMAJORZ
+CODE_SMELL
+j
+squid:S1062"9Replace this use of System.out or System.err by a logger.(Ê«÷ÓúÿÿÿÿHÄRMAJORZ
+CODE_SMELL
+zsquid:S1126 "AReplace this if-then-else statement by a single return statement.(ö“î¼ûÿÿÿÿ8´ÚÚ­³-HÌRMINORZ
+CODE_SMELL

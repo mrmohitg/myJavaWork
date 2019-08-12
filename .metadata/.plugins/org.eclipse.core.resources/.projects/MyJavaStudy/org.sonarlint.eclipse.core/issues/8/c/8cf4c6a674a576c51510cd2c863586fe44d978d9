@@ -1,0 +1,12 @@
+
+dsquid:S4973
+"9Use the "equals" method if value comparison was intended.(Ã„‰ÙÿÿÿÿÿHŸ>RMAJORZBUG
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ûåóˆH¢>RMAJORZ
+CODE_SMELL
+e
+squid:S106	"9Replace this use of System.out or System.err by a logger.(Ã²†“H¡>RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(äã–H£>RMAJORZ
+CODE_SMELL

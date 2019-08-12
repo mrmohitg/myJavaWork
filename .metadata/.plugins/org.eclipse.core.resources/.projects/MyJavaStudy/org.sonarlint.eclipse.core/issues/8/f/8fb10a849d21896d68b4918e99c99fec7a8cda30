@@ -1,0 +1,22 @@
+
+jsquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿH¾;RMINORZ
+CODE_SMELL
+Qsquid:S1659"Declare "c" on a separate line.(ù¸×©øÿÿÿÿHÀ;RMINORZ
+CODE_SMELL
+Qsquid:S1659"Declare "b" on a separate line.(ù¸×©øÿÿÿÿH¿;RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(±«™‘HÂ;RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(­ÍÿÞþÿÿÿÿHÃ;RMAJORZ
+CODE_SMELL
+e
+squid:S106	"9Replace this use of System.out or System.err by a logger.(£äËÉHÄ;RMAJORZ
+CODE_SMELL
+e
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(Ïà’ŸHÅ;RMAJORZ
+CODE_SMELL
+Qsquid:S1659"Declare "d" on a separate line.(ù¸×©øÿÿÿÿHÁ;RMINORZ
+CODE_SMELL

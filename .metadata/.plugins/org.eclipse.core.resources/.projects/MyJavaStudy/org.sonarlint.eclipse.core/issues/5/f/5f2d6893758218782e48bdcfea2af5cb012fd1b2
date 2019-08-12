@@ -1,0 +1,22 @@
+
+xsquid:CommentedOutCodeLine
+"<This block of commented-out lines of code should be removed.(±ÝÊ²Hî0RMAJORZ
+CODE_SMELL
+bsquid:S2209"5Change this instance-reference to a static reference.(³ù›ÊHì0RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ûø®¥þÿÿÿÿHë0RMAJORZ
+CODE_SMELL
+Rsquid:S1481"&Remove this unused "v" local variable.(ž°Hí0RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ê®òÓHé0RMAJORZ
+CODE_SMELL
+asquid:S1854"5Remove this useless assignment to local variable "v".(ž°Hè0RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Éê—Hç0RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Å‘ÙüÿÿÿÿHê0RMAJORZ
+CODE_SMELL

@@ -1,0 +1,12 @@
+
+lsquid:S1118":Add a private constructor to hide the implicit public one.(ô†¯ÃÿÿÿÿÿH—RMAJORZ
+CODE_SMELL
+asquid:S1133"5Do not forget to remove this deprecated code someday.(°”ÓH˜RINFOZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(šÏŞŠHšRMAJORZ
+CODE_SMELL
+fsquid:MissingDeprecatedCheck"(Add the missing @deprecated Javadoc tag.(°”ÓH™RMAJORZ
+CODE_SMELL
+rsquid:CallToDeprecatedMethod"/Remove this use of "display"; it is deprecated.(ŸÓ·ÙıÿÿÿÿH›RMINORZ
+CODE_SMELL

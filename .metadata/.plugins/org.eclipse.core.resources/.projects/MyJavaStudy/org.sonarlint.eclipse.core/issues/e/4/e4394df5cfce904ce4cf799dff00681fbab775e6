@@ -1,0 +1,16 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Û˜²»Hó-RMAJORZ
+CODE_SMELL
+lsquid:S1161(":Add the "@Override" annotation above this method signature(ÿŸ¾ÐüÿÿÿÿHø-RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ü«öòHö-RMAJORZ
+CODE_SMELL
+lsquid:S1161!":Add the "@Override" annotation above this method signature(ÿŸ¾ÐüÿÿÿÿH÷-RMAJORZ
+CODE_SMELL
+Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿHò-RMINORZVULNERABILITY
+psquid:S2276"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿHô-RBLOCKERZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿHõ-RMAJORZ
+CODE_SMELL

@@ -1,0 +1,37 @@
+
+dsquid:S1854"7Remove this useless assignment to local variable "obj".(©âÎÓHÌ5RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Æì¿¥HÉ5RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Å²äüÿÿÿÿHÇ5RMAJORZ
+CODE_SMELL
+‹squid:S1171 "YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿHÎ5RMAJORZ
+CODE_SMELL
+Zsquid:S1172
+"(Remove this unused method parameter "x".(›ñıØûÿÿÿÿHÄ5RMAJORZ
+CODE_SMELL
+e
+squid:S106!"9Replace this use of System.out or System.err by a logger.(Í½¯¿HÏ5RMAJORZ
+CODE_SMELL
+Ssquid:S1172"&Remove these unused method parameters.(íŒÿÄHÆ5RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ëãİ÷HÍ5RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÈÏÔËHÃ5RMAJORZ
+CODE_SMELL
+Usquid:S1481"(Remove this unused "obj" local variable.(©âÎÓHĞ5RMINORZ
+CODE_SMELL
+‹squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿHÈ5RMAJORZ
+CODE_SMELL
+‹squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿHÊ5RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(º–¡şHÅ5RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¾ƒ´‡ùÿÿÿÿHË5RMAJORZ
+CODE_SMELL

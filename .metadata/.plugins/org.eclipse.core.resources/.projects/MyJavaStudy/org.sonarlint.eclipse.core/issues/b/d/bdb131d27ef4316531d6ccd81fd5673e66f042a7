@@ -1,0 +1,7 @@
+
+Ssquid:S1481"&Remove this unused "x" local variable.(ï»ŠóH·=RMINORZ
+CODE_SMELL
+Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿHµ=RMINORZVULNERABILITY
+lsquid:S3518"CMake sure this expression can't be zero before doing this division.(ï»ŠóH³=RCRITICALZBUG
+bsquid:S1854"5Remove this useless assignment to local variable "x".(ï»ŠóH¶=RMAJORZ
+CODE_SMELL

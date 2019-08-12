@@ -1,0 +1,18 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(£îú­øÿÿÿÿHÌ4RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(€áİ±HÊ4RMAJORZ
+CODE_SMELL
+lsquid:S1161":Add the "@Override" annotation above this method signature(Ó¶êıÿÿÿÿHË4RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿHÍ4RMINORZ
+CODE_SMELL
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¶êıÿÿÿÿHÇ4RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ãş¸¤HÈ4RMAJORZ
+CODE_SMELL
+lsquid:S1161":Add the "@Override" annotation above this method signature(Ó¶êıÿÿÿÿHÉ4RMAJORZ
+CODE_SMELL

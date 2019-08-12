@@ -1,0 +1,26 @@
+
+‹squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿHº5RMAJORZ
+CODE_SMELL
+‹squid:S1171	"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿH¸5RMAJORZ
+CODE_SMELL
+Zsquid:S1481"(Remove this unused "obj" local variable.(ÚûÚ­øÿÿÿÿHÀ5RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(°•ÚÌH»5RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(²íýˆúÿÿÿÿH½5RMAJORZ
+CODE_SMELL
+isquid:S1854"7Remove this useless assignment to local variable "obj".(ÚûÚ­øÿÿÿÿH¾5RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿH¿5RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(…®ÁÏùÿÿÿÿH·5RMAJORZ
+CODE_SMELL
+‹squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿH¼5RMAJORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(ÉÇõñÿÿÿÿÿH¹5RMAJORZ
+CODE_SMELL

@@ -1,0 +1,31 @@
+
+jsquid:S1197"8Move the array designator from the variable to the type.(Š¿Ý‡üÿÿÿÿHÿ=RMINORZ
+CODE_SMELL
+Nsquid:S1165"Make this "str" field final.(‚€ñ„ýÿÿÿÿHþ=RMINORZ
+CODE_SMELL
+‡squid:S1488"ZImmediately throw this expression instead of assigning it to the temporary variable "obj".(Õ­¿´Hù=RMINORZ
+CODE_SMELL
+esquid:S1197"8Move the array designator from the variable to the type.(¼§Ä–H>RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ãÇ‡íH„>RMAJORZ
+CODE_SMELL
+Osquid:S1165""Make this "accountno" field final.(ŒÜÅHû=RMINORZ
+CODE_SMELL
+Jsquid:S1165"Make this "name" field final.(¼§Ä–Hü=RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(û²µH†>RMAJORZ
+CODE_SMELL
+esquid:S1197"8Move the array designator from the variable to the type.(ŒÜÅH€>RMINORZ
+CODE_SMELL
+Rsquid:S1165" Make this "balance" field final.(Š¿Ý‡üÿÿÿÿHý=RMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿHƒ>RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÁªøH…>RMAJORZ
+CODE_SMELL
+gsquid:S1161
+":Add the "@Override" annotation above this method signature(Á»›êH‚>RMAJORZ
+CODE_SMELL

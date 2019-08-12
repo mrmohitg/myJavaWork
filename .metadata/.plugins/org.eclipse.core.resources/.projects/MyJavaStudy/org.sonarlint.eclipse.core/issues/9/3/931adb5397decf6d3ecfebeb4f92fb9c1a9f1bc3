@@ -1,0 +1,12 @@
+
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(╝Д≥⌠ЫЪЪЪЪHг3RMAJORZ
+CODE_SMELL
+dsquid:S1854"7Remove this useless assignment to local variable "obj".(н▄Ц═Hи3RMAJORZ
+CODE_SMELL
+e
+squid:S106	"9Replace this use of System.out or System.err by a logger.(дк╞│Hх3RMAJORZ
+CODE_SMELL
+Usquid:S1481"(Remove this unused "obj" local variable.(н▄Ц═Hй3RMINORZ
+CODE_SMELL

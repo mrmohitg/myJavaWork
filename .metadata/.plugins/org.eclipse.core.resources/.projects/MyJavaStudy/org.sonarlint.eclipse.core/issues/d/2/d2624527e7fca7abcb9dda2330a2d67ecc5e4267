@@ -1,0 +1,10 @@
+
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(Á“Î'HÄ9RMAJORZ
+CODE_SMELL
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºİÊ»ùÿÿÿÿHÂ9RMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿHÃ9RMINORZ
+CODE_SMELL
+Qsquid:S1659"Declare "w" on a separate line.(¾©ƒÒÿÿÿÿÿHÁ9RMINORZ
+CODE_SMELL

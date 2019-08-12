@@ -1,0 +1,18 @@
+
+qsquid:S3518"CMake sure this expression can't be zero before doing this division.(¾¾ÛÆþÿÿÿÿHô<RCRITICALZBUG
+‹squid:S1488"YImmediately return this expression instead of assigning it to the temporary variable "x".(¾¾ÛÆþÿÿÿÿHõ<RMINORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHø<RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Øó×þÿÿÿÿHù<RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(—¨‡Hú<RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Éê—Hû<RMAJORZ
+CODE_SMELL
+^squid:S1143"5Remove this return statement from this finally block.(¢ºêµH÷<RCRITICALZBUG

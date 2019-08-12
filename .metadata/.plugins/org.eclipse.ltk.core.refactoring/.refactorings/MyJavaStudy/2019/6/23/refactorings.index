@@ -1,0 +1,37 @@
+1559725926094	Rename type 'DemoCollections'
+1559727574052	Rename type 'ArrayListWorking'
+1559727786337	Move compilation unit
+1559727827939	Copy compilation unit
+1559728427193	Copy compilation unit
+1559730478280	Copy compilation unit
+1559731212799	Infer generic type arguments
+1559731228000	Copy compilation unit
+1559732262290	Copy compilation unit
+1559732284441	Rename type 'ArrayListDemo5'
+1559733406073	Rename type 'VectorDemo1'
+1559734181423	Copy compilation unit
+1559734194726	Rename type 'VectorDemo'
+1559736190109	Extract Class...
+1559736347044	Delete element
+1559738520897	Rename package 'myJava.collections.arrayList'
+1559738549683	Rename package 'myJava.collections.vector'
+1559738569077	Rename package 'myJava.collections.linkList'
+1559740064127	Copy compilation unit
+1559740080405	Rename type 'ArrayListDemo1'
+1559740572523	Copy compilation unit
+1559973995382	Rename type 'LinkedhashSetDemo'
+1559974000952	Copy compilation unit
+1559974628576	Rename type 'TreeSetDemo'
+1559974635772	Copy compilation unit
+1559979216669	Rename type 'HashmapDemo'
+1559980112646	Rename type 'HashMapDemo'
+1559980118444	Copy compilation unit
+1559980638619	Copy compilation unit
+1559980654750	Rename type 'HashMapDemo2'
+1559981319499	Rename local variable 'hashMap'
+1559981338777	Copy compilation unit
+1559982119247	Copy compilation unit
+1559983231637	Rename type 'ComparatorDemo'
+1559983266877	Copy compilation unit
+1559986267137	Rename type 'Employee1'
+1559986398397	Rename type 'MyCom'

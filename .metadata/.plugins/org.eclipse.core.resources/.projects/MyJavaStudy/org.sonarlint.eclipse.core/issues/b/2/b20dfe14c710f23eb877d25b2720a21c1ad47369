@@ -1,0 +1,11 @@
+
+j
+squid:S106#"9Replace this use of System.out or System.err by a logger.(¨½û•ûÿÿÿÿH¸RMAJORZ
+CODE_SMELL
+qsquid:S2133"?Remove this object instantiation and use "Meta3.class" instead.(²ùâ‡ÿÿÿÿÿH¶RMAJORZ
+CODE_SMELL
+jsquid:S1197'"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿH¹RMINORZ
+CODE_SMELL
+j
+squid:S106!"9Replace this use of System.out or System.err by a logger.(Áß¹×üÿÿÿÿH·RMAJORZ
+CODE_SMELL

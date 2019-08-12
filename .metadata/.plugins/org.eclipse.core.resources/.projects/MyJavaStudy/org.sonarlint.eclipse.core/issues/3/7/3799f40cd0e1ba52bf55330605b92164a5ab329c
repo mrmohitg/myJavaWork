@@ -1,0 +1,21 @@
+
+Msquid:S2129" Remove this "String" constructor(‰¾Ò‹Hâ>RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿHá>RMINORZ
+CODE_SMELL
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(”¡– úÿÿÿÿHã>RMAJORZ
+CODE_SMELL
+dsquid:S4973"9Use the "equals" method if value comparison was intended.(­ìØýÿÿÿÿHß>RMAJORZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ìƒ×€ùÿÿÿÿHä>RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ìƒ×€ùÿÿÿÿHæ>RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(”¡– úÿÿÿÿHå>RMAJORZ
+CODE_SMELL
+_squid:S4973"9Use the "equals" method if value comparison was intended.(è«€¨HÞ>RMAJORZBUG
+{squid:S1192"FDefine a constant instead of duplicating this literal "Hello" 3 times.(ÞÿÙ¢úÿÿÿÿHÝ>RCRITICALZ
+CODE_SMELL

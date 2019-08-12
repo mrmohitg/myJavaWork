@@ -1,0 +1,7 @@
+
+Пsquid:UselessImportCheck"PRemove this unused import 'org.springframework.web.bind.annotation.RequestBody'.(тн╜└¤    HЭRMINORZ
+CODE_SMELL
+psquid:S1854$"7Remove this useless assignment to local variable "mav".(ъЇзя°    8К╢А▀├-HЮRMAJORZ
+CODE_SMELL
+asquid:S1481$"(Remove this unused "mav" local variable.(ъЇзя°    8К╢А▀├-HЯRMINORZ
+CODE_SMELL

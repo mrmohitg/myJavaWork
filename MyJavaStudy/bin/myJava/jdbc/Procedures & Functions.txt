@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE recins87 (name IN Employee1.name %type, salary IN Employee1.salary %type) IS 
+BEGIN
+insert into Employee1 values (name,salary);
+END;
+/
+
+CREATE OR REPLACE FUNCTION sum22(One IN NUMBER, Two IN NUMBER)
+RETURN NUMBER AS Total NUMBER;
+BEGIN
+Total := One+Two; 
+RETURN Total;
+END;
+/

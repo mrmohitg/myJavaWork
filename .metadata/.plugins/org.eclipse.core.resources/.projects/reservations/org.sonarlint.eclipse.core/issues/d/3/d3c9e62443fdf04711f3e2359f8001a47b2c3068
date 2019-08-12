@@ -1,0 +1,12 @@
+
+Έsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(έΰΪϋ8ΠΎοθΉ-Hª
+RCRITICALZ
+CODE_SMELL
+gsquid:S1068".Remove this unused "DAT_FORMAT" private field.(Ϊς„…ψÿÿÿÿ8δυμθΉ-H¥
+RMAJORZ
+CODE_SMELL
+Ysquid:S2885"'Make "DAT_FORMAT" an instance variable.(Ϊς„…ψÿÿÿÿ8δυμθΉ-H¤
+RMAJORZBUG
+{squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(έΰΪϋ8ΠΎοθΉ-H©
+RMAJORZ
+CODE_SMELL

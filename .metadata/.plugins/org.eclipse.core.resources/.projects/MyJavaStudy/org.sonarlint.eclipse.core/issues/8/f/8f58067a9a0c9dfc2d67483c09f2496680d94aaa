@@ -1,0 +1,8 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ºñß¸úÿÿÿÿHŸ5RMAJORZ
+CODE_SMELL
+xsquid:CommentedOutCodeLine	"<This block of commented-out lines of code should be removed.(Ú°à¬H 5RMAJORZ
+CODE_SMELL
+gsquid:S1118":Add a private constructor to hide the implicit public one.(æ¦ÊœHž5RMAJORZ
+CODE_SMELL

@@ -1,0 +1,20 @@
+
+hsquid:S1854"6Remove this useless assignment to local variable "d1".(áÄ–ˆúÿÿÿÿHµ<RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹Ž©óýÿÿÿÿH´<RMAJORZ
+CODE_SMELL
+hsquid:S1854"6Remove this useless assignment to local variable "d2".(›ŽÂÎûÿÿÿÿH¶<RMAJORZ
+CODE_SMELL
+¸%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(äçÀ€ýÿÿÿÿH·<RMINORZ
+CODE_SMELL
+„squid:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“H¸<RCRITICALZ
+CODE_SMELL
+Ysquid:S1481"'Remove this unused "d2" local variable.(›ŽÂÎûÿÿÿÿHº<RMINORZ
+CODE_SMELL
+Qsquid:S1659"Declare "y" on a separate line.(àž‹šùÿÿÿÿH²<RMINORZ
+CODE_SMELL
+y"squid:ObjectFinalizeOverridenCheck"-Do not override the Object.finalize() method.(ÖÒ˜ÙùÿÿÿÿH³<RCRITICALZ
+CODE_SMELL
+Ysquid:S1481"'Remove this unused "d1" local variable.(áÄ–ˆúÿÿÿÿH¹<RMINORZ
+CODE_SMELL

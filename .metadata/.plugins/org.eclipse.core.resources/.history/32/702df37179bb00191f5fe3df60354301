@@ -1,0 +1,59 @@
+class Test
+{
+	void display(int i)
+	{
+		System.out.println("This is the example of Synchronized Block");
+		synchronized(this)
+		{
+			try
+			{
+			for(;i<=10;i++)
+			{
+				System.out.println(i);
+				Thread.sleep(5000);
+			}
+			}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
+		}
+		System.out.println("Synchronized Block is ending");
+	}
+}
+class Thread1 extends Thread
+{
+	Test t;
+	Thread1(Test t)
+	{
+		this.t=t;
+	}
+	public void run()
+	{
+		t.display(1);
+	}
+}
+class Thread2 extends Thread
+{
+	Test t;
+	Thread2(Test t)
+	{
+		this.t=t;
+	}
+	public void run()
+	{
+		t.display(1);
+	}
+}
+public class SynchronizedBlockClass 
+{
+	public static void main(String args[])
+	{
+		Test obj = new Test();
+		Thread1	obj1 = new Thread1(obj);
+		obj1.start();
+		Thread2 obj2 = new Thread2(obj);
+		obj2.start();
+	}
+
+}

@@ -1,0 +1,11 @@
+package myJava.collections;
+
+import java.util.logging.Logger;
+
+public class DemoCollections {
+
+	public static void main(String[] args) {
+		Logger.getLogger("Hello");
+	}
+
+}

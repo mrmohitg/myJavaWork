@@ -1,0 +1,22 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿHÑ=RMAJORZ
+CODE_SMELL
+gsquid:S1118":Add a private constructor to hide the implicit public one.(±‰Ş±HÔ=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(À çøÿÿÿÿHĞ=RMAJORZ
+CODE_SMELL
+asquid:EmptyStatementUsageCheck"Remove this empty statement.(Åñ­õşÿÿÿÿHÒ=RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÖòÀùÿÿÿÿHÏ=RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(–ğ‹HÓ=RMAJORZ
+CODE_SMELL
+´%squid:RedundantThrowsDeclarationCheck"hRemove the declaration of thrown exception 'java.lang.ArithmeticException' which is a runtime exception.(ÅñšşÿÿÿÿHÕ=RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ßêŠ¿ûÿÿÿÿHÖ=RMAJORZ
+CODE_SMELL

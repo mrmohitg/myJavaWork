@@ -1,0 +1,9 @@
+package myJava.jdbc;
+
+public class XMLData {
+
+	public static void main(String[] args) {
+
+	}
+
+}

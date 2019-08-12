@@ -1,0 +1,30 @@
+package myJava.nestedClasses.annonymousClass;
+
+//Anonymous Class is at work and we are using non static method in this anonymous class
+class AnonymousClass {
+	int x = 10;
+	static int y = 20;
+
+	My display() {
+		return (new My() {
+			public void show() {
+				System.out.println(x);
+				System.out.println(y);
+			}
+		});
+	}
+
+	public static void main(String... s) {
+		AnonymousClass obj = new AnonymousClass();
+		My o = obj.display();
+		o.show();
+	}
+}
+
+interface My {
+	void show();
+}
+
+/*
+ * Output 10 20
+ */

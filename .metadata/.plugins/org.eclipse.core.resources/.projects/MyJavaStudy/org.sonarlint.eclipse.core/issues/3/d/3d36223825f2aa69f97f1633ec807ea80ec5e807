@@ -1,0 +1,11 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(тЎЇ‘HА3RMAJORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(±ре]HБ3RMAJORZ
+CODE_SMELL
+Рsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(®џХ®ь€€€€H€2RCRITICALZ
+CODE_SMELL
+Wsquid:S1214""Move constants to a class or enum.(Ж≠Є э€€€€Hю2RCRITICALZ
+CODE_SMELL

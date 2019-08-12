@@ -1,0 +1,27 @@
+
+Wsquid:S1659"%Declare "student" on a separate line.(ã¾”éþÿÿÿÿH¹0RMINORZ
+CODE_SMELL
+Ssquid:S1659"!Declare "tot" on a separate line.(ã¾”éþÿÿÿÿH»0RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ê§øËüÿÿÿÿH¿0RMAJORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(éËÇˆÿÿÿÿÿH½0RMAJORZ
+CODE_SMELL
+Usquid:S1659"#Declare "marks" on a separate line.(ã¾”éþÿÿÿÿHº0RMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿH¸0RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿHÁ0RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ðñÄ¡HÀ0RMAJORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÃÕ­eH¾0RMAJORZ
+CODE_SMELL
+esquid:S1197"8Move the array designator from the variable to the type.(ø¡ÄÚH¼0RMINORZ
+CODE_SMELL

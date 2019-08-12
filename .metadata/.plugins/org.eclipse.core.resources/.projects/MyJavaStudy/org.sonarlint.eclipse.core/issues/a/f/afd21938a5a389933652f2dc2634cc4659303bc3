@@ -1,0 +1,38 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇH≈RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇH¡RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇH∆RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇHƒRMAJORZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿHºRCRITICALZ
+CODE_SMELL
+asquid:EmptyStatementUsageCheck"Remove this empty statement.(ÙüéÏ˙ˇˇˇˇHøRMINORZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿHΩRCRITICALZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇH√RMAJORZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿHπRCRITICALZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇH¿RMAJORZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿH∏RCRITICALZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿH∫RCRITICALZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ØòÇH¬RMAJORZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿHªRCRITICALZ
+CODE_SMELL
+ãsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èü‚ÿHæRCRITICALZ
+CODE_SMELL

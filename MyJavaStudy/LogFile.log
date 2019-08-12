@@ -1,0 +1,6 @@
+DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe")
+    trying com.mysql.jdbc.Driver
+    trying org.apache.derby.jdbc.ClientDriver
+    trying org.postgresql.Driver
+    trying oracle.jdbc.driver.OracleDriver
+getConnection returning oracle.jdbc.driver.OracleDriver

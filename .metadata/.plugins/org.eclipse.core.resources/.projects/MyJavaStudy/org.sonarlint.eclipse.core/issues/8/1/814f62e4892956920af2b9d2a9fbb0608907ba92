@@ -1,0 +1,20 @@
+
+|squid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·Å–¢úÿÿÿÿHÏRBLOCKERZBUG
+usquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿHÎRBLOCKERZBUG
+Wsquid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿHÔRBLOCKERZVULNERABILITY
+Zsquid:S4925
+"-Remove this "Class.forName()", it is useless.(ùíÄéHÓRMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÖRMAJORZ
+CODE_SMELL
+ksquid:S1854"9Remove this useless assignment to local variable "Count".(±ÂØˆýÿÿÿÿHÒRMAJORZ
+CODE_SMELL
+}squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡³éŸþÿÿÿÿHØRMAJORZ
+CODE_SMELL
+\squid:S1481"*Remove this unused "Count" local variable.(±ÂØˆýÿÿÿÿH×RMINORZ
+CODE_SMELL
+„squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ÂØˆýÿÿÿÿHÑRMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(±ÂØˆýÿÿÿÿHÕRMINORZ
+CODE_SMELL

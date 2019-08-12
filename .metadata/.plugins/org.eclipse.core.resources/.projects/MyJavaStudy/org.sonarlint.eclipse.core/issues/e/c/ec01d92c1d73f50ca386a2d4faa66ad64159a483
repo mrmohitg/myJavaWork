@@ -1,0 +1,28 @@
+
+squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î²’±H”RMINORZ
+CODE_SMELL
+squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û¹ÚH–RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Æˆš´ùÿÿÿÿHšRMAJORZ
+CODE_SMELL
+ysquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(£ôÆËüÿÿÿÿH“RMAJORZ
+CODE_SMELL
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéH—RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ìœıÿÿÿÿH›RMAJORZ
+CODE_SMELL
+tsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿH‘RBLOCKERZBUG
+Wsquid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿH˜RBLOCKERZVULNERABILITY
+}squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ûŸòûúÿÿÿÿHRMAJORZ
+CODE_SMELL
+usquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿHRBLOCKERZBUG
+„squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÂ®ŒùÿÿÿÿH•RMINORZ
+CODE_SMELL
+ysquid:S1854"@Remove this useless assignment to local variable "TABLE_SCHEMA".(ÍÂ®Œùÿÿÿÿ8ÜĞºàÅ-H£RMAJORZ
+CODE_SMELL
+jsquid:S1481"1Remove this unused "TABLE_SCHEMA" local variable.(ÍÂ®Œùÿÿÿÿ8ÜĞºàÅ-H¤RMINORZ
+CODE_SMELL
+„squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éŞ®Êüÿÿÿÿ8ÜĞºàÅ-H¥RMAJORZ
+CODE_SMELL

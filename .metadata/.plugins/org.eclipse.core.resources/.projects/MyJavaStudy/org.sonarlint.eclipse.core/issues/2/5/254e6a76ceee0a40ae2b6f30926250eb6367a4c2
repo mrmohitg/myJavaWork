@@ -1,0 +1,11 @@
+
+ksquid:S2276
+"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¯ú™úHÃ-RBLOCKERZBUG
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ø«ïHÅ-RMAJORZ
+CODE_SMELL
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾HÄ-RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÍÖŒÍıÿÿÿÿHÂ-RMAJORZ
+CODE_SMELL

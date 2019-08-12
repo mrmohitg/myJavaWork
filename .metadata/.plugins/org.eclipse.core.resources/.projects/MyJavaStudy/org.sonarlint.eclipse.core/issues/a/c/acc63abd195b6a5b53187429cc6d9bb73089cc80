@@ -1,0 +1,14 @@
+
+usquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿHðRBLOCKERZBUG
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéHñRMAJORZ
+CODE_SMELL
+Wsquid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿHòRBLOCKERZVULNERABILITY
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(òûÔ‚ýÿÿÿÿHóRMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(É”³ÖHôRMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHõRMAJORZ
+CODE_SMELL

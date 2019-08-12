@@ -1,0 +1,40 @@
+package myJava.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class XMLData {
+
+	static Connection connection = null;
+	public static void main(String[] args) {
+
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			connection = DriverManager.getConnection(url, "system", "oracle");
+			Statement statement = connection.createStatement();
+			String query1 = "update Employee1 set name = 'Raj' where salary = 33000";
+			String query2 = "insert into Employee1 values ('Yasho',100000)";
+			String query3 = "delete from Employee1 where name ='Vipul'";
+			
+			statement.addBatch(query1);
+			statement.addBatch(query2);
+			statement.addBatch(query3);
+			statement.executeBatch();
+			
+			ResultSet resultSet = statement.executeQuery("select * from Employee1");
+			while(resultSet.next())
+			{
+				System.out.println(resultSet.getString(1));
+				System.out.println(resultSet.getString(2));
+			}
+			statement.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

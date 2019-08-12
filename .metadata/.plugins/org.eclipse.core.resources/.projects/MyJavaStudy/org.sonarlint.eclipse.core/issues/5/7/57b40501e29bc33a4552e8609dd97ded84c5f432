@@ -1,0 +1,11 @@
+
+^squid:S4973
+"9Use the "equals" method if value comparison was intended.(ïÀ¨HÒ>RMAJORZBUG
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ûåóˆHÕ>RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(äã–HÖ>RMAJORZ
+CODE_SMELL
+Rsquid:S2129" Remove this "String" constructor(˜ÿ¾¿ýÿÿÿÿHÔ>RMAJORZ
+CODE_SMELL

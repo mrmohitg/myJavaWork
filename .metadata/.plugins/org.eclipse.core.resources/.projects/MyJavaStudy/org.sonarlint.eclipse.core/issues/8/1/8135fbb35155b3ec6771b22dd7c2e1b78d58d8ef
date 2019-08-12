@@ -1,0 +1,15 @@
+
+Tsquid:S1481"'Remove this unused "t1" local variable.(ÅŠŒ„HŒ,RMINORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH‹,RMINORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "t2" local variable.(„ş©ğH,RMINORZ
+CODE_SMELL
+xsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(­¿ª†H,RMAJORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "t2".(„ş©ğH‰,RMAJORZ
+CODE_SMELL
+_squid:S2440"&Remove this instantiation of "Shared".(ÍÂºıÿÿÿÿ8—ßÔŞÇ-H‘,RMAJORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "t1".(ÅŠŒ„HŠ,RMAJORZ
+CODE_SMELL

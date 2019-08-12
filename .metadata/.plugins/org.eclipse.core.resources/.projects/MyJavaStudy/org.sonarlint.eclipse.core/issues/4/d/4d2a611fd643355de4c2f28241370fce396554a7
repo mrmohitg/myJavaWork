@@ -1,0 +1,13 @@
+
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéHîRMAJORZ
+CODE_SMELL
+|squid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ï°ïüÿÿÿÿHëRBLOCKERZBUG
+usquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿHéRBLOCKERZBUG
+usquid:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(üºˆÃHìRBLOCKERZBUG
+Wsquid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿHïRBLOCKERZVULNERABILITY
+tsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿHêRBLOCKERZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢¯ûÿÿÿÿHğRMAJORZ
+CODE_SMELL
+usquid:S1075"ARefactor your code to get this URI from a customizable parameter.( Å®É8¬ÑïßÅ-HñRMINORZ
+CODE_SMELL

@@ -1,0 +1,67 @@
+
+j
+squid:S106$"9Replace this use of System.out or System.err by a logger.(ç±ŠþøÿÿÿÿHÔ.RMAJORZ
+CODE_SMELL
+j
+squid:S106a"9Replace this use of System.out or System.err by a logger.(êìªëøÿÿÿÿHÎ.RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(é–ÀˆHÃ.RMAJORZ
+CODE_SMELL
+lsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€HÒ.RMAJORZBUG
+gsquid:S1161.":Add the "@Override" annotation above this method signature(“–ýþHÌ.RMAJORZ
+CODE_SMELL
+lsquid:S2142\"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€HÍ.RMAJORZBUG
+gsquid:S1161":Add the "@Override" annotation above this method signature(“–ýþHº.RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÉ.RMAJORZ
+CODE_SMELL
+e
+squid:S1065"9Replace this use of System.out or System.err by a logger.(é–ÀˆHÅ.RMAJORZ
+CODE_SMELL
+gsquid:S1161A":Add the "@Override" annotation above this method signature(“–ýþHÀ.RMAJORZ
+CODE_SMELL
+lsquid:S21422"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€HÇ.RMAJORZBUG
+j
+squid:S106_"9Replace this use of System.out or System.err by a logger.(›Óð°þÿÿÿÿH½.RMAJORZ
+CODE_SMELL
+j
+squid:S1063"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÏ.RMAJORZ
+CODE_SMELL
+bsquid:S2209"5Change this instance-reference to a static reference.(é–ÀˆHÊ.RMAJORZ
+CODE_SMELL
+j
+squid:S106 "9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÑ.RMAJORZ
+CODE_SMELL
+bsquid:S2209""5Change this instance-reference to a static reference.(é–ÀˆHÐ.RMAJORZ
+CODE_SMELL
+d
+squid:S106J"9Replace this use of System.out or System.err by a logger.(äçÔHË.RMAJORZ
+CODE_SMELL
+j
+squid:S1067"9Replace this use of System.out or System.err by a logger.(ËùÒéüÿÿÿÿHÓ.RMAJORZ
+CODE_SMELL
+lsquid:S2142E"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€H».RMAJORZBUG
+e
+squid:S106""9Replace this use of System.out or System.err by a logger.(é–ÀˆHÕ.RMAJORZ
+CODE_SMELL
+j
+squid:S106F"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿH¿.RMAJORZ
+CODE_SMELL
+lsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€HÁ.RMAJORZBUG
+bsquid:S2209H"5Change this instance-reference to a static reference.(é–ÀˆH¾.RMAJORZ
+CODE_SMELL
+bsquid:S22095"5Change this instance-reference to a static reference.(é–ÀˆHÄ.RMAJORZ
+CODE_SMELL
+j
+squid:S106]"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÂ.RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(™Þ¶×úÿÿÿÿH¼.RMAJORZ
+CODE_SMELL
+e
+squid:S106H"9Replace this use of System.out or System.err by a logger.(é–ÀˆHÈ.RMAJORZ
+CODE_SMELL
+gsquid:S1161":Add the "@Override" annotation above this method signature(“–ýþHÆ.RMAJORZ
+CODE_SMELL

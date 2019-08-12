@@ -1,0 +1,15 @@
+
+e
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(ûåóˆH€?RMAJORZ
+CODE_SMELL
+‘squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¯«Â€ÿÿÿÿÿHþ>RMAJORZ
+CODE_SMELL
+‘squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(´ó‘êþÿÿÿÿHý>RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(äã–H?RMAJORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(œ™ÀHÿ>RMAJORZ
+CODE_SMELL

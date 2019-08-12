@@ -1,0 +1,10 @@
+
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾Hè/RMAJORZ
+CODE_SMELL
+gsquid:S1161":Add the "@Override" annotation above this method signature(“–ışHæ/RMAJORZ
+CODE_SMELL
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿHç/RMAJORZ
+CODE_SMELL
+xsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(à÷–ÈHé/RMAJORZ
+CODE_SMELL

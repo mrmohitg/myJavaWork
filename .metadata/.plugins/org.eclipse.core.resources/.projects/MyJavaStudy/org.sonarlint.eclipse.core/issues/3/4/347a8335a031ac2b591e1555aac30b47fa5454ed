@@ -1,0 +1,12 @@
+
+jsquid:S1197"8Move the array designator from the variable to the type.(²¾óëùÿÿÿÿHå7RMINORZ
+CODE_SMELL
+e
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(†·š¹Hæ7RMAJORZ
+CODE_SMELL
+lsquid:HiddenFieldCheck"4Rename "x" which hides the field declared at line 5.(Ñ‡²¾Hç7RMAJORZ
+CODE_SMELL
+e
+squid:S106	"9Replace this use of System.out or System.err by a logger.(¯çá‹Hè7RMAJORZ
+CODE_SMELL

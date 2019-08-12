@@ -1,0 +1,17 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(é©Ñ¥úÿÿÿÿHÃ>RMAJORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(é©Ñ¥úÿÿÿÿHÁ>RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(°§ÄÎúÿÿÿÿHÂ>RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(ì…ãüüÿÿÿÿH¿>RMINORZ
+CODE_SMELL
+dsquid:S4973	"9Use the "equals" method if value comparison was intended.(ÝÐ‘úÿÿÿÿH¼>RMAJORZBUG
+dsquid:S4973"9Use the "equals" method if value comparison was intended.(ƒÇ¢çúÿÿÿÿH½>RMAJORZBUG
+Msquid:S2129" Remove this "String" constructor(ãõîÈHÀ>RMAJORZ
+CODE_SMELL

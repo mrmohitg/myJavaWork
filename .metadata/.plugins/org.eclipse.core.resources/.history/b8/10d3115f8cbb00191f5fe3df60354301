@@ -1,0 +1,24 @@
+package myJava.concepts;
+
+//Initializing the instance variable at the time of declaration.
+class Person {
+	private String name = "Mohit";
+	private int age = 25;
+
+	void talk() {
+		System.out.println("My name is " + name);
+		System.out.println("My age is " + age);
+	}
+}
+
+public class InitializingVariableAtDeclaration {
+	public static void main(String args[]) {
+		Person obj1 = new Person();
+		obj1.talk();
+		Person obj2 = new Person();
+		obj2.talk();
+	}
+}
+/*
+ * Output My name is Mohit My age is 25 My name is Mohit My age is 25
+ */

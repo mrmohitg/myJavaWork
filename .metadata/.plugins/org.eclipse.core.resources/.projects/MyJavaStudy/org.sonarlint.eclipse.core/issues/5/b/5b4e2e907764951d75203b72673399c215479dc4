@@ -1,0 +1,26 @@
+
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾H„.RMAJORZ
+CODE_SMELL
+e
+squid:S106 "9Replace this use of System.out or System.err by a logger.(Ä‰ı½Hƒ.RMAJORZ
+CODE_SMELL
+e
+squid:S106$"9Replace this use of System.out or System.err by a logger.(‚¸Hˆ.RMAJORZ
+CODE_SMELL
+xsquid:S3014"IRemove this use of "ThreadGroup". Prefer the use of "ThreadPoolExecutor".(ë—§êH.RBLOCKERZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(æÉêÃÿÿÿÿÿHŠ.RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¾ÏÔÂıÿÿÿÿH….RMAJORZ
+CODE_SMELL
+j
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(æÉêÃÿÿÿÿÿH†.RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¾ÏÔÂıÿÿÿÿH‰.RMAJORZ
+CODE_SMELL
+Wsquid:S00108")Either remove or fill this block of code.(”ı¾H‡.RMAJORZ
+CODE_SMELL

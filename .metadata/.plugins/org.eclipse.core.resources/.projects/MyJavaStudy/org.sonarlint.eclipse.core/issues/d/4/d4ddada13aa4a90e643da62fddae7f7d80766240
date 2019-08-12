@@ -1,0 +1,14 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(øù¤ÅH¦3RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH¨3RMINORZ
+CODE_SMELL
+zsquid:S1610"NConvert the abstract class "AbstractClassCantBeIntentiated" into an interface.(ÛÄ«hH¤3RMINORZ
+CODE_SMELL
+|squid:S00100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ„ãH§3RMINORZ
+CODE_SMELL
+squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª°ô¾üÿÿÿÿH¥3RMINORZ
+CODE_SMELL
+„squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡²™ıÿÿÿÿ8¨ÛëàÇ-H´3RMAJORZ
+CODE_SMELL

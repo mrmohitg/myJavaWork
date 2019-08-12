@@ -1,0 +1,22 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡Â³H’0RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH0RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(°£Í­şÿÿÿÿH‘0RMAJORZ
+CODE_SMELL
+asquid:EmptyStatementUsageCheck"Remove this empty statement.(Åñ­õşÿÿÿÿH•0RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(É„†úH–0RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‘‡±H“0RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(©à¯„H”0RMAJORZ
+CODE_SMELL
+†squid:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜´·‘H0RMINORZ
+CODE_SMELL

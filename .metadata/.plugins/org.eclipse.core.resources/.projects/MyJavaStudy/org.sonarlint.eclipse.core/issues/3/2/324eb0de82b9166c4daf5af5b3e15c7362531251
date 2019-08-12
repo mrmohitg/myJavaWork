@@ -1,0 +1,8 @@
+
+fsquid:S2134"@Don't extend "Thread", since the "run" method is not overridden.(Ì˜ù‹Hâ*RMAJORZBUG
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(çì¹§Hä*RMAJORZ
+CODE_SMELL
+e
+squid:S106	"9Replace this use of System.out or System.err by a logger.(çì¹§Hã*RMAJORZ
+CODE_SMELL

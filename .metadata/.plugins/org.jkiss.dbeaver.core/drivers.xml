@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drivers>
+	<provider id="wmi"/>
+	<provider id="athena"/>
+	<provider id="db2"/>
+	<provider id="db2_zos"/>
+	<provider id="db2_i"/>
+	<provider id="elasticsearch"/>
+	<provider id="exasol"/>
+	<provider id="jaybird"/>
+	<provider id="generic"/>
+	<provider id="bigquery"/>
+	<provider id="google_spanner"/>
+	<provider id="greenplum"/>
+	<provider id="sqlserver"/>
+	<provider id="mssql"/>
+	<provider id="mysql"/>
+	<provider id="oracle"/>
+	<provider id="postgresql"/>
+	<provider id="snowflake"/>
+	<provider id="vertica"/>
+</drivers>

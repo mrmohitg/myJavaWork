@@ -1,0 +1,16 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿH=RMAJORZ
+CODE_SMELL
+rsquid:S1193"@Replace the usage of the "instanceof" operator by a catch block.(Íö—åùÿÿÿÿH’=RMAJORZ
+CODE_SMELL
+jsquid:S1197	"8Move the array designator from the variable to the type.(®òƒ‚üÿÿÿÿH=RMINORZ
+CODE_SMELL
+msquid:S1193"@Replace the usage of the "instanceof" operator by a catch block.(±®®ÍH=RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ş´›ÄH“=RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŸüşÎûÿÿÿÿH‘=RMAJORZ
+CODE_SMELL

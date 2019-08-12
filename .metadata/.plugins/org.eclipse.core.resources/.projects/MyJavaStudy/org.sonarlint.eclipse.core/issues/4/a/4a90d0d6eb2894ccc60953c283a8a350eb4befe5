@@ -1,0 +1,18 @@
+
+^squid:S2068" Remove this hard-coded password.(Ï’úøúÿÿÿÿ8¾‚·ÞÅ-HÐRBLOCKERZVULNERABILITY
+}squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ý”–øþÿÿÿÿHÅRMAJORZ
+CODE_SMELL
+|squid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Ï’úøúÿÿÿÿ8¾‚·ÞÅ-HÏRBLOCKERZBUG
+{squid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(™üé¼ùÿÿÿÿ8¾‚·ÞÅ-HÍRBLOCKERZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(•·…ŒýÿÿÿÿHÂRMAJORZ
+CODE_SMELL
+{squid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéþÿÿÿÿ8¾‚·ÞÅ-HÎRBLOCKERZBUG
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(ü†óÌþÿÿÿÿHÁRMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿHÀRMAJORZ
+CODE_SMELL
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéH¾RMAJORZ
+CODE_SMELL

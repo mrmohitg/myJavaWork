@@ -1,0 +1,132 @@
+
+Msquid:S1659" Declare "f2" on a separate line.(ü£ÔôHÇ?RMINORZ
+CODE_SMELL
+nsquid:HiddenFieldCheck{"6Rename "s1" which hides the field declared at line 15.( Ô›Hà?RMAJORZ
+CODE_SMELL
+Nsquid:S1659"!Declare "sum" on a separate line.(ü£ÔôHÈ?RMINORZ
+CODE_SMELL
+osquid:HiddenFieldCheck"6Rename "s1" which hides the field declared at line 15.(•¦íHİ?RMAJORZ
+CODE_SMELL
+osquid:HiddenFieldCheck–"6Rename "s1" which hides the field declared at line 15.(êî´ÂHÛ?RMAJORZ
+CODE_SMELL
+Psquid:S1659"#Declare "minus" on a separate line.(ü£ÔôHÉ?RMINORZ
+CODE_SMELL
+nsquid:HiddenFieldCheck‚"6Rename "s1" which hides the field declared at line 15.(Ş›¹pHÜ?RMAJORZ
+CODE_SMELL
+ssquid:S2147Ú"ECombine this catch with the one at line 216, which has the same body.(”ı¾Hê?RMINORZ
+CODE_SMELL
+isquid:S2130Í";Use "Float.parseFloat" for this string-to-float conversion.(îÔÁHñ?RMINORZ
+CODE_SMELL
+nsquid:S2130¤";Use "Float.parseFloat" for this string-to-float conversion.(ºàÄ´şÿÿÿÿHó?RMINORZ
+CODE_SMELL
+k
+squid:S106˜"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿHû?RMAJORZ
+CODE_SMELL
+esquid:S4973"9Use the "equals" method if value comparison was intended.(ò¿ÓğşÿÿÿÿHÂ?RMAJORZBUG
+Qsquid:S1659"$Declare "divide" on a separate line.(ü£ÔôHÌ?RMINORZ
+CODE_SMELL
+™squid:S1845Å"dRename method "result" to prevent any misunderstanding/clash with field "result" defined on line 16.(³ö„°ûÿÿÿÿHÔ?RBLOCKERZ
+CODE_SMELL
+ssquid:HiddenFieldCheckç"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHã?RMAJORZ
+CODE_SMELL
+ksquid:S1197 "8Move the array designator from the variable to the type.(†À¶îüÿÿÿÿHÕ?RMINORZ
+CODE_SMELL
+Psquid:S1659"#Declare "multi" on a separate line.(ü£ÔôHË?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheckâ"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHõ?RMAJORZ
+CODE_SMELL
+Nsquid:S1659"!Declare "per" on a separate line.(ü£ÔôHÍ?RMINORZ
+CODE_SMELL
+osquid:HiddenFieldCheck’"6Rename "s2" which hides the field declared at line 15.(‹¾®ëHú?RMAJORZ
+CODE_SMELL
+nsquid:S2130³";Use "Float.parseFloat" for this string-to-float conversion.(ºàÄ´şÿÿÿÿH@RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheck»"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHò?RMAJORZ
+CODE_SMELL
+”squid:S1845õ"dRename method "divide" to prevent any misunderstanding/clash with field "divide" defined on line 16.(ƒíŠÁHÓ?RBLOCKERZ
+CODE_SMELL
+esquid:S4973"9Use the "equals" method if value comparison was intended.(ò¿ÓğşÿÿÿÿHÁ?RMAJORZBUG
+Msquid:S1659" Declare "r1" on a separate line.(ü£ÔôHÊ?RMINORZ
+CODE_SMELL
+‡squid:S3776-"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(¼ ÒşüÿÿÿÿHØ?RCRITICALZ
+CODE_SMELL
+nsquid:HiddenFieldCheckn"6Rename "s1" which hides the field declared at line 15.(Ü«£ÓHß?RMAJORZ
+CODE_SMELL
+ssquid:S2147†"ECombine this catch with the one at line 260, which has the same body.(”ı¾Hù?RMINORZ
+CODE_SMELL
+nsquid:S2130ş";Use "Float.parseFloat" for this string-to-float conversion.(ºàÄ´şÿÿÿÿHä?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheckh"6Rename "s1" which hides the field declared at line 15.(ë´ÅıÿÿÿÿHŞ?RMAJORZ
+CODE_SMELL
+nsquid:HiddenFieldCheckt"6Rename "s1" which hides the field declared at line 15.(ô¹³ˆHÚ?RMAJORZ
+CODE_SMELL
+Psquid:S1659"#Declare "equal" on a separate line.(ü£ÔôHÏ?RMINORZ
+CODE_SMELL
+’squid:S1845œ"bRename method "equal" to prevent any misunderstanding/clash with field "equal" defined on line 16.(õ¬úHĞ?RBLOCKERZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(È§˜áùÿÿÿÿH×?RMINORZ
+CODE_SMELL
+squid:S1845³"^Rename method "sum" to prevent any misunderstanding/clash with field "sum" defined on line 16.(ÓÉ½úHÑ?RBLOCKERZ
+CODE_SMELL
+isquid:S2130ù";Use "Float.parseFloat" for this string-to-float conversion.(îÔÁHø?RMINORZ
+CODE_SMELL
+nsquid:S2130è";Use "Float.parseFloat" for this string-to-float conversion.(ºàÄ´şÿÿÿÿHì?RMINORZ
+CODE_SMELL
+hsquid:S1161é":Add the "@Override" annotation above this method signature(í‰±H‚@RMAJORZ
+CODE_SMELL
+ssquid:S2147—"ECombine this catch with the one at line 277, which has the same body.(”ı¾Hô?RMINORZ
+CODE_SMELL
+fsquid:S1197"8Move the array designator from the variable to the type.(ëìËâHı?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheckı"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHë?RMAJORZ
+CODE_SMELL
+Rsquid:S1659" Declare "s2" on a separate line.(¯¥«ÜùÿÿÿÿHÅ?RMINORZ
+CODE_SMELL
+k
+squid:S106–"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿHü?RMAJORZ
+CODE_SMELL
+nsquid:S2130Ò";Use "Float.parseFloat" for this string-to-float conversion.(ºàÄ´şÿÿÿÿHç?RMINORZ
+CODE_SMELL
+ˆsquid:S1221œ"aEither override Object.equals(Object obj), or totally rename the method to prevent any confusion.(õ¬úHá?RMAJORZBUG
+ssquid:S2147À"ECombine this catch with the one at line 318, which has the same body.(”ı¾Hå?RMINORZ
+CODE_SMELL
+ssquid:S2147Ä"ECombine this catch with the one at line 194, which has the same body.(”ı¾Hâ?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheckø"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿH÷?RMAJORZ
+CODE_SMELL
+ssquid:HiddenFieldCheck£"5Rename "f" which hides the field declared at line 14.(ª†õòûÿÿÿÿHæ?RMAJORZ
+CODE_SMELL
+ssquid:HiddenFieldCheck¶"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHè?RMAJORZ
+CODE_SMELL
+isquid:S2130ã";Use "Float.parseFloat" for this string-to-float conversion.(îÔÁHö?RMINORZ
+CODE_SMELL
+ssquid:S2147ğ"ECombine this catch with the one at line 238, which has the same body.(”ı¾Hï?RMINORZ
+CODE_SMELL
+ssquid:S2147®"ECombine this catch with the one at line 172, which has the same body.(”ı¾Hÿ?RMINORZ
+CODE_SMELL
+isquid:S2130·";Use "Float.parseFloat" for this string-to-float conversion.(îÔÁHé?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheckÌ"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHğ?RMAJORZ
+CODE_SMELL
+`squid:S1199¢"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿHÀ?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheckÑ"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿH€@RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(»ĞèÈüÿÿÿÿHş?RMINORZ
+CODE_SMELL
+Msquid:S1659" Declare "f1" on a separate line.(ü£ÔôHÆ?RMINORZ
+CODE_SMELL
+—squid:S1845É"bRename method "minus" to prevent any misunderstanding/clash with field "minus" defined on line 16.(ü”œƒûÿÿÿÿHÒ?RBLOCKERZ
+CODE_SMELL
+esquid:S1197["8Move the array designator from the variable to the type.(ëìËâHÖ?RMINORZ
+CODE_SMELL
+ssquid:HiddenFieldCheck²"5Rename "f" which hides the field declared at line 14.(ï®¤ßıÿÿÿÿHí?RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(Åí“ûøÿÿÿÿHÙ?RMINORZ
+CODE_SMELL
+Msquid:S1659" Declare "f3" on a separate line.(ü£ÔôHÎ?RMINORZ
+CODE_SMELL
+nsquid:S2130¼";Use "Float.parseFloat" for this string-to-float conversion.(ºàÄ´şÿÿÿÿHî?RMINORZ
+CODE_SMELL
+Rsquid:S1659" Declare "s1" on a separate line.(¯¥«ÜùÿÿÿÿHÄ?RMINORZ
+CODE_SMELL

@@ -1,0 +1,26 @@
+
+l
+squid:S106X"9Replace this use of System.out or System.err by a logger.(¯ÅíË8ÈŠ¬ÜÅ-HÍRMAJORZ
+CODE_SMELL
+zsquid:S2095 "MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¾¡½ßÿÿÿÿÿHÇRBLOCKERZBUG
+Xsquid:S1148;"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHÉRMINORZVULNERABILITY
+~squid:S2095$"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÉøÙ´8ÿºæÜÅ-HØRBLOCKERZBUG
+l
+squid:S106a"9Replace this use of System.out or System.err by a logger.(Û‡È×8æî—İÅ-HßRMAJORZ
+CODE_SMELL
+e
+squid:S1064"9Replace this use of System.out or System.err by a logger.(Ã¸œİHİRMAJORZ
+CODE_SMELL
+j
+squid:S106G"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿHÁRMAJORZ
+CODE_SMELL
+Zsquid:S4925"-Remove this "Class.forName()", it is useless.(ùíÄéHÃRMAJORZ
+CODE_SMELL
+fsquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8æî—İÅ-HŞRCRITICALZ
+CODE_SMELL
+_squid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8–ò›İÅ-HàRMINORZVULNERABILITY
+osquid:S2095,"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(à’ëHÄRBLOCKERZBUG
+q
+squid:S106]"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8ÈŠ¬ÜÅ-HÎRMAJORZ
+CODE_SMELL
+Wsquid:S2068" Remove this hard-coded password.(ÜÕÄÏÿÿÿÿÿHÆRBLOCKERZVULNERABILITY

@@ -1,0 +1,28 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(§Ò∫∫Hï9RMAJORZ
+CODE_SMELL
+e
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(¢–£‘Hó9RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ùÚåòHò9RMAJORZ
+CODE_SMELL
+j
+squid:S106	"9Replace this use of System.out or System.err by a logger.(„”Ô±˙ˇˇˇˇHñ9RMAJORZ
+CODE_SMELL
+_squid:S4973"9Use the "equals" method if value comparison was intended.(èîîÆHë9RMAJORZBUG
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÙŸ‚Hô9RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ùÚåòHö9RMAJORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÙŸ‚Hõ9RMAJORZ
+CODE_SMELL
+Lsquid:S2129" Remove this "String" constructor(ç‚¸*Hî9RMAJORZ
+CODE_SMELL
+esquid:S1197"8Move the array designator from the variable to the type.(ÿ±√ˇHì9RMINORZ
+CODE_SMELL

@@ -1,0 +1,18 @@
+
+|squid:S11922"FDefine a constant instead of duplicating this literal "Actor" 3 times.(Ù¾Ò8ªŠŒ¼Å-H–RCRITICALZ
+CODE_SMELL
+squid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(·¡¢¦8À¾³˜Å-H¿RMAJORZ
+CODE_SMELL
+squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‘–îÿ8ÛµÅ-H¾RMAJORZ
+CODE_SMELL
+q
+squid:S106U"9Replace this use of System.out or System.err by a logger.(óúãûÿÿÿÿ8¤ÿ«‹Å-H¼RMAJORZ
+CODE_SMELL
+„squid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(ßê¶Ýþÿÿÿÿ8ÛµÅ-HÁRMAJORZ
+CODE_SMELL
+„squid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(úÔ¤¯üÿÿÿÿ8ÙèÍŒÅ-HÂRMAJORZ
+CODE_SMELL
+nsquid:UselessImportCheck".Remove this unused import 'java.util.HashSet'.(Ê‚êX8À¾³˜Å-H½RMINORZ
+CODE_SMELL
+squid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(à¿ÃÏ8À¾³˜Å-HÀRMAJORZ
+CODE_SMELL

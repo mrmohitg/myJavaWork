@@ -1,0 +1,30 @@
+package myJava.jdbc;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Types;
+
+public class CallFunction {
+
+	static Connection connection = null;
+	public static void main(String[] args) {
+
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			connection = DriverManager.getConnection(url, "system", "oracle");
+			CallableStatement cs = connection.prepareCall("{?=call sum22(?,?)}");
+			cs.setInt(2, 1);
+			cs.setInt(3, 3300);
+			cs.registerOutParameter(1, Types.INTEGER);
+			cs.execute();
+			int a = cs.getInt(1);
+			System.out.println(a);
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

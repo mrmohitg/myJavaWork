@@ -1,0 +1,12 @@
+
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‰¨€≠H¯=RMAJORZ
+CODE_SMELL
+osquid:S2166"CRename this class to remove "Exception" or correct its inheritance.(¶ç–+Hˆ=RMAJORZ
+CODE_SMELL
+lsquid:S3518"CMake sure this expression can't be zero before doing this division.(ÔªäÛHÛ=RCRITICALZBUG
+Üsquid:S1488"YImmediately return this expression instead of assigning it to the temporary variable "x".(ÔªäÛHÙ=RMINORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(Å…ÍóH˜=RMAJORZ
+CODE_SMELL

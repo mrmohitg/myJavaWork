@@ -1,0 +1,19 @@
+package myJava.collections.arrayList;
+
+import java.util.ArrayList;
+
+
+
+/**
+ * @author Mohit
+ * 
+ * This program is used to get all the element of array list via for loop
+ */
+public class ArrayListDemo4 {
+
+	public static void main(String[] args) {
+		ArrayList<ArrayList> arrayList = new ArrayList<>();
+		System.out.println(arrayList.size());
+		
+	}
+}

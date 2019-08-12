@@ -1,0 +1,39 @@
+
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(”ÁŠƒ8ó’ßµ³-H·RMAJORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(¡Ò¹şÿÿÿÿ8ãµ³-HºRMAJORZ
+CODE_SMELL
+‹squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©àÅ’şÿÿÿÿ8ëµ³-H§RMINORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(áöÛÄşÿÿÿÿ8ÚÜµ³-H´RMAJORZ
+CODE_SMELL
+qsquid:S1197"8Move the array designator from the variable to the type.(©àÅ’şÿÿÿÿ8ëµ³-H«RMINORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ùğóşÿÿÿÿ8¾Û¥´³-HRMAJORZ
+CODE_SMELL
+qsquid:S1197"8Move the array designator from the variable to the type.(øÓñöûÿÿÿÿ8ëµ³-H­RMINORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ïñ²µ8˜üæµ³-H¾RMAJORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢Ç–‹8¾Ì÷´³-HŸRMAJORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(ù—¥‚8ëµ³-H®RMAJORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(–ÂŸşÿÿÿÿ8¢åµ³-H¼RMAJORZ
+CODE_SMELL
+qsquid:S1197"8Move the array designator from the variable to the type.(¢á‡ãùÿÿÿÿ8ëµ³-H¬RMINORZ
+CODE_SMELL
+k
+squid:S106"9Replace this use of System.out or System.err by a logger.(üª8í¥éµ³-H¿RMAJORZ
+CODE_SMELL
+l
+squid:S106 "9Replace this use of System.out or System.err by a logger.(îŸ­8¹’ìµ³-HÀRMAJORZ
+CODE_SMELL

@@ -1,0 +1,18 @@
+
+¸%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(²Á€œüÿÿÿÿHù;RMINORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(Å°á,Hö;RMAJORZ
+CODE_SMELL
+jsquid:S1197"8Move the array designator from the variable to the type.(²Á€œüÿÿÿÿHû;RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(É‘ÕÅÿÿÿÿÿH÷;RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÝŸ‚ìHø;RMAJORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "br" local variable.(ßÅÍ”Hü;RMINORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "br".(ßÅÍ”Hú;RMAJORZ
+CODE_SMELL

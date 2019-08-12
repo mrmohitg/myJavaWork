@@ -1,0 +1,21 @@
+
+jsquid:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿH/RMINORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿH’/RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ó‚ëìH‘/RMAJORZ
+CODE_SMELL
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(Èá·şıÿÿÿÿH/RMAJORZ
+CODE_SMELL
+squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š” ‘HŒ/RMINORZ
+CODE_SMELL
+bsquid:S1854"5Remove this useless assignment to local variable "D".(Š” ‘H/RMAJORZ
+CODE_SMELL
+„squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÉÀçùÿÿÿÿH‹/RMINORZ
+CODE_SMELL
+lsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€H/RMAJORZBUG
+Ssquid:S1481"&Remove this unused "D" local variable.(Š” ‘H“/RMINORZ
+CODE_SMELL
