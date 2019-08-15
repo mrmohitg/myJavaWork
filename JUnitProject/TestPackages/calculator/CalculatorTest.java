@@ -33,8 +33,9 @@ public class CalculatorTest {
      */
 
     @Test
+    @Ignore("I don't want to test now.")
     public void testMain() {
-   
+    	assertFalse(true);
 
     }
     
