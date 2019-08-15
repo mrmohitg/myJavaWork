@@ -5,7 +5,92 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-08-14T21:05:56Z</updated>
+  <updated>2019-08-15T13:57:12Z</updated>
+  <entry>
+    <title>Announcing Spring Cloud Function 3.0.0.M2</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/08/15/announcing-spring-cloud-function-3-0-0-m2" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oleg Zhurakousky</name>
+    </author>
+    <id>tag:spring.io,2019-08-15:3773</id>
+    <updated>2019-08-15T13:57:12Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the second Milestone of the Spring Cloud Function 3.0.0.M2. &lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: Spring Cloud Function 3.0.0.M1 was primarily to establish compatibility with Spring Boot 2.2.x. and therefore went unannounced. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Spring Cloud Function 3.0.0.M2 modules are available for use in the &lt;a href="https://repo.spring.io/libs-milestone-local/org/springframework/cloud/"&gt;Spring Milestone&lt;/a&gt; repository. &lt;/p&gt;&lt;h3&gt;&lt;a href="#quick-highlights" class="anchor" name="quick-highlights"&gt;&lt;/a&gt;Quick highlights:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Boot 2.2.x&lt;/li&gt;
+  &lt;li&gt;Enhanced deployer (requires a separate blog)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#notable-features-and-enhancements" class="anchor" name="notable-features-and-enhancements"&gt;&lt;/a&gt;Notable features and enhancements:&lt;/h3&gt;&lt;h5&gt;&lt;a href="#function-arity-multiple-inputs-outputs" class="anchor" name="function-arity-multiple-inputs-outputs"&gt;&lt;/a&gt;Function arity (multiple inputs/outputs)&lt;/h5&gt;
+&lt;p&gt;One of the biggest features introduced with this milestone is support for functions with multiple inputs and outputs. Important thing to point out is that this feature only makes sense in reactive world where you may want to pass several streams to a function for purposes of doing some type of aggregate/merge operation on such streams. For conventional cases you can always send multiple arguments using a Collection of some type.&lt;/p&gt;
+&lt;p&gt;To represent multiple inputs/outputs in &lt;em&gt;the type safe way&lt;/em&gt; to benefit from type conversion and other features mentioned earlier, we’ve chosen &lt;code&gt;Tuple&lt;/code&gt; library from &lt;a href="https://projectreactor.io/docs/core/release/api/index.html?reactor/util/function/Tuples.html"&gt;project reactor&lt;/a&gt;, given that spring-cloud-function had it as a dependency at its core from its inception. However, in the future we also intend to support types like &lt;code&gt;BiFunction&lt;/code&gt; as well as POJO-style functions if we can determine the arity and types of inputs and outputs through some type of convention. &lt;/p&gt;
+&lt;p&gt;While the feature is new and in the process of being enhanced, it’s already being utilised by few internal projects and you can try it as well. Here is an example:&lt;/p&gt;
+&lt;p&gt;Assume the following function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+public Function&amp;lt;Tuple2&amp;lt;Flux&amp;lt;String&amp;gt;, Flux&amp;lt;Integer&amp;gt;&amp;gt;, Flux&amp;lt;?&amp;gt;[]&amp;gt; repeater() {&#xD;
+  return tuple -&amp;gt; {&#xD;
+    Flux&amp;lt;String&amp;gt; stringFlux = tuple.getT1();&#xD;
+    Flux&amp;lt;Integer&amp;gt; integerFlux = tuple.getT2();&#xD;
+&#xD;
+    Flux&amp;lt;Integer&amp;gt; sharedIntFlux = integerFlux.publish().autoConnect(2);&#xD;
+&#xD;
+    Flux&amp;lt;String&amp;gt; repeated = stringFlux&#xD;
+      .zipWith(sharedIntFlux)&#xD;
+      .flatMap(t -&amp;gt; &#xD;
+            Flux.fromIterable(Collections.nCopies(t.getT2(), t.getT1())));&#xD;
+&#xD;
+    Flux&amp;lt;Integer&amp;gt; sum = sharedIntFlux&#xD;
+	.buffer(3, 1)&#xD;
+	.map(l -&amp;gt; l.stream().mapToInt(Integer::intValue).sum());&#xD;
+&#xD;
+    return new Flux[] { repeated, sum };&#xD;
+  };&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can invoke it as such:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;Function&amp;lt;Tuple2&amp;lt;Flux&amp;lt;String&amp;gt;, Flux&amp;lt;Integer&amp;gt;&amp;gt;, Flux&amp;lt;?&amp;gt;[]&amp;gt; repeater = catalog.lookup(&amp;quot;repeater&amp;quot;);&#xD;
+Flux&amp;lt;String&amp;gt; stringStream = Flux.just(&amp;quot;one&amp;quot;, &amp;quot;two&amp;quot;, &amp;quot;three&amp;quot;);&#xD;
+Flux&amp;lt;Integer&amp;gt; intStream = Flux.just(3, 2, 1);&#xD;
+Flux&amp;lt;?&amp;gt;[] result = repeater.apply(Tuples.of(stringStream, intStream));&#xD;
+result[0].subscribe(System.out::println);&#xD;
+result[1].subscribe(System.out::println);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There will be a separate blog on his subject in the future.&lt;/p&gt;&lt;h5&gt;&lt;a href="#choice-of-programming-styles-reactive-imperative" class="anchor" name="choice-of-programming-styles-reactive-imperative"&gt;&lt;/a&gt;Choice of programming styles - reactive, imperative&lt;/h5&gt;
+&lt;p&gt;As before, functions could be implemented in imperative or reactive style via &lt;a href="https://projectreactor.io/"&gt;project reactor&lt;/a&gt;. However, in the previous versions we would &lt;em&gt;always&lt;/em&gt; apply reactive transformation on functions implemented using imperative style. For example, &lt;code&gt;Function&amp;lt;Foo, Foo&amp;gt;&lt;/code&gt; would become &lt;code&gt;Function&amp;lt;Flux&amp;lt;Foo&amp;gt;, Flux&amp;lt;Foo&amp;gt;&amp;gt;&lt;/code&gt;. With this release, this is no longer the case. Functions implemented in the imperative way could be looked up and invoked &lt;em&gt;as is&lt;/em&gt; (imperative) or as &lt;em&gt;reactive&lt;/em&gt;.&lt;br/&gt;For example, let&amp;rsquo;s assume the following configuration:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+publci Function&amp;lt;String, String&amp;gt; uppercase() {&#xD;
+	return v -&amp;gt; v.toUpperCase();&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can access this function as it is written:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;Function&amp;lt;String, String&amp;gt; function = functionCatalog.lookup(&amp;quot;uppercase&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or as reactive equivalent:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;Function&amp;lt;Flux&amp;lt;String&amp;gt;, Flux&amp;lt;String&amp;gt;&amp;gt; reactiveFunction = functionCatalog.lookup(&amp;quot;uppercase&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Spring Cloud Function will automatically adapt.&lt;/p&gt;&lt;h5&gt;&lt;a href="#transparent-type-conversion-of-inputs-and-outputs" class="anchor" name="transparent-type-conversion-of-inputs-and-outputs"&gt;&lt;/a&gt;Transparent type conversion of inputs and outputs.&lt;/h5&gt;
+&lt;p&gt;One of the new features that comes with this milestone is transparent type conversion at the function core, so while some of it was already present in the web adapter, it is now available at the level of function invocation allowing any type of function consumers (not just web) to benefit from it. One of the primary benefits of this feature is realised when composing functions (for more on this later).&lt;br/&gt;For example, assume the following functions: &lt;code&gt;Function&amp;lt;Foo, Foo&amp;gt; foo()&lt;/code&gt; and &lt;code&gt;Function&amp;lt;Bar, Bar&amp;gt; bar()&lt;/code&gt; composed as &lt;code&gt;foo|bar&lt;/code&gt;. While it would not work in the previous versions given type incompatibility between output of one and input of another, it is supported now providing the appropriate &lt;em&gt;conversion strategies&lt;/em&gt; are available.&lt;br/&gt;Such &lt;em&gt;conversion strategies&lt;/em&gt; are standard Spring&amp;rsquo;s &lt;code&gt;ConversionService&lt;/code&gt; and &lt;code&gt;MessageConverters&lt;/code&gt;. And while we&amp;rsquo;re still in the process of refining this feature and providing detailed documentation, the &lt;code&gt;ConversionService&lt;/code&gt; and &lt;code&gt;MessageConverters&lt;/code&gt; that work for most cases (e.g., JSON) are already initialised by default.&lt;/p&gt;
+&lt;p&gt;For example, assume the following function configuration:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+public Function&amp;lt;Person, Person&amp;gt; uppercasePerson() {&#xD;
+  return person -&amp;gt; {&#xD;
+    return new Person(person.getName().toUpperCase(), person.getId());&#xD;
+  };&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To benefit from &lt;code&gt;MessageConverters&lt;/code&gt; we can invoke this function as &lt;code&gt;Function&amp;lt;Message&amp;lt;String&amp;gt;, Person&amp;gt;&lt;/code&gt; (or byte[] as a payload) thus employing the available JSON &lt;code&gt;MessageConverter&lt;/code&gt; to convert &lt;code&gt;String&lt;/code&gt; to &lt;code&gt;Person&lt;/code&gt; (see below).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;Function&amp;lt;Message&amp;lt;String&amp;gt;, Person&amp;gt; uppercasePerson = catalog.lookup(&amp;quot;uppercasePerson&amp;quot;);&#xD;
+Person person =  uppercasePerson.apply(MessageBuilder.withPayload(&amp;quot;{\&amp;quot;name\&amp;quot;:\&amp;quot;bill\&amp;quot;,\&amp;quot;id\&amp;quot;:2}&amp;quot;).build()); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Keep in mind that for functions written using reactive style nothing changes and the same &lt;em&gt;conversion strategies&lt;/em&gt; are applied.&lt;/p&gt;&lt;h5&gt;&lt;a href="#function-composition-and-adaptation" class="anchor" name="function-composition-and-adaptation"&gt;&lt;/a&gt;Function composition and adaptation;&lt;/h5&gt;
+&lt;p&gt;While function composition is not a new feature to Spring Cloud Function, it was refined with this milestone. &lt;/p&gt;
+&lt;p&gt;As before, you can compose functions via &amp;ldquo;|&amp;rdquo; or &amp;quot;,” characters. &lt;/p&gt;
+&lt;p&gt;As an additional benefit you can compose functions with different programming styles (e.g., reactive and imperative), you can compose &lt;em&gt;Supplier&lt;/em&gt; with &lt;em&gt;Function&lt;/em&gt;, &lt;em&gt;Supplier&lt;/em&gt; with &lt;em&gt;Consumer&lt;/em&gt;, &lt;em&gt;Function&lt;/em&gt; with &lt;em&gt;Consumer&lt;/em&gt; etc., - we will adapt.&lt;br/&gt;You can compose functions where output of the producer function does not match the input of the consumer function - we will convert.&lt;br/&gt;There will be a separate blog on this subject in the future and we&amp;rsquo;re also in the process of refining documentation.&lt;/p&gt;&lt;h4&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h4&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-function"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-function/"&gt;GitHub&lt;/a&gt; . &lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.1.0.RC2 Released!</title>
     <link rel="alternate" href="https://spring.io/blog/2019/08/14/spring-boot-for-apache-geode-pivotal-gemfire-1-1-0-rc2-released" />
@@ -1068,31 +1153,6 @@ Of course, if you have not done so already, you should first read the &lt;a href
     <updated>2019-08-02T05:58:08Z</updated>
     <content type="html">&lt;p&gt;Hi Spring fans! In today&amp;rsquo;s installment, &lt;a href="http://twitter.com/Starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Gradle Developer Advocate &lt;a href="http://twitter.com/codeJENNerator"&gt;Jenn Strater (@codeJENNerator)&lt;/a&gt; about Gradle, Groovy, Spring REST Docs, and so much more.&lt;/p&gt;
 &lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/659985764&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - July 30, 2019</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/07/30/this-week-in-spring-july-30-2019" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-07-30:3754</id>
-    <updated>2019-07-30T19:41:18Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;. This week I&amp;rsquo;m in sweet San Francisco, soaking up the sun and enjoying the fun of summer. Sure, I&amp;rsquo;ve got a few meetings, and appearances, etc., but it is very nice to be home. By the by, I&amp;rsquo;ll be speaking at the upcoming &lt;a href="https://www.meetup.com/sfjava/"&gt;San Francisco Java User Group&lt;/a&gt; - come hang out and say hi! &lt;/p&gt;
-&lt;p&gt;Anyway, lots of good stuff (as usual), so let&amp;rsquo;s get to it. &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/07/30/spring-cloud-data-flow-2-2-0-released"&gt;Spring Cloud Data Flow 2.2.0 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Do not miss this extra special episode of &lt;a href="https://spring.io/blog/2019/07/26/spring-team-legend-oliver-drotbohm"&gt;&lt;em&gt;A Bootiful Podcast&lt;/em&gt; with Spring team legend Oliver Drotbohm&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/07/24/simplifying-the-spring-cloud-release-train"&gt;Simplifying the Spring Cloud Release Train&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out this great demonstrationn of &lt;a href="https://www.youtube.com/watch?time_continue=50&amp;v=ecNfohOuzMI"&gt;Spring Cloud Task / Spring Batch-job executions and the monitoring of it using Spring Cloud Data Flow 2.2 with InfluxDB and Grafana in Spring Cloud Data Flow 2.2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Hey Milwaukee, come hear Spring Cloud lead Spencer Gibb talk about &lt;a href="https://www.meetup.com/Chicago-Spring-User-Group/events/262612322/"&gt;Spring Cloud Gateway&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/springboot/status/1155735050962575360"&gt;Good news everyone! Spring Boot supports Java 13&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/cloudfoundry/status/1154800946850881537"&gt;Happy Sys-Admin appreciation day!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I love the possibilities of &lt;a href="https://twitter.com/r_arni/status/1153884012622032896"&gt;Spring Cloud Gateway, as is well illustrated in this tweet&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A nice post on Mkyong.com with &lt;a href="https://www.mkyong.com/spring-boot/spring-boot-jdbc-examples/"&gt;Spring Boot JDBC Examples&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;We love our community members; &lt;a href="https://twitter.com/springcentral/status/1153790473032437767"&gt;thanks Vedran Pavic!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

@@ -8,7 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	ApplicationContext context = new ClassPathXM
-        System.out.println( "Hello World!" );
+    	/*ApplicationContext context = new ClassPathXML
+        System.out.println( "Hello World!" );*/
     }
 }

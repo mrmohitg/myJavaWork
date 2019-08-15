@@ -28,8 +28,6 @@ Rsrc/main/java/springintroxml/spring_foundations_xml/services/InventoryService.j
 ‡
 Wsrc/main/java/springintroxml/spring_foundations_xml/services/impl/OrderServiceImpl.java,2\1\210c567dc07d9c77c0682e4dd08d56e3de13ad92
 X
-(src/main/resources/ApplicationCinfig.xml,0\4\04e6733ebbaf033c9fc9afeda203e4ae7f4e1317
-X
 (src/main/resources/ApplicationConfig.xml,e\0\e029c3662a9ebe2b17678c2b871ae74faf2513a5
 l
 <src/main/java/springintroxml/spring_foundations_xml/App.java,a\1\a19bb885d282a8ff39cad955301a800e9a13f225
