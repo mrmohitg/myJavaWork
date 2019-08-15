@@ -4,6 +4,7 @@
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="org.aspectj:1.8.10.201704242114"/>
 		<item value="org.eclipse.ajdt:2.2.4.201704242114"/>
+		<item value="org.eclipse.buildship:3.1.1.v20190701-1615"/>
 		<item value="org.eclipse.cft.server.core.feature:1.2.2.v201706141943"/>
 		<item value="org.eclipse.cft.server.ui.feature:1.0.9.v201706141943"/>
 		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>
@@ -125,6 +126,17 @@
 		<item value="org.springsource.sts:3.9.0.201707061823-RELEASE"/>
 		<item value="zigen.plugin.future:1.2.2.v20101009"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Tutorials\Lynda\Advanced Java Programming\Ex_Files_Java_Adv_Training\Ex_Files_Java_Adv_Training\ExerciseFiles\02_Java7NF"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">

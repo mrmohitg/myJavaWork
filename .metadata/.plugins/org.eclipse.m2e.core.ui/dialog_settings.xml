@@ -74,16 +74,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="springintroxml.spring_foundations_xml"/>
-			<item value="springintro.spring_foundations"/>
 		</list>
 		<list key="groupId">
-			<item value="springintroxml"/>
-			<item value="springintro"/>
 		</list>
 		<list key="artifactId">
-			<item value="spring-foundations-xml"/>
-			<item value="spring-foundations"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
