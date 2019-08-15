@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<list key="installedFeatures">
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
+		<item value="de.jcup.yamleditor:1.4.2"/>
 		<item value="org.aspectj:1.8.10.201704242114"/>
 		<item value="org.eclipse.ajdt:2.2.4.201704242114"/>
 		<item value="org.eclipse.buildship:3.1.1.v20190701-1615"/>

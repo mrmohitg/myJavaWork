@@ -33,6 +33,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Tutorials\Lynda\Advanced Java Programming\Ex_Files_Java_Adv_Training\Ex_Files_Java_Adv_Training\ExerciseFiles\02_Java7NF\StringsInSwitch"/>
 			<item value="E:\JavaWorkbook\spring_mvc_project"/>
 			<item value="E:\JavaWorkbook\reservations"/>
 			<item value="E:\Learning Spring with Spring Boot\reservations"/>
@@ -60,8 +61,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="E:\JavaWorkbook\spring-foundations-xml"/>
 			<item value="E:\JavaWorkbook"/>
+			<item value="E:\JavaWorkbook\JUnitProject"/>
+			<item value="E:\JavaWorkbook\spring-foundations-xml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -74,10 +76,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="JUnitMavenProject.mavenExample"/>
 		</list>
 		<list key="groupId">
+			<item value="JUnitMavenProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="mavenExample"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
