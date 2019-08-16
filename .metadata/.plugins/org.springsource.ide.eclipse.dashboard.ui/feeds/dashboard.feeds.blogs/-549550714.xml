@@ -5,7 +5,25 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-08-15T13:57:12Z</updated>
+  <updated>2019-08-16T04:29:19Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Brian Clozel</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/08/16/a-bootiful-podcast-brian-clozel" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-08-16:3774</id>
+    <updated>2019-08-16T04:29:19Z</updated>
+    <content type="html">&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/666530666&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
+&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="http://twitter.com/Starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to &lt;a href="http://twitter.com/SpringBoot"&gt;Spring Boot&lt;/a&gt; and Spring Framework engineer &lt;a href="http://twitter.com/BClozel"&gt;Brian Clozel (@bclozel)&lt;/a&gt; about all the new features - &lt;a href="http://twitter.com/RSocketIO"&gt;RSocket&lt;/a&gt; support, performance improvements and more - in Spring Framework 5.2 and Spring Boot 2.2.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Brian on Twitter: &lt;a href="http://twitter.com/BClozel"&gt;@bclozel &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Boot on Twitter: &lt;a href="http://twitter.com/SpringBoot"&gt;@SpringBoot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the place to get started with all things Spring: &lt;a href="http://start.Spring.io"&gt;start.Spring.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Announcing Spring Cloud Function 3.0.0.M2</title>
     <link rel="alternate" href="https://spring.io/blog/2019/08/15/announcing-spring-cloud-function-3-0-0-m2" />
@@ -14,7 +32,7 @@
       <name>Oleg Zhurakousky</name>
     </author>
     <id>tag:spring.io,2019-08-15:3773</id>
-    <updated>2019-08-15T13:57:12Z</updated>
+    <updated>2019-08-15T13:57:00Z</updated>
     <content type="html">&lt;p&gt;We are pleased to announce the second Milestone of the Spring Cloud Function 3.0.0.M2. &lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;NOTE: Spring Cloud Function 3.0.0.M1 was primarily to establish compatibility with Spring Boot 2.2.x. and therefore went unannounced. &lt;/p&gt;
@@ -57,10 +75,10 @@ Flux&amp;lt;?&amp;gt;[] result = repeater.apply(Tuples.of(stringStream, intStrea
 result[0].subscribe(System.out::println);&#xD;
 result[1].subscribe(System.out::println);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There will be a separate blog on his subject in the future.&lt;/p&gt;&lt;h5&gt;&lt;a href="#choice-of-programming-styles-reactive-imperative" class="anchor" name="choice-of-programming-styles-reactive-imperative"&gt;&lt;/a&gt;Choice of programming styles - reactive, imperative&lt;/h5&gt;
+&lt;p&gt;There will be a separate blog on this subject in the future.&lt;/p&gt;&lt;h5&gt;&lt;a href="#choice-of-programming-styles-reactive-imperative" class="anchor" name="choice-of-programming-styles-reactive-imperative"&gt;&lt;/a&gt;Choice of programming styles - reactive, imperative&lt;/h5&gt;
 &lt;p&gt;As before, functions could be implemented in imperative or reactive style via &lt;a href="https://projectreactor.io/"&gt;project reactor&lt;/a&gt;. However, in the previous versions we would &lt;em&gt;always&lt;/em&gt; apply reactive transformation on functions implemented using imperative style. For example, &lt;code&gt;Function&amp;lt;Foo, Foo&amp;gt;&lt;/code&gt; would become &lt;code&gt;Function&amp;lt;Flux&amp;lt;Foo&amp;gt;, Flux&amp;lt;Foo&amp;gt;&amp;gt;&lt;/code&gt;. With this release, this is no longer the case. Functions implemented in the imperative way could be looked up and invoked &lt;em&gt;as is&lt;/em&gt; (imperative) or as &lt;em&gt;reactive&lt;/em&gt;.&lt;br/&gt;For example, let&amp;rsquo;s assume the following configuration:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
-publci Function&amp;lt;String, String&amp;gt; uppercase() {&#xD;
+public Function&amp;lt;String, String&amp;gt; uppercase() {&#xD;
 	return v -&amp;gt; v.toUpperCase();&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -1140,19 +1158,6 @@ Of course, if you have not done so already, you should first read the &lt;a href
 &lt;p&gt;Spring Framework &lt;code&gt;5.1.9&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.1.9.RELEASE"&gt;38 fixes and improvements&lt;/a&gt; and is a recommended upgrade for all 5.x users. Spring Framework &lt;code&gt;5.0.15&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.0.15.RELEASE"&gt;16 selected fixes&lt;/a&gt; while Spring Framework &lt;code&gt;4.3.25&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v4.3.25.RELEASE"&gt;10 selected fixes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Next up is Spring Framework 5.2 RC1 coming up early next week followed by the usual Spring Boot releases, stay tuned!&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.1.9.RELEASE/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Gradle Developer Advocate Jenn Strater</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/08/02/a-bootiful-podcast-gradle-developer-advocate-jenn-strater" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-08-02:3755</id>
-    <updated>2019-08-02T05:58:08Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! In today&amp;rsquo;s installment, &lt;a href="http://twitter.com/Starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Gradle Developer Advocate &lt;a href="http://twitter.com/codeJENNerator"&gt;Jenn Strater (@codeJENNerator)&lt;/a&gt; about Gradle, Groovy, Spring REST Docs, and so much more.&lt;/p&gt;
-&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/659985764&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

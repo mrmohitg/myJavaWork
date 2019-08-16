@@ -125,6 +125,9 @@
 		<item value="org.springsource.sts.cft:3.9.0.201707061823-RELEASE"/>
 		<item value="org.springsource.sts.package:3.9.0.201707061823-RELEASE-e47"/>
 		<item value="org.springsource.sts:3.9.0.201707061823-RELEASE"/>
+		<item value="org.tigris.subversion.clientadapter.svnkit.feature:1.8.12.3"/>
+		<item value="org.tigris.subversion.subclipse.graph.feature:4.2.0.1"/>
+		<item value="org.tigris.subversion.subclipse:4.3.0.201901172050"/>
 		<item value="zigen.plugin.future:1.2.2.v20101009"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
