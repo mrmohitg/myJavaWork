@@ -5,7 +5,167 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-08-16T04:29:19Z</updated>
+  <updated>2019-08-16T16:00:00Z</updated>
+  <entry>
+    <title>Securing Services with Spring Cloud Gateway</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/08/16/securing-services-with-spring-cloud-gateway" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Ben Wilcock</name>
+    </author>
+    <id>tag:spring.io,2019-08-16:3775</id>
+    <updated>2019-08-16T16:00:00Z</updated>
+    <content type="html">&lt;p&gt;So far in this series, we&amp;rsquo;ve covered &lt;a href="getting_started.md"&gt;Getting Started&lt;/a&gt; and &lt;a href="runtime-discovery-and-service-hiding.md"&gt;Hiding Services&lt;/a&gt; with &lt;a href="https://spring.io/projects/spring-cloud-gateway"&gt;Spring Cloud Gateway&lt;/a&gt;. However, when we set about hiding our services, we didn&amp;rsquo;t secure them. In this article, we&amp;rsquo;ll correct this.&lt;/p&gt;
+&lt;p&gt;To secure our services, we&amp;rsquo;ll use the Token Relay pattern supported by OAuth 2.0 and the Javascript Object Signing &amp;amp; Encryption (JOSE) and JSON Web Tokens standards. This will give our users a means to identify themselves, authorize applications to view their profile and access the secured resources behind the gateway.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;All the code for this demo is published online &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-security/2.1.3.RELEASE/single/spring-cloud-security.html#_token_relay"&gt;in GitHub&lt;/a&gt; in the &lt;code&gt;secured-gateway&lt;/code&gt; folder. If you just want to run it without understanding how it was built, skip ahead to the section entitled &amp;ldquo;Running The Demo&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before we run the demo, I want to draw your attention to the major components within it and how they were created. The diagram below shows the overall system design. It consists of a network of three services: a Single Sign-On Server, an API Gateway Server, and a Resource Server.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.spring.io/blog/bwilcock/20190801/demo.png" alt="Diagram illustrating the overarching architecture of the demo" title="Diagram illustrating the overarching architecture of the demo" /&gt;&lt;/p&gt;
+&lt;p&gt;The Resource Server is a regular Spring Boot application hidden behind the API Gateway. The API Gateway is built with Spring Cloud Gateway and delegates the management of user accounts and authorization to the Single Sign-On server. In order to create these three components, there are a number of small but important things to take into account. Let’s take a look at what these were next.&lt;/p&gt;&lt;h2&gt;&lt;a href="#creating-a-user" class="anchor" name="creating-a-user"&gt;&lt;/a&gt;Creating A User&lt;/h2&gt;
+&lt;p&gt;In order to authenticate our users, we need two things: user account records and an OAuth2 compatible Authentication Provider (or server). There are many commercial OAuth2 authentication providers out there, but in our demo, we&amp;rsquo;re going to stick with open-source software and use Cloud Foundry’s User Account &amp;amp; Authentication Server, more commonly referred to as the UAA.&lt;/p&gt;
+&lt;p&gt;The UAA is a Web Archive (WAR) that can be deployed onto any server that supports this format. In our case, we&amp;rsquo;ve chosen the open-source Apache Tomcat server. When running in Tomcat, the UAA provides OAuth and OpenId Connect authentication against its internal user account database.&lt;/p&gt;
+&lt;p&gt;For this demo, we’ve built the UAA and Tomcat into a container image using a &lt;code&gt;Dockerfile&lt;/code&gt; (which you can examine in the &lt;code&gt;uaa&lt;/code&gt; folder). The other item to draw your attention to is the &lt;code&gt;uaa.yml&lt;/code&gt; file. This YAML file will configure our UAA with the user and password to use later when we’re trying to access the Resource Server. It also contains the OAuth2 applications to register, and the keys required to perform JWT token encryption.&lt;/p&gt;
+&lt;p&gt;In the &lt;code&gt;uaa.yml&lt;/code&gt; we tell the UAA to add &lt;code&gt;user1&lt;/code&gt; to its account database and to grant this user the &lt;code&gt;resource.read&lt;/code&gt; scope. This is the scope the Resource Server will require to allow access.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;scim:&#xD;
+  groups:&#xD;
+    email: Access your email address&#xD;
+    resource.read: Allow access with &amp;#39;resource.read&amp;#39;&#xD;
+  users:&#xD;
+    - user1|password|user1@provider.com|first1|last1|uaa.user,profile,email,resource.read
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the &lt;code&gt;uaa.yml&lt;/code&gt; we also register our OAuth2 ‘client’ application. This registration tells the UAA that it should expect an application to identify itself as the &lt;code&gt;gateway&lt;/code&gt; and that this application will use the &lt;code&gt;authorization_code&lt;/code&gt; scheme. The gateway will expect to access various scopes including &lt;code&gt;resource.read&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;oauth:&#xD;
+...&#xD;
+  clients:&#xD;
+    gateway:&#xD;
+      name: gateway&#xD;
+      secret: secret&#xD;
+      authorized-grant-types: authorization_code&#xD;
+      scope: openid,profile,email,resource.read&#xD;
+      authorities: uaa.resource&#xD;
+      redirect-uri: http://localhost:8080/login/oauth2/code/gateway
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#integrating-the-uaa-with-spring-cloud-gateway" class="anchor" name="integrating-the-uaa-with-spring-cloud-gateway"&gt;&lt;/a&gt;Integrating The UAA with Spring Cloud Gateway&lt;/h2&gt;
+&lt;p&gt;As you can see in the &lt;a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-security/2.1.3.RELEASE/single/spring-cloud-security.html#_token_relay"&gt;Spring Cloud Security, OAuth2 Token Relay docs&lt;/a&gt;: &amp;ldquo;Spring Cloud Gateway can forward OAuth2 access tokens to the services it is proxying. In addition to logging in the user and grabbing a token, a filter extracts the access token for the authenticated user and puts it into a request header for downstream requests.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This effectively means that there is very little work involved when integrating our Spring Cloud Gateway server with our chosen security mechanism when using Spring Cloud Security. The gateway will coordinate authentication with the single sign-on server on our behalf and ensure that downstream applications get a copy of the users access token when they need it.&lt;/p&gt;
+&lt;p&gt;In order to configure this feature, the first thing of note is the OAuth2 configuration in our gateway’s &lt;code&gt;application.yml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;security:&#xD;
+    oauth2:&#xD;
+      client:&#xD;
+        registration:&#xD;
+          gateway:&#xD;
+            provider: uaa&#xD;
+            client-id: gateway&#xD;
+            client-secret: secret&#xD;
+            authorization-grant-type: authorization_code&#xD;
+            redirect-uri-template: &amp;quot;{baseUrl}/login/oauth2/code/{registrationId}&amp;quot;&#xD;
+            scope: openid,profile,email,resource.read&#xD;
+        provider:&#xD;
+          uaa:&#xD;
+            authorization-uri: http://localhost:8090/uaa/oauth/authorize&#xD;
+            token-uri: http://uaa:8090/uaa/oauth/token&#xD;
+            user-info-uri: http://uaa:8090/uaa/userinfo&#xD;
+            user-name-attribute: sub&#xD;
+            jwk-set-uri: http://uaa:8090/uaa/token_keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This configuration is doing two things. It’s specifying our OAuth client registration information (which matches the &lt;code&gt;gateway&lt;/code&gt; application that we registered in the UAA earlier), and it is detailing where the OAuth authentication provider’s services can be found (along with some other attributes such as the &lt;code&gt;jwk-set-uri&lt;/code&gt; which the gateway will use to verify the authenticity of the token). This config is essentially enabling our gateway to communicate effectively with the UAA.&lt;/p&gt;
+&lt;p&gt;The next item of interest here is the &lt;code&gt;GatewayApplication.java&lt;/code&gt; class. In this class, we have two things to take note of. The first is the inclusion of an autowired &lt;code&gt;TokenRelayGatewayFilterFactory&lt;/code&gt; and the second is the use of this class as a filter in the route configuration for our Resource Server:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Autowired&#xD;
+private TokenRelayGatewayFilterFactory filterFactory;&#xD;
+&#xD;
+@Bean&#xD;
+public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {&#xD;
+    return builder.routes()&#xD;
+            .route(&amp;quot;resource&amp;quot;, r -&amp;gt; r.path(&amp;quot;/resource&amp;quot;)&#xD;
+              .filters(f -&amp;gt; f.filters(filterFactory.apply())&#xD;
+                .removeRequestHeader(&amp;quot;Cookie&amp;quot;))&#xD;
+            .uri(&amp;quot;http://resource:9000&amp;quot;)) &#xD;
+            .build();&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second is the configuration of the route. As discussed in the &lt;a href="runtime-discovery-and-service-hiding.md"&gt;Hiding Services&lt;/a&gt;, we must expose the Resource Server as a route, otherwise it will remain hidden inside our network. The &lt;code&gt;filterFactory.apply()&lt;/code&gt; method in the route declaration ensures that any exchanges intended for the Resource Server contain a JWT access token. The &lt;code&gt;removeRequestHeader(“Cookie”)&lt;/code&gt; tells the gateway to remove the users “Cookie” header from the request during the routing operation (because downstream services don’t need this, all they need is the JWT &lt;code&gt;access_token&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The YAML configuration below achieves the same thing, but without the need for Java code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+  cloud:&#xD;
+    gateway:&#xD;
+      routes:&#xD;
+        - id: resource&#xD;
+          uri: http://resource:9000&#xD;
+          predicates:&#xD;
+            - Path=/resource&#xD;
+          filters:&#xD;
+            - TokenRelay=&#xD;
+            - RemoveRequestHeader=Cookie
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With our gateway configured this way (using either Java or YAML), any user request heading to the Resource Server on the &lt;code&gt;/resource&lt;/code&gt; route will need a security &lt;code&gt;access_token&lt;/code&gt; in JWT format.&lt;/p&gt;&lt;h2&gt;&lt;a href="#creating-a-resource-server-and-securing-a-resource" class="anchor" name="creating-a-resource-server-and-securing-a-resource"&gt;&lt;/a&gt;Creating a Resource Server and Securing a Resource&lt;/h2&gt;
+&lt;p&gt;The Resource Server now requires only two things. The first is a &lt;code&gt;/resource&lt;/code&gt; endpoint that expects an authentication principal in the form of a JWT token. The second is some configuration to prevent access to the &lt;code&gt;/resource&lt;/code&gt; endpoint unless you have such a token.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;@RestController&lt;/code&gt; endpoint for &lt;code&gt;/resource&lt;/code&gt; expects a Jwt object as a method parameter. This parameter is decorated as the &lt;code&gt;@AuthenticationPrincipal&lt;/code&gt;. The method returns a simple string containing a message. This message confirms the resource was accessed and contains some basic details about the user.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@GetMapping(&amp;quot;/resource&amp;quot;)&#xD;
+public String resource(@AuthenticationPrincipal Jwt jwt) {&#xD;
+    return String.format(&amp;quot;Resource accessed by: %s (with subjectId: %s)&amp;quot; ,&#xD;
+            jwt.getClaims().get(&amp;quot;user_name&amp;quot;),&#xD;
+            jwt.getSubject());&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The security configuration is handled by the &lt;code&gt;SecurityConfig&lt;/code&gt; class. This class contains a bean method that configures the &lt;code&gt;ServerHttpSecurity&lt;/code&gt; object passed as a parameter in the &lt;code&gt;springSecurityFilterChain&lt;/code&gt; method signature. &lt;/p&gt;
+&lt;p&gt;This configuration declares that users asking to access the path &lt;code&gt;/resource&lt;/code&gt; must be authenticated and must have the OAuth2 scope &lt;code&gt;resource.read&lt;/code&gt; in their profile. The line &lt;code&gt;.oauth2ResourceServer().jwt()&lt;/code&gt; is telling the application that it must use the OAuth2 JWT specification as the security scheme.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;public class SecurityConfig {&#xD;
+&#xD;
+  @Bean&#xD;
+  SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {&#xD;
+    http&#xD;
+            .authorizeExchange()&#xD;
+             .pathMatchers(&amp;quot;/resource&amp;quot;).hasAuthority(&amp;quot;SCOPE_resource.read&amp;quot;)&#xD;
+              .anyExchange().authenticated()&#xD;
+              .and()&#xD;
+            .oauth2ResourceServer()&#xD;
+              .jwt();&#xD;
+    return http.build();&#xD;
+  }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, the Resource Server needs to know where it can find the public keys to validate the authenticity of the access token which it has been given. The UAA provides an endpoint which both the Resource Server and the Gateway rely upon at runtime to do this check. The endpoint is configured in the &lt;code&gt;application.yml&lt;/code&gt; for each application:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+  security:&#xD;
+    oauth2:&#xD;
+      resourceserver:&#xD;
+        jwt:&#xD;
+          jwk-set-uri: http://uaa:8090/uaa/token_keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You don’t have to use an endpoint to grab these keys, you can bundle them into your application directly, but we’ve chosen not to here. If you follow the &lt;code&gt;jwk-set-uri&lt;/code&gt; link in a browser when the demo is running, you’ll see something like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.spring.io/blog/bwilcock/20190801/keys.png" alt="An example of the token keys endpoint data showing a JSON object containing public keys" title="An example of the token keys endpoint data showing a JSON object containing public keys" /&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#running-the-demo" class="anchor" name="running-the-demo"&gt;&lt;/a&gt;Running The Demo&lt;/h2&gt;
+&lt;p&gt;As before, we’ll use Docker Compose to keep things simple and emulate a real network. With the code checked out and Docker already running in the background, in the &lt;code&gt;security-gateway&lt;/code&gt; folder, execute the &lt;code&gt;build.sh&lt;/code&gt; script to compile the Resource Server and the Gateway applications into JAR’s and then package these and the UAA into containers.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$&amp;gt; cd security-gateway&#xD;
+$&amp;gt; ./build.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once this process has finished successfully, we can start the demo using &lt;code&gt;docker-compose up&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$&amp;gt; docker-compose up
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When you do this, you will see a lot of output on your screen while all three servers start up, but after a couple of minutes, it should settle down.&lt;/p&gt;
+&lt;p&gt;Now, open a ‘private’ or ‘incognito’ browser window and navigate to &lt;a href="http://localhost:8080/resource"&gt;http://localhost:8080/resource&lt;/a&gt;. Immediately, the gateway will forward your browser to the UAA server and ask you to login using your username and password (in this case &lt;code&gt;user1&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;). The UAA will then ask you to ‘Authorize’ the gateway to read user1’s profile. You’ll be presented with the following screen to do this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.spring.io/blog/bwilcock/20190801/authorize.png" alt="An image showing the UAA autherisation screen used to autherise the application&amp;rsquo;s access to the read dot resource scope" title="An image showing the UAA authorisation screen used to autherise the application&amp;#39;s access to the read dot resource scope" /&gt;&lt;/p&gt;
+&lt;p&gt;Notice in particular the checkbox entitled “Allow access with ‘resource.read’”. It’s this scope that the Resource Server will check before allowing you access to the resource. &lt;/p&gt;
+&lt;p&gt;Once you click ‘Authorize’ you’ll be forwarded to the &lt;code&gt;[/resource][7]&lt;/code&gt; endpoint which will show you some basic details about your user. You’ll see a message similar to this, although your &lt;code&gt;subjectId&lt;/code&gt; will be different:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Resource accessed by: user1 (with subjectId: 43c7681a-6762-451e-8435-d503fd7a0c4d)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This is the resource server confirming you could access the resource, and showing that you used user1’s identity.&lt;/p&gt;
+&lt;p&gt;If you want to see some additional information about user1, navigate to &lt;a href="http://localhost:8080"&gt;http://localhost:8080&lt;/a&gt; where a more complete user detail screen has been provided. It looks something like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.spring.io/blog/bwilcock/20190801/user.png" alt="An image showing the full user details screen available once logged in and authorized" title="An image showing the full user details screen available once logged in and authorized" /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, in the logs, we’ve printed out the JWT token passed to the Resource Server so that you can inspect it. We wouldn’t ever do this in production, but for demo purposes, we felt it would be helpful to see it. It looks something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint bash"&gt;resource | TRACE --- SecuredServiceApplication: ***** JWT Token: eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vbG9jYWxob3N0OjgwODAvdWFhL3Rva2VuX2tleXMiLCJraWQiOiJrZXktaWQtMSIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJm (truncated...)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can copy this token in its entirety from the log and paste it into the JWT Debugger at &lt;a href="https://jwt.io/"&gt;jwt.io&lt;/a&gt;. This utility can parse the token and show you the contents. In the output, you’ll find the username and the scopes associated with the user&amp;rsquo;s profile.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.spring.io/blog/bwilcock/20190801/jwt.png" alt="An image showing the jwt.org screen after parsing the JWT token generated by the UAA and used by our user to access reasources" title="An image showing the jwt.org screen after parsing the JWT token generated by the UAA and used by our user to access reasources" /&gt;&lt;/p&gt;
+&lt;p&gt;The logs themselves are also quite revealing (although the order is not guaranteed). They show much of what’s going on as these three servers interact with each other. To see some edited log highlights with some additional notes, &lt;a href="secured-gateway-access-log.md"&gt;look here&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#finishing-up" class="anchor" name="finishing-up"&gt;&lt;/a&gt;Finishing Up&lt;/h2&gt;
+&lt;p&gt;When you&amp;rsquo;re done, use &lt;code&gt;Ctrl-C&lt;/code&gt; to shut down the Docker services. If for any reason this fails to work, you can also use &lt;code&gt;docker-compose down&lt;/code&gt; from the &lt;code&gt;security-gateway&lt;/code&gt; folder. With either technique, you should see output similar to this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$&amp;gt; docker-compose down &#xD;
+Stopping gateway  ... done&#xD;
+Stopping service  ... done&#xD;
+Stopping registry ... done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Further clean-up of Docker can be achieved using &lt;code&gt;docker-compose rm -f&lt;/code&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#and-finally-hellip" class="anchor" name="and-finally-hellip"&gt;&lt;/a&gt;And Finally&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;Why not have your developer dreams come true this year by signing up for &lt;a href="https://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;? It’s the premier conference for building scalable applications with Spring. Join thousands of other developers to learn, share, and have fun in Austin, TX from October 7th to 10th. Use the discount code S1P_Save200 when registering to save money on your ticket. If you need help convincing your manager try &lt;a href="https://springoneplatform.io/2019/convince-your-manager"&gt;these tips&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Brian Clozel</title>
     <link rel="alternate" href="https://spring.io/blog/2019/08/16/a-bootiful-podcast-brian-clozel" />
@@ -1143,21 +1303,6 @@ Of course, if you have not done so already, you should first read the &lt;a href
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 5.1.9, 5.0.15 and 4.3.25 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/08/02/spring-framework-5-1-9-5-0-15-and-4-3-25-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2019-08-02:3756</id>
-    <updated>2019-08-02T11:10:17Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;5.1.9&lt;/code&gt;, &lt;code&gt;5.0.15&lt;/code&gt;, and &lt;code&gt;4.3.25&lt;/code&gt; are available now.&lt;/p&gt;
-&lt;p&gt;Spring Framework &lt;code&gt;5.1.9&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.1.9.RELEASE"&gt;38 fixes and improvements&lt;/a&gt; and is a recommended upgrade for all 5.x users. Spring Framework &lt;code&gt;5.0.15&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.0.15.RELEASE"&gt;16 selected fixes&lt;/a&gt; while Spring Framework &lt;code&gt;4.3.25&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v4.3.25.RELEASE"&gt;10 selected fixes&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Next up is Spring Framework 5.2 RC1 coming up early next week followed by the usual Spring Boot releases, stay tuned!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.1.9.RELEASE/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
