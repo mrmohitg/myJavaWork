@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
+		<item value="com.aptana.feature.studio:3.6.0.201407100643-7f7D37k6bPlkbrRb8WuT8t_CCL4C"/>
+		<item value="com.aptana.feature:3.6.0.1402537589-B27k88Bma9kxYA5ZR9833355984B"/>
+		<item value="com.aptana.php.feature:3.4.2.201406111917-7J7E-7IObXdeTYVX"/>
+		<item value="com.aptana.pydev.feature:3.0.0.201406111920-7v--7uVyx2EKHY"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="de.jcup.yamleditor:1.4.2"/>
 		<item value="org.aspectj:1.8.10.201704242114"/>
@@ -103,6 +107,7 @@
 		<item value="org.jboss.tools.m2e.wro4j.feature:1.1.0.201406251020"/>
 		<item value="org.jkiss.dbeaver.ide.feature:6.1.3.201907211943"/>
 		<item value="org.jkiss.dbeaver.runtime.feature:6.1.3.201907211943"/>
+		<item value="org.radrails.rails:3.4.2.1400262587-7n-7Z7oKtUqxrXdp"/>
 		<item value="org.sonarlint.eclipse.feature:4.1.0.201901311043"/>
 		<item value="org.sonatype.m2e.buildhelper.feature:0.15.0.201207090124"/>
 		<item value="org.sonatype.m2e.egit.feature:0.14.0.201509090157"/>
