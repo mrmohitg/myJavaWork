@@ -2,24 +2,30 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
+
+	<!-- Provide the Value to bean -->
 	<bean id="triangle" class="learning.spring.Triangle">
 		<property name="type" value="Equilateral" />
 	</bean>
 
+	<!-- Provide the constructor args -->
 	<bean id="circle" class="learning.spring.Circle">
 		<constructor-arg value="Big" />
 	</bean>
 
+	<!-- Provide type to the values to the constructor args -->
 	<bean id="circle1" class="learning.spring.Circle">
 		<constructor-arg type="java.lang.String" value="Big" />
 		<constructor-arg type="int" value="20" />
 	</bean>
 
+	<!-- Constructor value index -->
 	<bean id="rectangle" class="learning.spring.Rectangle">
 		<constructor-arg index="0" value="Smart" />
 		<constructor-arg index="1" value="10" />
 	</bean>
 
+	<!-- Reference Beans -->
 	<bean id="advtriangle" class="learning.spring.AdvanceTriangle">
 		<property name="pointA" ref="zeropoint" />
 		<property name="pointB" ref="firstpoint" />
@@ -41,7 +47,7 @@
 		<property name="y" value="20" />
 	</bean>
 
-
+	<!-- Inner Bean fourtpoint -->
 	<bean id="advcircle" class="learning.spring.AdvanceCircle">
 		<property name="pointP" ref="thirdpoint" />
 		<property name="pointQ">
@@ -58,11 +64,83 @@
 		<property name="y" value="0" />
 	</bean>
 
-
-
 	<bean id="fifthpoint" class="learning.spring.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
+	</bean>
+
+	<!-- Alias of bean -->
+	<alias name="rectangle" alias="rectangle-alias" />
+
+	<!-- Initializing Collections -->
+	<bean id="advtriangle1" class="learning.spring.collections.AdvanceTriangle">
+		<property name="points">
+			<list>
+				<ref bean="zeropoint1" />
+				<ref bean="firstpoint1" />
+				<ref bean="secondpoint1" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="zeropoint1" class="learning.spring.collections.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="firstpoint1" class="learning.spring.collections.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="secondpoint1" class="learning.spring.collections.Point">
+		<property name="x" value="0" />
+		<property name="y" value="20" />
+	</bean>
+
+	<!-- Autowiring Concept ByName -->
+	<bean id="advtriangle2"
+		class="learning.spring.autowiring.byNameConcept.AdvanceTriangle"
+		autowire="byName">
+	</bean>
+
+	<bean id="pointX" class="learning.spring.autowiring.byNameConcept.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="pointY" class="learning.spring.autowiring.byNameConcept.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="pointZ" class="learning.spring.autowiring.byNameConcept.Point">
+		<property name="x" value="0" />
+		<property name="y" value="20" />
+	</bean>
+
+
+	<!-- Autowiring Concept ByType -->
+	<bean id="advtriangle3"
+		class="learning.spring.autowiring.byTypeConcept.AdvanceTriangle"
+		autowire="byType">
+	</bean>
+
+	<bean id="point" class="learning.spring.autowiring.byTypeConcept.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+
+	<!-- Autowiring Concept Constructor -->
+	<bean id="advtriangle4"
+		class="learning.spring.autowiring.byConstructorConcept.AdvanceTriangle"
+		autowire="constructor">
+	</bean>
+
+	<bean id="pointT" class="learning.spring.autowiring.byConstructorConcept.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
 	</bean>
 
 </beans>

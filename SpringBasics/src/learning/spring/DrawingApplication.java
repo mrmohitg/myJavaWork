@@ -32,6 +32,10 @@ public class DrawingApplication {
 		
 		AdvanceCircle myAdvCircle = (AdvanceCircle)applicationContext.getBean("advcircle");
 		myAdvCircle.draw();
+		
+		Rectangle rectangleAlias = (Rectangle)applicationContext.getBean("rectangle-alias");
+		rectangleAlias.draw();	
+		
 	}
 
 }
