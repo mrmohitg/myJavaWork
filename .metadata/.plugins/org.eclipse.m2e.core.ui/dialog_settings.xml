@@ -33,6 +33,10 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Tutorials\Lynda\Spring Cloud\Ex_Files_Spring_Spring_Cloud\Exercise Files\Chapter 1\01_02\End\spring-cloud"/>
+			<item value="D:\Tutorials\Lynda\Spring Cloud\Ex_Files_Spring_Spring_Cloud\Exercise Files\Chapter 1\01_03\Begin\spring-cloud"/>
+			<item value="D:\Tutorials\Lynda\Spring Cloud\Ex_Files_Spring_Spring_Cloud\Exercise Files\Chapter 3\03_04\Begin\spring-cloud\config-server"/>
+			<item value="E:\JavaWorkbook"/>
 			<item value="D:\Tutorials\Lynda\Advanced Java Programming\Ex_Files_Java_Adv_Training\Ex_Files_Java_Adv_Training\ExerciseFiles\02_Java7NF\StringsInSwitch"/>
 			<item value="E:\JavaWorkbook\spring_mvc_project"/>
 			<item value="E:\JavaWorkbook\reservations"/>
