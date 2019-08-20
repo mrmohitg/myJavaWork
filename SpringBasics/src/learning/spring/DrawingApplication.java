@@ -17,7 +17,6 @@ public class DrawingApplication {
 		Triangle myTriangle = (Triangle)beanFactory.getBean("triangle");
 		myTriangle.draw();
 		
-		
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 		Circle myCircle = (Circle)applicationContext.getBean("circle");
 		myCircle.draw();
@@ -28,9 +27,11 @@ public class DrawingApplication {
 		Rectangle rectangle = (Rectangle)applicationContext.getBean("rectangle");
 		rectangle.draw();
 		
-		
 		AdvanceTriangle myAdvTriangle = (AdvanceTriangle)applicationContext.getBean("advtriangle");
 		myAdvTriangle.draw();
+		
+		AdvanceCircle myAdvCircle = (AdvanceCircle)applicationContext.getBean("advcircle");
+		myAdvCircle.draw();
 	}
 
 }
