@@ -28,6 +28,9 @@ public class DrawingApplication {
 		Rectangle rectangle = (Rectangle)applicationContext.getBean("rectangle");
 		rectangle.draw();
 		
+		
+		AdvanceTriangle myAdvTriangle = (AdvanceTriangle)applicationContext.getBean("advtriangle");
+		myAdvTriangle.draw();
 	}
 
 }

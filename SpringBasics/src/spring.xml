@@ -19,4 +19,26 @@
       		<constructor-arg index="0" value="Smart"/>
       		<constructor-arg index="1" value="10"/>
       	</bean>
+      	
+      	<bean id="zeropoint" class="learning.spring.Point">
+      		<property name="x" value="0"/>
+      		<property name="y" value="0"/>
+      	</bean>
+      	
+      	<bean id="firstpoint" class="learning.spring.Point">
+      		<property name="x" value="-20"/>
+      		<property name="y" value="0"/>
+      	</bean>
+      	
+      	<bean id="secondpoint" class="learning.spring.Point">
+      		<property name="x" value="0"/>
+      		<property name="y" value="20"/>
+      	</bean>
+      	
+      	<bean id="advtriangle" class="learning.spring.AdvanceTriangle">
+      		<property name="pointA" ref="zeropoint"/>
+      		<property name="pointB" ref="firstpoint"/>
+      		<property name="pointC" ref="secondpoint"/>
+      		
+      	</bean>
       </beans>
