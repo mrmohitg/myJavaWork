@@ -143,4 +143,26 @@
 		<property name="y" value="40" />
 	</bean>
 
+	<!-- Bean Scopes Singleton-->
+	<bean id="advtriangle5"
+		class="learning.spring.beanScopes.AdvanceTriangle" scope="singleton">
+		<property name="pointP" ref="pointP"></property>
+	</bean>
+
+	<bean id="pointP" class="learning.spring.beanScopes.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	
+	<!-- Bean Scopes Singleton-->
+	<bean id="advtriangle6"
+		class="learning.spring.beanScopes.AdvanceTriangle" scope="prototype">
+		<property name="pointP" ref="pointP1"></property>
+	</bean>
+
+	<bean id="pointP1" class="learning.spring.beanScopes.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+
 </beans>
