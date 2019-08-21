@@ -143,9 +143,9 @@
 		<property name="y" value="40" />
 	</bean>
 
-	<!-- Bean Scopes Singleton-->
-	<bean id="advtriangle5"
-		class="learning.spring.beanScopes.AdvanceTriangle" scope="singleton">
+	<!-- Bean Scopes Singleton -->
+	<bean id="advtriangle5" class="learning.spring.beanScopes.AdvanceTriangle"
+		scope="singleton">
 		<property name="pointP" ref="pointP"></property>
 	</bean>
 
@@ -153,10 +153,10 @@
 		<property name="x" value="20" />
 		<property name="y" value="40" />
 	</bean>
-	
-	<!-- Bean Scopes Prototype-->
-	<bean id="advtriangle6"
-		class="learning.spring.beanScopes.AdvanceTriangle" scope="prototype">
+
+	<!-- Bean Scopes Prototype -->
+	<bean id="advtriangle6" class="learning.spring.beanScopes.AdvanceTriangle"
+		scope="prototype">
 		<property name="pointP" ref="pointP1"></property>
 	</bean>
 
@@ -164,10 +164,9 @@
 		<property name="x" value="20" />
 		<property name="y" value="40" />
 	</bean>
-	
-	<!-- Bean Scopes Application Context Aware-->
-	<bean id="advtriangle7"
-		class="learning.spring.applicationContextAware.AdvanceTriangle">
+
+	<!-- Bean Scopes Application Context Aware -->
+	<bean id="advtriangle7" class="learning.spring.applicationContextAware.AdvanceTriangle">
 		<property name="pointA" ref="pointA"></property>
 		<property name="pointB" ref="pointB"></property>
 		<property name="pointC" ref="pointC"></property>
@@ -186,4 +185,72 @@
 		<property name="y" value="40" />
 	</bean>
 
+	<!-- Bean Inheritance -->
+
+	<bean id="parentTriangle" class="learning.spring.inheritance.AdvanceTriangle">
+		<property name="pointA" ref="pointAA"></property>
+	</bean>
+	<bean id="advtriangle8_1" class="learning.spring.inheritance.AdvanceTriangle"
+		parent="parentTriangle">
+		<property name="pointB" ref="pointBB"></property>
+		<property name="pointC" ref="pointCC"></property>
+	</bean>
+
+	<bean id="advtriangle8_2" class="learning.spring.inheritance.AdvanceTriangle"
+		parent="advtriangle8_1">
+		<property name="pointB" ref="pointBB"></property>
+	</bean>
+
+	<bean id="pointAA" class="learning.spring.inheritance.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointBB" class="learning.spring.inheritance.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointCC" class="learning.spring.inheritance.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+
+	<!-- Bean Inheritance of List and Merge-->
+
+	<bean id="parentTriangle1" class="learning.spring.inheritance.abstraction.AdvanceTriangle" abstract="true">
+		<property name="pointss">
+			<list>
+				<ref bean = "pointAAA" />
+			</list>
+		</property>
+	</bean>
+	<bean id="advtriangle9_1" class="learning.spring.inheritance.abstraction.AdvanceTriangle"
+		parent="parentTriangle1">
+		<property name="pointss">
+			<list merge="true">
+				<ref bean = "pointBBB" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="advtriangle9_2" class="learning.spring.inheritance.abstraction.AdvanceTriangle"
+		parent="parentTriangle1">
+		<property name="pointss">
+			<list merge="true">
+				<ref bean = "pointCCC" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="pointAAA" class="learning.spring.inheritance.abstraction.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointBBB" class="learning.spring.inheritance.abstraction.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointCCC" class="learning.spring.inheritance.abstraction.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
 </beans>
