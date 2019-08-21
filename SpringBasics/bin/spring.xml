@@ -154,13 +154,34 @@
 		<property name="y" value="40" />
 	</bean>
 	
-	<!-- Bean Scopes Singleton-->
+	<!-- Bean Scopes Prototype-->
 	<bean id="advtriangle6"
 		class="learning.spring.beanScopes.AdvanceTriangle" scope="prototype">
 		<property name="pointP" ref="pointP1"></property>
 	</bean>
 
 	<bean id="pointP1" class="learning.spring.beanScopes.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	
+	<!-- Bean Scopes Application Context Aware-->
+	<bean id="advtriangle7"
+		class="learning.spring.applicationContextAware.AdvanceTriangle">
+		<property name="pointA" ref="pointA"></property>
+		<property name="pointB" ref="pointB"></property>
+		<property name="pointC" ref="pointC"></property>
+	</bean>
+
+	<bean id="pointA" class="learning.spring.applicationContextAware.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointB" class="learning.spring.applicationContextAware.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointC" class="learning.spring.applicationContextAware.Point">
 		<property name="x" value="20" />
 		<property name="y" value="40" />
 	</bean>
