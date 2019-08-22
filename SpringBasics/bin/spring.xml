@@ -297,4 +297,31 @@
 	</bean>
 	
 	<bean class="learning.spring.beanPostProcessor.DisplayNameBeanPostProcessor"/>
+	
+	<!-- Bean Factory Post Processor -->
+	<bean id="advtriangle12" class="learning.spring.beanFactoryPostProcessor.AdvanceTriangle">
+		<property name="pointA" ref="pointAAAAAA"></property>
+		<property name="pointB" ref="pointBBBBBB"></property>
+		<property name="pointC" ref="pointCCCCCC"></property>
+	</bean>
+
+	<bean id="pointAAAAAA" class="learning.spring.beanFactoryPostProcessor.Point">
+		<property name="x" value="${pointA.pointX}" />
+		<property name="y" value="${pointA.pointY}" />
+	</bean>
+	<bean id="pointBBBBBB" class="learning.spring.beanFactoryPostProcessor.Point">
+		<property name="x" value="${pointB.pointX}" />
+		<property name="y" value="${pointB.pointY}" />
+	</bean>
+	<bean id="pointCCCCCC" class="learning.spring.beanFactoryPostProcessor.Point">
+		<property name="x" value="${pointC.pointX}" />
+		<property name="y" value="${pointC.pointY}" />
+	</bean>
+	
+	<!-- <bean class="learning.spring.beanFactoryPostProcessor.DisplayNameBeanPostProcessor"/> -->
+	<bean class="learning.spring.beanFactoryPostProcessor.MyBeanFactoryPP"/>
+	<bean class= "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointConfig.properties"/>
+	</bean>
+	
 </beans>
