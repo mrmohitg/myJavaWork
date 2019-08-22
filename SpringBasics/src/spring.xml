@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans>
+<beans default-init-method="myInit" default-destroy-method="cleanUp">
 
 	<!-- Provide the Value to bean -->
 	<bean id="triangle" class="learning.spring.Triangle">
@@ -242,15 +242,59 @@
 	</bean>
 
 	<bean id="pointAAA" class="learning.spring.inheritance.abstraction.Point">
-		<property name="x" value="20" />
-		<property name="y" value="40" />
+		<property name="x" value="10" />
+		<property name="y" value="20" />
 	</bean>
+	
 	<bean id="pointBBB" class="learning.spring.inheritance.abstraction.Point">
-		<property name="x" value="20" />
+		<property name="x" value="30" />
 		<property name="y" value="40" />
 	</bean>
+	
 	<bean id="pointCCC" class="learning.spring.inheritance.abstraction.Point">
+		<property name="x" value="50" />
+		<property name="y" value="60" />
+	</bean>
+	
+	<!-- Bean Life Cycle -->
+	<bean id="advtriangle10" class="learning.spring.lifecycle.AdvanceTriangle" init-method="myInit" destroy-method="cleanUp">
+		<property name="pointA" ref="pointAAAA"></property>
+		<property name="pointB" ref="pointBBBB"></property>
+		<property name="pointC" ref="pointCCCC"></property>
+	</bean>
+
+	<bean id="pointAAAA" class="learning.spring.lifecycle.Point">
 		<property name="x" value="20" />
 		<property name="y" value="40" />
 	</bean>
+	<bean id="pointBBBB" class="learning.spring.lifecycle.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointCCCC" class="learning.spring.lifecycle.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	
+	<!-- Bean Post Processor -->
+	<bean id="advtriangle11" class="learning.spring.beanPostProcessor.AdvanceTriangle">
+		<property name="pointA" ref="pointAAAAA"></property>
+		<property name="pointB" ref="pointBBBBB"></property>
+		<property name="pointC" ref="pointCCCCC"></property>
+	</bean>
+
+	<bean id="pointAAAAA" class="learning.spring.beanPostProcessor.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointBBBBB" class="learning.spring.beanPostProcessor.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	<bean id="pointCCCCC" class="learning.spring.beanPostProcessor.Point">
+		<property name="x" value="20" />
+		<property name="y" value="40" />
+	</bean>
+	
+	<bean class="learning.spring.beanPostProcessor.DisplayNameBeanPostProcessor"/>
 </beans>
