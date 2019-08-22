@@ -298,7 +298,7 @@
 	
 	<bean class="learning.spring.beanPostProcessor.DisplayNameBeanPostProcessor"/>
 	
-	<!-- Bean Factory Post Processor -->
+	<!-- Bean Factory Post Processor and Place holder -->
 	<bean id="advtriangle12" class="learning.spring.beanFactoryPostProcessor.AdvanceTriangle">
 		<property name="pointA" ref="pointAAAAAA"></property>
 		<property name="pointB" ref="pointBBBBBB"></property>
@@ -318,10 +318,38 @@
 		<property name="y" value="${pointC.pointY}" />
 	</bean>
 	
-	<!-- <bean class="learning.spring.beanFactoryPostProcessor.DisplayNameBeanPostProcessor"/> -->
 	<bean class="learning.spring.beanFactoryPostProcessor.MyBeanFactoryPP"/>
 	<bean class= "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations" value="pointConfig.properties"/>
+	</bean>
+	
+	<!-- Bean Factory Post Processor and Place holder -->
+	<bean id="advtriangle13" class="learning.spring.codingToInterface.AdvanceTriangle">
+		<property name="pointA" ref="pointAAAAAAA"></property>
+		<property name="pointB" ref="pointBBBBBBB"></property>
+		<property name="pointC" ref="pointCCCCCCC"></property>
+	</bean>
+
+	<bean id="pointAAAAAAA" class="learning.spring.codingToInterface.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointBBBBBBB" class="learning.spring.codingToInterface.Point">
+		<property name="x" value="1" />
+		<property name="y" value="1" />
+	</bean>
+	<bean id="pointCCCCCCC" class="learning.spring.codingToInterface.Point">
+		<property name="x" value="2" />
+		<property name="y" value="2" />
+	</bean>
+	
+	<bean id="advtriangle14" class="learning.spring.codingToInterface.AdvanceCircle">
+		<property name="pointA" ref="pointAAAAAAAA"></property>
+	</bean>
+
+	<bean id="pointAAAAAAAA" class="learning.spring.codingToInterface.Point">
+		<property name="x" value="3" />
+		<property name="y" value="3" />
 	</bean>
 	
 </beans>
