@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+	<!-- Autowired Annotation -->
+	<!-- <bean id="advtriangle17" class="learning.spring.annotations.autowired.AdvanceTriangle">
+		<property name="pointA" ref="pointA"></property>
+		<property name="pointB" ref="pointB"></property>
+		<property name="pointC" ref="pointC"></property>
+	</bean>-->
+	
+	<bean id="ABC" class="learning.spring.annotations.autowired.Point">
+		<property name="x" value="00" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointB" class="learning.spring.annotations.autowired.Point">
+	<qualifier value="circleRelated"/>
+		<property name="x" value="11" />
+		<property name="y" value="1" />
+	</bean>
+	<bean id="pointC" class="learning.spring.annotations.autowired.Point">
+		<property name="x" value="22" />
+		<property name="y" value="2" />
+	</bean>
+	<bean id="B" class="learning.spring.annotations.autowired.Point">
+		<property name="x" value="00" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="advtriangle18" class="learning.spring.annotations.autowired.AdvanceCircle"/>
+	
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	
+	<context:annotation-config/>
+</beans>

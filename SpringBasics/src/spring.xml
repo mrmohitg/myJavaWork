@@ -323,7 +323,7 @@
 		<property name="locations" value="pointConfig.properties"/>
 	</bean>
 	
-	<!-- Bean Factory Post Processor and Place holder -->
+	<!-- Code To Interface -->
 	<bean id="advtriangle13" class="learning.spring.codingToInterface.AdvanceTriangle">
 		<property name="pointA" ref="pointAAAAAAA"></property>
 		<property name="pointB" ref="pointBBBBBBB"></property>
@@ -352,4 +352,52 @@
 		<property name="y" value="3" />
 	</bean>
 	
+	<!-- Required Annotation -->
+	<bean id="advtriangle15" class="learning.spring.annotations.required.AdvanceTriangle">
+		<property name="pointA" ref="pointAAAAAAAAA"></property>
+		<property name="pointB" ref="pointBBBBBBBB"></property>
+		<property name="pointC" ref="pointCCCCCCCC"></property>
+	</bean>
+
+	<bean id="pointAAAAAAAAA" class="learning.spring.annotations.required.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointBBBBBBBB" class="learning.spring.annotations.required.Point">
+		<property name="x" value="1" />
+		<property name="y" value="1" />
+	</bean>
+	<bean id="pointCCCCCCCC" class="learning.spring.annotations.required.Point">
+		<property name="x" value="2" />
+		<property name="y" value="2" />
+	</bean>
+	
+	<!-- <bean id="advtriangle16" class="learning.spring.annotations.required.AdvanceCircle">
+		<property name="pointA"></property>
+	</bean>
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotaionBeanPostProcessor"></bean> -->
+	
+	<!-- Autowired Annotation -->
+	<!-- <bean id="advtriangle17" class="learning.spring.annotations.autowired.AdvanceTriangle">
+		<property name="pointA" ref="pointAAAAAAAAAA"></property>
+		<property name="pointB" ref="pointBBBBBBBBB"></property>
+		<property name="pointC" ref="pointCCCCCCCCC"></property>
+	</bean>
+
+	<bean id="pointAAAAAAAAAA" class="learning.spring.annotations.autowired.Point">
+		<property name="x" value="00" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointBBBBBBBBB" class="learning.spring.annotations.autowired.Point">
+		<property name="x" value="11" />
+		<property name="y" value="1" />
+	</bean>
+	<bean id="pointCCCCCCCCC" class="learning.spring.annotations.autowired.Point">
+		<property name="x" value="22" />
+		<property name="y" value="2" />
+	</bean> -->
+	
+	<bean id="advtriangle18" class="learning.spring.annotations.autowired.AdvanceCircle"/>
+	
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotaionBeanPostProcessor"></bean>
 </beans>
