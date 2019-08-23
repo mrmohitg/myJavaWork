@@ -5,7 +5,7 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
 	xmlns:context="http://www.springframework.org/schema/context">
 
-	<!-- Sterotype and Component Annotation -->
+	<!-- Message for Properties File -->
 
 	<bean id="pointA" class="learning.spring.messageFromProperties.Point">
 		<property name="x" value="100" />

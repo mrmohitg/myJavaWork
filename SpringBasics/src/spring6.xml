@@ -5,22 +5,22 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
 	xmlns:context="http://www.springframework.org/schema/context">
 
-	<!-- Message for Properties File -->
+	<!-- Event Handling -->
 
-	<bean id="pointA" class="learning.spring.messageFromProperties.Point">
+	<bean id="pointA" class="learning.spring.eventHandling.Point">
 		<property name="x" value="100" />
 		<property name="y" value="200" />
 	</bean>
-	<bean id="pointB" class="learning.spring.messageFromProperties.Point">
+	<bean id="pointB" class="learning.spring.eventHandling.Point">
 		<property name="x" value="11" />
 		<property name="y" value="1" />
 	</bean>
-	<bean id="pointC" class="learning.spring.messageFromProperties.Point">
+	<bean id="pointC" class="learning.spring.eventHandling.Point">
 		<property name="x" value="22" />
 		<property name="y" value="2" />
 	</bean>
 
-	<bean id="advanceCircle20" class="learning.spring.messageFromProperties.AdvanceCircle" />
+	<bean id="advanceCircle20" class="learning.spring.eventHandling.AdvanceCircle" />
 	
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
@@ -32,6 +32,6 @@
 	
 	<context:annotation-config/>
 	
-	<context:component-scan base-package="learning.spring.messageFromProperties"/>
+	<context:component-scan base-package="learning.spring.eventHandling"/>
 
 </beans>
