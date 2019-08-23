@@ -14,21 +14,30 @@ public class LoggingAspect {
 		System.out.println("Advice Run and Get method is called.");
 	}
 	
-	
 	@Before("execution(public * get*(..))")
 	public void loggingAdvice1()
 	{
 		System.out.println("All getter Wild card");
 	}
 	
-	@After("allGetters()")
+	@Before("allGetters() && allCircleMethods()")
 	public void loggingAdvice2()
 	{
-		System.out.println("All getter Wild card");
+		System.out.println("All getter Circle Wild card After Annotaion");
 	}
+	
+	@Before("allCircleMethods()")
+	public void loggingAdvice3()
+	{
+		System.out.println("All Model Classes ");
+	}
+	
 	
 	@Pointcut("execution(public * get*(..))")
 	public void allGetters() {}
+	
+	@Pointcut("within(learning.spring.aop.model.Circle)")
+	public void allCircleMethods() {}
 	
 			
 }
