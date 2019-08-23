@@ -1,5 +1,6 @@
 package learning.spring.aop.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -20,10 +21,11 @@ public class LoggingAspect {
 		System.out.println("All getter Wild card");
 	}
 	
-	@Before("allGetters() && allCircleMethods()")
-	public void loggingAdvice2()
+	@Before("allMethods() && allCircleMethods()")
+	public void loggingAdvice2(JoinPoint joinPoint)
 	{
-		System.out.println("All getter Circle Wild card After Annotaion");
+		System.out.println("All "+ joinPoint.toString()+" Circle Wild card After Annotaion");
+		System.out.println(joinPoint.getTarget());
 	}
 	
 	@Before("allCircleMethods()")
@@ -39,5 +41,13 @@ public class LoggingAspect {
 	@Pointcut("within(learning.spring.aop.model.Circle)")
 	public void allCircleMethods() {}
 	
+	@Pointcut("execution(public * *(..))")
+	public void allMethods() {}
 			
+	@Before("args(name)")
+	public void stringArgumentMethods(String name) 
+	{
+		System.out.println("A method that takes strings has been called "+ name);
+	}
+	
 }
