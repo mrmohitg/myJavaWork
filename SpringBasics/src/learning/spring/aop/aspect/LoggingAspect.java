@@ -1,9 +1,11 @@
 package learning.spring.aop.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -81,5 +83,35 @@ public class LoggingAspect {
 	{
 		System.out.println("An exception has been thrown." + ex);
 	}
+	
+	/*@Around("allGetters()")
+	public void myAroundAdvice(ProceedingJoinPoint proceedingJoinPoint)
+	{
+		System.out.println("Hi Mohit");
+		try {
+			proceedingJoinPoint.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Bye Mohit");
+	}
+	
+	
+	@Around("@annotation(learning.spring.aop.aspect.Loggable)")
+	public void myAroundAdvice1(ProceedingJoinPoint proceedingJoinPoint)
+	{
+		System.out.println("Hi Mohit");
+		try {
+			proceedingJoinPoint.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Bye Mohit");
+	}*/
+	
+	
+	
 	
 }
