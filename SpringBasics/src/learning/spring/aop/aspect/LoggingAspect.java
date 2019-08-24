@@ -2,6 +2,8 @@ package learning.spring.aop.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -48,6 +50,36 @@ public class LoggingAspect {
 	public void stringArgumentMethods(String name) 
 	{
 		System.out.println("A method that takes strings has been called "+ name);
+	}
+	
+	@After("args(name)")
+	public void stringArgumentMethods1(String name) 
+	{
+		System.out.println("A method that takes strings has been called "+ name+ " after the method has run.");
+	} 
+	
+	@AfterReturning("args(name)")
+	public void stringArgumentMethods2(String name) 
+	{
+		System.out.println("A method that takes strings has been called "+ name+ " after the method has run with after returning. ");
+	} 
+	
+	@AfterReturning(pointcut="args(name)", returning="stringReturn")
+	public void stringArgumentMethods3(String name, String stringReturn) 
+	{
+		System.out.println("A method that takes strings has been called "+ name+ " after the method has run with after returning. "+ stringReturn);
+	}
+	
+	@AfterThrowing("args(name)")
+	public void exceptionAdvice(String name)
+	{
+		System.out.println("An exception has been thrown.");
+	}
+	
+	@AfterThrowing(pointcut="args(name)", throwing="ex")
+	public void exceptionAdvice1(String name, RuntimeException ex)
+	{
+		System.out.println("An exception has been thrown." + ex);
 	}
 	
 }
