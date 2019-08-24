@@ -27,6 +27,12 @@ public class Circle {
 		setId(id);
 		setName(name);
 	}
+
+	public Circle() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 	
 
