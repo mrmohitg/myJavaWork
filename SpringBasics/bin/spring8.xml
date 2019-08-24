@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+    http://www.springframework.org/schema/aop   
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<aop:aspectj-autoproxy />
+
+	<bean id="triangle" class="learning.spring.aop.viaXml.model.Triangle">
+		<property name="name" value="Tringle Name"></property>
+	</bean>
+
+	<bean id="circle" class="learning.spring.aop.viaXml.model.Circle">
+		<property name="name" value="Circle Name"></property>
+	</bean>
+
+	<bean id="shapeService" class="learning.spring.aop.viaXml.service.ShapeService"
+		autowire="byName" />
+
+	<bean name="loggingAspect" class="learning.spring.aop.viaXml.aspect.LoggingAspect"></bean>
+
+
+	<aop:config>
+
+		<aop:aspect id="loggingAspect" ref="loggingAspect">
+			<aop:pointcut id="allGetters" expression="execution(* get*())" />
+			<aop:around pointcut-ref="allGetters" method="myAroundAdvice" />
+		</aop:aspect>
+	</aop:config>
+</beans>
