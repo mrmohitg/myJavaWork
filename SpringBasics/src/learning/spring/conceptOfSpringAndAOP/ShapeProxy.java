@@ -1,4 +1,4 @@
-package learning.spring.concept;
+package learning.spring.conceptOfSpringAndAOP;
 
 public class ShapeProxy extends Shape{
 	

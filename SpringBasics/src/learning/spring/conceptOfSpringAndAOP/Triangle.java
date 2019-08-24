@@ -1,6 +1,6 @@
-package learning.spring.concept;
+package learning.spring.conceptOfSpringAndAOP;
 
-public class Circle {
+public class Triangle {
 	
 	private String name;
 
