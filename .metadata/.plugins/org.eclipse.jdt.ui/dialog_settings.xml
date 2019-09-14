@@ -3,7 +3,7 @@
 	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
-	<item value="E:\Dependencies\spring_aop_additional_jar_files" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="E:\Dependencies\spring_data_additional_jars" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="filter_imports;" key="filters_last_used"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
@@ -86,6 +86,20 @@
 		<item value="573" key="DIALOG_HEIGHT"/>
 		<item value="430" key="DIALOG_X_ORIGIN"/>
 		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="NewAnnotationWizardPage">
+		<item value="false" key="add_documented"/>
+		<section name="AddTarget">
+			<item value="false" key="enabled"/>
+			<list key="selectedEnums">
+			</list>
+		</section>
+		<section name="AddRetention">
+			<item value="false" key="enabled"/>
+			<list key="selectedEnums">
+				<item value="CLASS"/>
+			</list>
+		</section>
 	</section>
 	<section name="DialogBounds_OverrideMethodDialog">
 		<item value="526" key="DIALOG_WIDTH"/>

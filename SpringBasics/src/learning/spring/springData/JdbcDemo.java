@@ -1,6 +1,6 @@
 package learning.spring.springData;
 
-import learning.spring.jdbc.model.Circle;
+import learning.spring.springData.model.Circle;
 import learning.spring.springData.dao.JdbcDaoImpl;
 
 import java.util.List;
@@ -34,11 +34,13 @@ public class JdbcDemo {
 		
 		System.out.println(jdi.getAllCircles().size());;
 		
-		jdi.insertCircle(new learning.spring.springData.model.Circle(2,"Anurag"));
+		jdi.insertCircle(new learning.spring.springData.model.Circle(2,"Anurag"));*/
 		
-		System.out.println(jdi.getAllCircles().size());*/
+		System.out.println(jdi.getAllCircles().size());
 		
-		jdi.createTriangleTable();
+		//jdi.createTriangleTable();
+		
+		//jdi.insertCircleViaNamedParameter(new Circle(4, "Papa"));
 	}
 
 }

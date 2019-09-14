@@ -12,6 +12,9 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
@@ -28,12 +31,15 @@ public class JdbcDaoImpl {
 
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
+		this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
 	}
 
 	@Autowired
 	private DataSource dataSource;
 	
 	private JdbcTemplate jdbcTemplate = new JdbcTemplate();
+	
+	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 	
 	
 
@@ -140,6 +146,13 @@ public class JdbcDaoImpl {
 		String sql = "CREATE TABLE TRIANGLE (ID INTEGER, NAME VARCHAR(20))";
 		jdbcTemplate.setDataSource(getDataSource());
 		jdbcTemplate.execute(sql);
+	}
+	
+	public void insertCircleViaNamedParameter(Circle circle)
+	{
+		 String sql = "INSERT INTO CIRCLE (ID, NAME) VALUES (:id , :name)";
+		 SqlParameterSource nameparameter = new MapSqlParameterSource("id",circle.getId()).addValue("name",circle.getName());
+		 namedParameterJdbcTemplate.update(sql,nameparameter);
 	}
 
 }
