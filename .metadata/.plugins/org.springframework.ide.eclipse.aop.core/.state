@@ -3,7 +3,6 @@
 <aop-project name="spring-foundations-xml"/>
 <aop-project name="reservations"/>
 <aop-project name="config-server"/>
-<aop-project name="Spring_Cloud_room-services"/>
 <aop-project name="gs-serving-web-content-initial"/>
 <aop-project name="hello-world-mvc"/>
 <aop-project name="spring_mvc_project"/>
