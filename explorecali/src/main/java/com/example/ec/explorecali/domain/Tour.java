@@ -12,6 +12,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Tour implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
@@ -41,20 +46,18 @@ public class Tour implements Serializable{
 	private TourPackage tourPackage;
 	
 	@Column
-	private Difficulty dificulty;
+	private Difficulty difficulty;
 	
 	@Column
 	private Region region;
 	
 	protected Tour() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public Tour(Integer id, String title, String description, String blurb, Integer price, String duration,
-			String bullets, String keywords, TourPackage tourPackage, Difficulty dificulty, Region region) {
+	public Tour(String title, String description, String blurb, Integer price, String duration,
+			String bullets, String keywords, TourPackage tourPackage, Difficulty difficulty, Region region) {
 		super();
-		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.blurb = blurb;
@@ -63,7 +66,7 @@ public class Tour implements Serializable{
 		this.bullets = bullets;
 		this.keywords = keywords;
 		this.tourPackage = tourPackage;
-		this.dificulty = dificulty;
+		this.difficulty = difficulty;
 		this.region = region;
 	}
 

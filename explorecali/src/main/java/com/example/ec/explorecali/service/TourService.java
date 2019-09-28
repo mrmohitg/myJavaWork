@@ -25,14 +25,14 @@ public class TourService {
 		this.tourPackageRepository = tourPackageRepository;
 	}
 
-	public Tour createTour(Integer id, String title, String description, String blurb, Integer price, String duration,
-			String bullets, String keywords, TourPackage tourPackage, Difficulty dificulty, Region region) {
-		Optional<TourPackage> tourPackage1 = tourPackageRepository.findById(tourPackage.getCode());
-		if (tourPackage1 == null) {
-			throw new RuntimeException("Tour package does not exist " + tourPackage.getCode());
+	public Tour createTour(String title, String description, String blurb, Integer price, String duration,
+			String bullets, String keywords, String tourPackageName, Difficulty difficulty, Region region) {
+		TourPackage tourPackage = tourPackageRepository.findByName(tourPackageName);
+		if (tourPackage == null) {
+			throw new RuntimeException("Tour package does not exist " + tourPackageName);
 		} else {
-			return tourRepository.save(new Tour(id, title, description, blurb, price, duration, bullets, keywords,
-					tourPackage, dificulty, region));
+			return tourRepository.save(new Tour(title, description, blurb, price, duration, bullets, keywords,
+					tourPackage, difficulty, region));
 		}
 	}
 
@@ -43,4 +43,5 @@ public class TourService {
 	public Long totalTour() {
 		return tourRepository.count();
 	}
+
 }

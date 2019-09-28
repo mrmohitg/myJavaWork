@@ -48,18 +48,16 @@ public class ExplorecaliApplication implements CommandLineRunner {
 		System.out.println("Number of tours packages =" + tourPackageService.total());
 
 		// Persist the Tours to the database
-		/*TourFromFile.importTours().forEach(t -> tourService.createTour(t.title, t.description, t.blurb, Integer.parseInt(t.price),
-				t.length, t.bullets, t.keywords, t.packageType., Difficulty.valueOf(t.difficulty),Region.findByLabel(t.region)));
+		TourFromFile.importTours().forEach(t -> tourService.createTour(t.title, t.description, t.blurb, Integer.parseInt(t.price), t.length, t.bullets, t.keywords, t.packageType, Difficulty.valueOf(t.difficulty), Region.findByLabel(t.region)));
 		System.out.println("Number of tours =" + tourService.totalTour());
-*/
+		 
 	}
 
-/*	static class TourFromFile
-	{
+	static class TourFromFile {
+	  
+	  private String packageType, title, description, blurb, price, length, bullets, keywords, difficulty, region; 
+	  static List<TourFromFile> importTours() throws IOException { 
+		  return new ObjectMapper().setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY).readValue(TourFromFile.class.getResourceAsStream("/ExploreCalifornia.json"), new TypeReference<List<TourFromFile>>(){});}  
+	}
 
-		private String packageType, title, description, blurb, price, length, bullets, keywords,  difficulty, region;
-	static List<TourFromFile> importTours() throws IOException {
-		return new ObjectMapper().setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY).
-				readValue(TourFromFile.class.getResourceAsStream("/ExploreCalifornia.json"),new TypeReference<List<TourFromFile>>(){});
-	}*/
 }
