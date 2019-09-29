@@ -33,6 +33,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\JavaWorkbook\explorecali"/>
 			<item value="D:\Tutorials\Lynda\Spring Cloud\Ex_Files_Spring_Spring_Cloud\Exercise Files\Chapter 1\01_02\End\spring-cloud"/>
 			<item value="D:\Tutorials\Lynda\Spring Cloud\Ex_Files_Spring_Spring_Cloud\Exercise Files\Chapter 1\01_03\Begin\spring-cloud"/>
 			<item value="D:\Tutorials\Lynda\Spring Cloud\Ex_Files_Spring_Spring_Cloud\Exercise Files\Chapter 3\03_04\Begin\spring-cloud\config-server"/>

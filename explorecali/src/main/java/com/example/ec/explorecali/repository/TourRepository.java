@@ -10,7 +10,7 @@ import com.example.ec.explorecali.domain.Region;
 import com.example.ec.explorecali.domain.Tour;
 
 public interface TourRepository extends CrudRepository<Tour, Integer>{
-
+	
 	public List<Tour> findByPrice(int price);
 	
 	public Collection<Tour> findByDifficulty(Difficulty difficulty);
@@ -28,5 +28,7 @@ public interface TourRepository extends CrudRepository<Tour, Integer>{
 	public List<Tour> findByTourPackageCodeAndBulletsLike(String code, String searchString);
 	
 	public List<Tour> findByTourPackageCodeAndDifficultyAndRegionAndPriceLessThan(String code, Difficulty difficulty, Region region,Integer maxPrice);
+	
+	public List<Tour> findByTourPackageCode(String code);
 	
 }

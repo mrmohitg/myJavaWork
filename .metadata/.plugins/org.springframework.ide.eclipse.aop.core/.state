@@ -6,4 +6,5 @@
 <aop-project name="gs-serving-web-content-initial"/>
 <aop-project name="hello-world-mvc"/>
 <aop-project name="spring_mvc_project"/>
+<aop-project name="explorecali"/>
 </aop-reference-model>
