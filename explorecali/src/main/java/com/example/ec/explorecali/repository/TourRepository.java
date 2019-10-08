@@ -2,6 +2,7 @@ package com.example.ec.explorecali.repository;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import javax.annotation.Resource;
 
@@ -37,7 +38,7 @@ public interface TourRepository extends PagingAndSortingRepository<Tour, Integer
 	public List<Tour> findByTourPackageCodeAndDifficultyAndRegionAndPriceLessThan(String code, Difficulty difficulty, Region region,Integer maxPrice);
 	
 	public Page<Tour> findByTourPackageCode(@Param("code")String code, Pageable pageable);
-
+	
 	/*@Override
 	@RestResource(exported=false)
 	default void delete(Tour arg0) {
