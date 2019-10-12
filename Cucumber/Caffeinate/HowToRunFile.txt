@@ -1,0 +1,11 @@
+Install Rubygems
+ruby --version
+bundle --version
+cucumber -version
+Create a Gemfile in this project and then run below commands in Powershell
+PS E:\JavaWorkbook\Cucumber\Caffeinate> bundle install
+PS E:\JavaWorkbook\Cucumber\Caffeinate> cucumber --init
+
+
+cucumber school
+bdd kickstart

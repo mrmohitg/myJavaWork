@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\JavaWorkbook\Cucumber\Caffeinate"/>
+	</list>
 	<list key="installedFeatures">
 		<item value="com.caucho.resin.eclipse:4.0.27"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
