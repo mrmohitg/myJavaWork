@@ -13,6 +13,8 @@
 		<item value="org.eclipse.buildship:3.1.1.v20190701-1615"/>
 		<item value="org.eclipse.cft.server.core.feature:1.2.2.v201706141943"/>
 		<item value="org.eclipse.cft.server.ui.feature:1.0.9.v201706141943"/>
+		<item value="org.eclipse.dltk.core:5.8.2.201709190955"/>
+		<item value="org.eclipse.dltk.ruby:5.10.0.201808292040"/>
 		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>
 		<item value="org.eclipse.egit.mylyn:4.8.0.201706111038-r"/>
 		<item value="org.eclipse.egit:4.8.0.201706111038-r"/>
