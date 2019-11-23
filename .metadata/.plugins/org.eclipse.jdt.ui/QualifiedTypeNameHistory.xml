@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.aspectj.lang.annotation.Around"/>
-<fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
-<fullyQualifiedTypeName name="learning.spring.concept.Circle"/>
-<fullyQualifiedTypeName name="learning.spring.concept.FactoryShape"/>
-<fullyQualifiedTypeName name="learning.spring.concept.Shape"/>
-<fullyQualifiedTypeName name="learning.spring.concept.LoggingAspect"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="learning.spring.concept.ShapeProxy"/>
-<fullyQualifiedTypeName name="learning.spring.jdbc.dao.JDBCDaoImpl"/>
-<fullyQualifiedTypeName name="learning.spring.aop.model.Circle"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="learning.spring.jdbc.model.Circle"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
@@ -31,7 +16,6 @@
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.MapSqlParameterSource"/>
 <fullyQualifiedTypeName name="learning.spring.springData.model.Circle"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.PropertyAccessor"/>
 <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
 <fullyQualifiedTypeName name="com.example.ec.explorecali.domain.TourPackage"/>
@@ -60,4 +44,20 @@
 <fullyQualifiedTypeName name="com.example.ec.explorecali.domain.TourRating"/>
 <fullyQualifiedTypeName name="com.example.ec.explorecali.domain.TourRatingPk"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.xml.ws.Response"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+<fullyQualifiedTypeName name="com.delhiHotel.roomReservation.rest.ReservationResource"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+<fullyQualifiedTypeName name="com.delhiHotel.roomReservation.model.Links"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.datatype.jsr310.JavaTimeModule"/>
+<fullyQualifiedTypeName name="com.delhiHotel.roomReservation.model.request.ReservationRequest"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>
