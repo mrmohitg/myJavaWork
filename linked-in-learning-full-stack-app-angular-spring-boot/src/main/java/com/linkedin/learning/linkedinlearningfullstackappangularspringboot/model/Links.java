@@ -16,6 +16,12 @@ public class Links {
 		super();
 		this.self = self;
 	}
+
+	public Links() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 	
 }

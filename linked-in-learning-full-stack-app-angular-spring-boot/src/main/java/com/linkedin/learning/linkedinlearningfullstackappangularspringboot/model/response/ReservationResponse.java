@@ -1,13 +1,24 @@
 package com.linkedin.learning.linkedinlearningfullstackappangularspringboot.model.response;
 
-import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.model.Links;
+import java.time.LocalDate;
 
 public class ReservationResponse {
 
 	private Long id;
-	private Integer roomNumber;
-	private Integer price;
-	private Links links;
+	private LocalDate checkin;
+	private LocalDate checkout;
+	
+	public ReservationResponse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ReservationResponse(Long id, LocalDate checkin, LocalDate checkout) {
+		super();
+		this.id = id;
+		this.checkin = checkin;
+		this.checkout = checkout;
+	}
 
 	public Long getId() {
 		return id;
@@ -17,40 +28,21 @@ public class ReservationResponse {
 		this.id = id;
 	}
 
-	public Integer getRoomNumber() {
-		return roomNumber;
+	public LocalDate getCheckin() {
+		return checkin;
 	}
 
-	public void setRoomNumber(Integer roomNumber) {
-		this.roomNumber = roomNumber;
+	public void setCheckin(LocalDate checkin) {
+		this.checkin = checkin;
 	}
 
-	public Integer getPrice() {
-		return price;
+	public LocalDate getCheckout() {
+		return checkout;
 	}
 
-	public void setPrice(Integer price) {
-		this.price = price;
+	public void setCheckout(LocalDate checkout) {
+		this.checkout = checkout;
 	}
-
-	public Links getLinks() {
-		return links;
-	}
-
-	public void setLinks(Links links) {
-		this.links = links;
-	}
-
-	public ReservationResponse(Integer roomNumber, Integer price) {
-		super();
-		this.roomNumber = roomNumber;
-		this.price = price;
-	}
-
-	public ReservationResponse() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	
 }
