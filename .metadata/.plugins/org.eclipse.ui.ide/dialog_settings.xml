@@ -7,8 +7,6 @@
 	</list>
 	<list key="installedFeatures">
 		<item value="com.caucho.resin.eclipse:4.0.27"/>
-		<item value="com.genuitec.eclipse.code.angularide.feature:3.6.0.201912111708"/>
-		<item value="com.genuitec.eclipse.code.feature:3.6.0.201912111708"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="com.ibm.ws.st.liberty.tools.base:1.0.5.v2019-03-26_1414"/>
 		<item value="io.emmet.eclipse:1.0.0.201401132323"/>
@@ -149,7 +147,6 @@
 		<item value="org.springsource.sts.cft:3.9.0.201707061823-RELEASE"/>
 		<item value="org.springsource.sts.package:3.9.0.201707061823-RELEASE-e47"/>
 		<item value="org.springsource.sts:3.9.0.201707061823-RELEASE"/>
-		<item value="pack.angular:3.6.0.201912111708"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
