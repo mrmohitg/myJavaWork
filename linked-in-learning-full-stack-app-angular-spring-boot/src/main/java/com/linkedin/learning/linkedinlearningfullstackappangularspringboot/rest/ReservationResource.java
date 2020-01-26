@@ -24,6 +24,7 @@ import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.entit
 import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.entity.RoomEntity;
 import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.model.request.ReservationRequest;
 import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.model.response.ReservableRoomResponse;
+import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.model.response.ReservationResponse;
 import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.repository.PageableRoomRepository;
 import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.repository.ReservationRepository;
 import com.linkedin.learning.linkedinlearningfullstackappangularspringboot.repository.RoomRepository;
@@ -55,24 +56,31 @@ public class ReservationResource {
 	}
 	
 	@RequestMapping(path = "/{roomId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Optional<RoomEntity>> getRoomById(
+    public ResponseEntity<RoomEntity> getRoomById(
             @PathVariable
                     Long roomId) {
 
-        Optional<RoomEntity> roomEntity = roomRepository.findById(roomId);
+        RoomEntity roomEntity = roomRepository.findOne(roomId);
 
         return new ResponseEntity<>(roomEntity, HttpStatus.OK);
     }
 
 	@RequestMapping(path = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<ReservableRoomResponse> createReservation(@RequestBody ReservationRequest reservationRequest) {
+	public ResponseEntity<ReservationResponse> createReservation(
+			@RequestBody ReservationRequest reservationRequest) {
+
 		ReservationEntity reservationEntity = conversionService.convert(reservationRequest, ReservationEntity.class);
 		reservationRepository.save(reservationEntity);
-		
-		Optional<RoomEntity> roomEntity = roomRepository.findById(reservationRequest.getRoomId());
-		roomEntity.addRservationEntity(reservationEntity);
+
+		RoomEntity roomEntity = roomRepository.findOne(reservationRequest.getRoomId());
+		roomEntity.addReservationEntity(reservationEntity);
 		roomRepository.save(roomEntity);
-		//return new ResponseEntity<>(new ReservableRoomResponse(), HttpStatus.CREATED);
+		reservationEntity.setRoomEntity(roomEntity);
+
+		ReservationResponse reservationResponse = conversionService.convert(reservationEntity,
+				ReservationResponse.class);
+
+		return new ResponseEntity<>(reservationResponse, HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(path = "", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_UTF8_VALUE, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
