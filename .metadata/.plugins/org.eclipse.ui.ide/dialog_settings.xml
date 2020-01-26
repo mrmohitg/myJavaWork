@@ -153,6 +153,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\JavaWorkbook\ExcelDemosWithPOI"/>
 			<item value="D:\Tutorials\Lynda\Advanced Java Programming\Ex_Files_Java_Adv_Training\Ex_Files_Java_Adv_Training\ExerciseFiles\02_Java7NF"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

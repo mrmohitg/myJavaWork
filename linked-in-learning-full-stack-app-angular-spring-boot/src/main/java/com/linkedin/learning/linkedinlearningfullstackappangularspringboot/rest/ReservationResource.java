@@ -70,6 +70,7 @@ public class ReservationResource {
 		reservationRepository.save(reservationEntity);
 		
 		Optional<RoomEntity> roomEntity = roomRepository.findById(reservationRequest.getRoomId());
+		roomEntity.addRservationEntity(reservationEntity);
 		roomRepository.save(roomEntity);
 		//return new ResponseEntity<>(new ReservableRoomResponse(), HttpStatus.CREATED);
 	}
