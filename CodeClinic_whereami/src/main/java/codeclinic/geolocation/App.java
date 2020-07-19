@@ -12,11 +12,16 @@ public class App {
         String maplink =""; 
 
         //test case
+        location = getData("");
+        obj = new JSONObject(location);
+        System.out.println("\n\nYou are in or near the city of "
+        + obj.getString("city")+ ", "+ obj.getString("country"));
+        maplink = "https://www.google.com/maps/?q="
+        +obj.getString("loc");
+        System.out.println("Your approximate location on the map : \n" + maplink );
         
 
-
         location = getData("8.8.8.8");
-        //System.out.println(location);
         obj = new JSONObject(location);
         System.out.println("\n\nYou are in or near the city of "
         + obj.getString("city")+ ", "+ obj.getString("country"));
