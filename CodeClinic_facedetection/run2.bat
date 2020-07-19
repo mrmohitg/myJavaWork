@@ -1,1 +1,1 @@
-java -jar target\Detect-1.0-SNAPSHOT-jar-with-dependencies.jar graduation.jpeg 1228 820
+java -jar target\CodeClinic_FacialDetection-1.0-SNAPSHOT-jar-with-dependencies.jar graduation.jpeg 1228 820
