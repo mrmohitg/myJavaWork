@@ -2,10 +2,14 @@ package baromatric_trend;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class WeatherEntry{
 
     //fields to be used from input files
+	Date when;
+	float pressure;
+	float humidity;
 
     public String toString(){
         DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

@@ -28,10 +28,11 @@ public class BPTrend{
                     break; 
                 }else{
                     wordsArray = line.split("\t");
-                    
-                    //
-                    // desired fields from input text and WeatherEntry instance 
-                    //
+                    WeatherEntry entry = new WeatherEntry(); 
+                    entry.pressure = Float.valueOf(wordsArray[2]);
+                    entry.humidity = Float.valueOf(wordsArray[4]);
+                    entry.when = format.parse(wordsArray[0]);
+                    collectedData.add(entry);
                 }
             }
             buf.close();
@@ -72,13 +73,19 @@ public class BPTrend{
         }
         
         //formula , slope variable
+        float slope = (y2.pressure - y1.pressure)/(x2-x1);
         
-        result = result + " The barometric pressure slope is " 
+        
+		result = result + " The barometric pressure slope is " 
         +String.format("%.6f",slope) + " \nthe forecast is: ";
 
-        //
         //Trend analysis
-        //
+		if(slope<0)
+			result = result + " inclement weather is closing in.\n ";
+		if(slope==0)
+			result = result + " current conditions are likely to persist. \n";
+		if(slope>0)
+			result = result + "conditions are improving. \n";
         return result;
     }
 
