@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.ec.explorecali.domain.TourPackage;
 import com.example.ec.explorecali.repository.TourPackageRepository;
-import com.example.ec.explorecali.repository.TourRepository;
 
 @Service
 public class TourPackageService {

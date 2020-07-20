@@ -9,6 +9,11 @@ import javax.persistence.ManyToOne;
 @Embeddable
 public class TourRatingPk implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@ManyToOne
 	private Tour tour;
 	

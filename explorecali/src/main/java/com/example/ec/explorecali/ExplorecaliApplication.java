@@ -3,21 +3,19 @@ package com.example.ec.explorecali;
 import java.io.IOException;
 import java.util.List;
 
-import com.example.ec.explorecali.domain.Difficulty;
-import com.example.ec.explorecali.domain.Region;
-import com.example.ec.explorecali.domain.TourPackage;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.ec.explorecali.domain.Difficulty;
+import com.example.ec.explorecali.domain.Region;
 import com.example.ec.explorecali.service.TourPackageService;
 import com.example.ec.explorecali.service.TourService;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootApplication
 public class ExplorecaliApplication implements CommandLineRunner {
