@@ -33,6 +33,22 @@ public class EmployeeTest {
 			if (p2.test(e))
 				System.out.println(e);
 		}
+		
+		Predicate<Employee> p3 = E -> E.city.equalsIgnoreCase("Delhi");
+		
+		Predicate<Employee> p4 = p.or(p3);
+		System.out.println("List of employees who is working from Noida or Delhi");
+		for (Employee e : listOfEmployee) {
+			if (p4.test(e))
+				System.out.println(e);
+		}
+		
+		Predicate<Employee> p5 = p1.negate();
+		System.out.println("List of employees whose salary is less then 40000");
+		for (Employee e : listOfEmployee) {
+			if (p5.test(e))
+				System.out.println(e);
+		}
 
 	}
 
