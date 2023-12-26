@@ -1,4 +1,15 @@
+/target/
+*/target/**
+**/META-INF/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.css
+.apt_generated
 .classpath
 .js
+.factorypath
 .project
-.css
+.settings
+.springBeans
+.sts4-cache
