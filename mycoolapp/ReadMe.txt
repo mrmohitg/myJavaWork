@@ -44,3 +44,8 @@ Spring will inject it automatically ... hence it is auto wired.
 @Component Annotation
 @Component Annotation marks the class as a spring bean. A spring bean is just a regular java class that is managed by Spring.
 @Component also make the bean available for dependency injection.
+
+The spring framework will perform these operations behind the scenes for you.
+Coach theCoach = new CricketCoach();
+CoachRestController coachRestController = new CoachRestController(theCoach);
+
