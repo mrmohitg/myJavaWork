@@ -67,4 +67,11 @@ More on Component Scanning
 
 For explicitly defining the packages for scanning we need to use this below syntax
 //@SpringBootApplication(scanBasePackages = {"com.springboot.demo.mycoolapp","com.springboot.demo.util"})
+
+Setter Injection
+The spring framework will perform these operations behind the scenes for you.
+Coach theCoach = new CricketCoach();
+CoachRestController coachRestController = new CoachRestController();
+coachRestController.setCoach(theCoach); 
+
  
