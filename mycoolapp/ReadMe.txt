@@ -64,4 +64,7 @@ Automatically register the beans in the Spring container
 More on Component Scanning
 * By default, Spring Boot starts component scanning from same package as your main Spring Boot Application also scans sub-packages recursively.
 * This implicitly defines a base search package and allows you to leverage default component scanning so that there is no need to explicitly reference the base package name.
+
+For explicitly defining the packages for scanning we need to use this below syntax
+//@SpringBootApplication(scanBasePackages = {"com.springboot.demo.mycoolapp","com.springboot.demo.util"})
  
