@@ -16,6 +16,13 @@ public class CoachRestController_SetterInjection {
 	public void setCoach(Coach theCoach) {
 		myCoach = theCoach;
 	}
+	
+	/*
+	@Autowired
+	public void doSomething(Coach theCoach) {
+		myCoach = theCoach;
+	}
+	*/
 
 	@GetMapping("/dailyworkoutt")
 	public String getDailyWorkout() {
