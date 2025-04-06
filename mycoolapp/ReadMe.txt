@@ -49,3 +49,19 @@ The spring framework will perform these operations behind the scenes for you.
 Coach theCoach = new CricketCoach();
 CoachRestController coachRestController = new CoachRestController(theCoach);
 
+Scanning for Component Classes
+Spring will scan your java classes for special annotations
+* @Component etc
+Automatically register the beans in the Spring container
+
+
+@SpringBootApplication Annotation is composed of the following annotations:
+
+1. @EnableAutoConfiguration : Enables Spring Boot's auto-configuration support
+2. @ComponentScan : Enables component scanning of current package also recursively scans sub-packages
+3. @Configuration : Able to register extra beans with @Bean or import other configuration classes
+
+More on Component Scanning
+* By default, Spring Boot starts component scanning from same package as your main Spring Boot Application also scans sub-packages recursively.
+* This implicitly defines a base search package and allows you to leverage default component scanning so that there is no need to explicitly reference the base package name.
+ 
