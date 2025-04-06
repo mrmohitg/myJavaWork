@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springboot.demo.mycoolapp.common.Coach;
 
 @RestController
-public class CoachRestController {
+public class CoachRestControllerConstructorInjection {
 	
 	//Define a private field for the dependency
 	private Coach myCoach;
 	
 	// Define a constructor for dependency injection
-	public CoachRestController(Coach theCoach) {
+	public CoachRestControllerConstructorInjection(Coach theCoach) {
 		myCoach = theCoach;
 	}
 

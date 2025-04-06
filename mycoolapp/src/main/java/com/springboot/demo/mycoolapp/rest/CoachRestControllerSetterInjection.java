@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springboot.demo.mycoolapp.common.Coach;
 
 @RestController
-public class CoachRestController_SetterInjection {
+public class CoachRestControllerSetterInjection {
 	
 	//Define a private field for the dependency
 	private Coach myCoach;
