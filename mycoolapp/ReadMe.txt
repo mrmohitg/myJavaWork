@@ -231,5 +231,24 @@ Links to download the MsSQL DatabaseServer
 https://dev.mysql.com/downloads/mysql/
 https://dev.mysql.com/downloads/workbench/ 
 
+user : root
+Password : MySQLServer
 
-Password : MySQLServer*
+Automatic Data Source Configuration
+* In Spring Boot, Hibernate is the default implementation of JPA
+* EntityManager is main component for creating queries etc...
+* EntityManager is from Jakarta Persistence API (JPA)
+* Based on configurations, Spring Boot will automatically create the beans: DataSorce, EntityManager etc....
+* You can then inject these into your application for example DAO
+
+Setting up Project with Spring Initializer
+* At Spring Initializer web site, start.spring.io
+* Add dependencies 
+	- MySQL Driver : mysql-connector-j
+	- Spring Data JPA : spring-boot-starter-data-jpa 
+* DB connection info from application.properties 
+
+
+
+
+
