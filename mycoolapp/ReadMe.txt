@@ -170,3 +170,66 @@ Use case for @Bean
 * You may not have access to the source code of third-party class
 * However, we would like to use the third-party class as Spring bean
 
+Hibernate / JPA Overview
+What is Hibernate?
+* A framework for persisting / saving Java objects in a database i.e. www.hibernate.org/orm
+
+Benefits of Hibernate
+* Hibernate handles all of the low-level SQL
+* Minimizes the amount of JDBC code you have to develop
+* Hibernate provides the Object-to-Relational Mapping (ORM)
+
+Object-to-Relational Mapping (ORM)
+* The developer defines mapping between Java class and database table
+
+Java Class										Database Table
+Student											student
+id : int			--->	Hibernate	--->	id INT
+firstName : String								first_name VARCHAR(45)
+lastname : String 	<---				<---	last_name VARCHAR(45)
+email : String									email VARCHAR(45)	
+
+What is JPA?
+Jakarta Persistence API (JPA) ... previously known as Java Persistence API. It's a standard API for Object-to-Relational-Mapping (ORM).
+It's Only a specification. Defines a set of interfaces and requires an implementation to be usable
+
+JPA - Vendor Implementations
+
+		JPA Spec	
+		^	^	
+Hibernate	EclipseLink
+
+What are benefits of JPA?
+* By having a standard API, we are not locked to vendor's implementation and we can maintain portable, flexible code by coding to JPA spec (interfaces)
+* Can theoretically switch vendor implementations	
+
+JPA/Hibernate CRUD Apps
+* Create Objects
+* Read Objects
+* Update Objects
+* Delete Objects	
+
+Hibernate/JPA and JDBC
+Hibernate / JPA uses JDBC for all database communications
+
+	Our		->		JPA		|	 |	->			
+	Java		  Hibernate |JDBC|				Database
+	App		<-				|	 |	<-	
+
+MySQL Database	
+-MySQL Database includes two components
+* MySQL Database Server
+* MySQL Workbench
+
+MySQL Database Server
+* The MySQL Database Server is the main engine of the database stores data for the database and supports CRUD feature on the data
+
+MySQL Workbench
+* MySQL Workbench is a client GUI for interacting with the database for creating database schemas and tables executing SQL queries to retrieve data, perform insert, updates and deletes on data and handle administrative functions such as creating users
+
+Links to download the MsSQL DatabaseServer
+https://dev.mysql.com/downloads/mysql/
+https://dev.mysql.com/downloads/workbench/ 
+
+
+Password : MySQLServer*
