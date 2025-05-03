@@ -74,4 +74,15 @@ Coach theCoach = new CricketCoach();
 CoachRestController coachRestController = new CoachRestController();
 coachRestController.setCoach(theCoach); 
 
+Field Injection with Annotation n Auto wiring
+In early days, field injection was popular on spring projects. But now it makes the code harder to unit test. However you  will still see it being used on legacy projects.
+
+//no need for constructor or setter
+@Autowired
+private Coach myCoach;
+
+
+Qualifiers
+Adding @Qualifier Annotation to each Controller
+
  

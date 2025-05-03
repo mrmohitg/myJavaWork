@@ -7,17 +7,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springboot.demo.mycoolapp.common.Coach;
 
 @RestController
-public class CoachRestControllerConstructorInjection {
+public class CoachRestControllerQualifiers {
 	
 	//Define a private field for the dependency
+	
 	private Coach myCoach;
 	
 	// Define a constructor for dependency injection
-	public CoachRestControllerConstructorInjection(@Qualifier("footballCoach") Coach theCoach) {
+	
+	public CoachRestControllerQualifiers(@Qualifier("footballCoach") Coach theCoach) {
 		myCoach = theCoach;
 	}
 
-	@GetMapping("/dailyworkout")
+	@GetMapping("/dailyworkoutqualifiers")
 	public String getDailyWorkout() {
 		return  myCoach.getDailyWorkout();
 	}
