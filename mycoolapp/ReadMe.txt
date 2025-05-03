@@ -126,3 +126,19 @@ Lazy Initialization Disadvantages
 * If you have web related components like @RestController, not created until requested
 * May not discover configuration issues until too late
 * Need to make sure you have enough memory for all beans once created 
+
+Bean Scopes
+* Bean Scopes refer to the life cycle of a bean or How long does the bean live or how many instance are created for a bean and how is the bean shared.
+
+Scope			Description
+singleton		Create a single shared instance of the bean. Default scope.
+prototype		Creates a new bean instance for each container request.
+request			Scoped to an HTTP web request. Only used for web applications.
+session 		Scoped to an HTTP web session. Only used for web applications.
+application 	Scoped to a web application ServletContext. Only used for web applications.
+websocket		Scoped to a web socket. Only used for web applications.
+
+Default Scope of Spring Bean is Singleton
+
+What is Singleton?
+* Spring container creates only one instance of the bean, by default. It is cached in memory and all dependency injections for the bean will reference the same bean.  
