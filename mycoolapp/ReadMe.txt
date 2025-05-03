@@ -159,3 +159,14 @@ Init : method configuration
 
 Destroy : method configuration
 @PreDestroy
+
+Java Config Bean - Development Process
+* Create @Configuration class
+* Define @Bean method to configure the bean
+* Inject the bean into our controller
+
+Use case for @Bean
+* Make an existing third-party class available to Spring framework
+* You may not have access to the source code of third-party class
+* However, we would like to use the third-party class as Spring bean
+
