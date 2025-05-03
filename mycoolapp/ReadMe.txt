@@ -141,4 +141,21 @@ websocket		Scoped to a web socket. Only used for web applications.
 Default Scope of Spring Bean is Singleton
 
 What is Singleton?
-* Spring container creates only one instance of the bean, by default. It is cached in memory and all dependency injections for the bean will reference the same bean.  
+* Spring container creates only one instance of the bean, by default. It is cached in memory and all dependency injections for the bean will reference the same bean.
+
+Bean Life Cycle 
+Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spring Processing -> Your Custom Init Method -> Bean is ready for use -> Container is Shutdown -> Your Custom Destroy Method -> Stop
+
+Bean Life Cycle Methods / Hooks
+- You can add custom code during bean initialization
+	* Calling custom business logic methods
+	* Setting up handles to resources (db, sockets, file etc)
+- You can add custom code during bean destruction
+	* Calling custom business logic methods
+	* Clean up handles to resources (db, sockets, file etc)
+	
+Init : method configuration
+@PostConstruct 
+
+Destroy : method configuration
+@PreDestroy
