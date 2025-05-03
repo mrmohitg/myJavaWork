@@ -105,4 +105,24 @@ Which one: @Primary or @Qualifier?
 -In general, I recommended using @Qualifier
 * More specific
 * Higher priority
- 
+
+
+Initialization
+* By default, when your application starts, all beans are initialized @Component etc and spring will create an instance of each and make them available.
+
+Lazy Initialization 
+* Instead of creating all beans up front, we can specify lazy initialization. A bean will only be initialized in the following cases:
+- It is needed for dependency injection
+- Or it is explicitly requested
+* Add the @Lazy annotation to a given class
+Lazy Initialization - Global Configuration
+Add this entry in application.properties file
+spring.main.lazy-initialization=true  
+
+Lazy Initialization Advantages
+* Only create objects as needed
+* May help with faster startup time if you have large number of components
+Lazy Initialization Disadvantages
+* If you have web related components like @RestController, not created until requested
+* May not discover configuration issues until too late
+* Need to make sure you have enough memory for all beans once created 
