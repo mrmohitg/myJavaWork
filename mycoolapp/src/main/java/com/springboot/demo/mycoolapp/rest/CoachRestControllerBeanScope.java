@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springboot.demo.mycoolapp.common.Coach;
 
 @RestController
-public class CoachRestControllerLazyBeanScope {
+public class CoachRestControllerBeanScope {
 	
 	//Define a private field for the dependency
 	
@@ -17,7 +17,7 @@ public class CoachRestControllerLazyBeanScope {
 	
 	// Define a constructor for dependency injection
 	
-	public CoachRestControllerLazyBeanScope(@Qualifier("cricketCoach") Coach theCoach, @Qualifier("cricketCoach") Coach theAnotherCoach) {
+	public CoachRestControllerBeanScope(@Qualifier("cricketCoach") Coach theCoach, @Qualifier("cricketCoach") Coach theAnotherCoach) {
 		myCoach = theCoach;
 		anotherCoach = theAnotherCoach;
 	}
