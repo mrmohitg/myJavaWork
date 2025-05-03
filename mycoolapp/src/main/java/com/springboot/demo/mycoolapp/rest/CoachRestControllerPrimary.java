@@ -1,31 +1,24 @@
 package com.springboot.demo.mycoolapp.rest;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.demo.mycoolapp.common.Coach;
 
 @RestController
-public class CoachRestControllerSetterInjection {
+public class CoachRestControllerPrimary {
 	
 	//Define a private field for the dependency
+	
 	private Coach myCoach;
 	
-	@Autowired
-	public void setCoach(@Qualifier("tennisCoach") Coach theCoach) {
-		myCoach = theCoach;
-	}
+	// Define a constructor for dependency injection
 	
-	/*
-	@Autowired
-	public void doSomething(Coach theCoach) {
+	public CoachRestControllerPrimary(Coach theCoach) {
 		myCoach = theCoach;
 	}
-	*/
 
-	@GetMapping("/dailyworkoutt")
+	@GetMapping("/dailyworkoutprimary")
 	public String getDailyWorkout() {
 		return  myCoach.getDailyWorkout();
 	}

@@ -15,7 +15,7 @@ public class CoachRestControllerQualifiers {
 	
 	// Define a constructor for dependency injection
 	
-	public CoachRestControllerQualifiers(@Qualifier("footballCoach") Coach theCoach) {
+	public CoachRestControllerQualifiers(@Qualifier("cricketCoach") Coach theCoach) {
 		myCoach = theCoach;
 	}
 
@@ -24,3 +24,4 @@ public class CoachRestControllerQualifiers {
 		return  myCoach.getDailyWorkout();
 	}
 }
+

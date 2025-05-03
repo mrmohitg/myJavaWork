@@ -13,7 +13,7 @@ public class CoachRestControllerConstructorInjection {
 	private Coach myCoach;
 	
 	// Define a constructor for dependency injection
-	public CoachRestControllerConstructorInjection(@Qualifier("footballCoach") Coach theCoach) {
+	public CoachRestControllerConstructorInjection(@Qualifier("trackCoach") Coach theCoach) {
 		myCoach = theCoach;
 	}
 

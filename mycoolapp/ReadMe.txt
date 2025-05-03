@@ -81,8 +81,28 @@ In early days, field injection was popular on spring projects. But now it makes 
 @Autowired
 private Coach myCoach;
 
-
 Qualifiers
 Adding @Qualifier Annotation to each Controller
 
+Resolving issue with Multiple Coach implementations
+- In the case of multiple Coach implementations
+* We resolve it using @Qualifier
+* We specified a coach by name
+
+Alternate Solution
+Instead of specifying a coach by name using @Qualifier
+I simply need a coach... I don't care which coach, If there are multiple coaches then you coaches figure it out and tell me who's the primary coach.
+
+Resolve with @Primary - Only one
+* When using @Primary, can have only one for multiple implementations.
+
+Which one: @Primary or @Qualifier?
+- @Primary leaves it up to the implementation classes
+* Could have the issue of multiple @Primary classes leading to an error
+
+-@Qualifier allows to you be very specific on which bean you want
+
+-In general, I recommended using @Qualifier
+* More specific
+* Higher priority
  
