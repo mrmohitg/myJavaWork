@@ -31,6 +31,7 @@ public class MycoolappApplication {
 			updateStudent(studentDAO);
 			deleteStudent(studentDAO);
 			deleteAllStudent(studentDAO);
+			createMultipleStudent(studentDAO);
 		};
 	}
 
@@ -112,14 +113,14 @@ public class MycoolappApplication {
 		student.setEmail("indugupta@gmail.com");
 		studentDAO.update(student);
 	}
-	
+
 	private void deleteStudent(StudentDAO studentDAO) {
 		Student student = studentDAO.findById(3);
 		studentDAO.delete(student.getId());
 	}
-	
+
 	private void deleteAllStudent(StudentDAO studentDAO) {
-		int numberOfRowsDeleted =  studentDAO.deleteAll();
+		int numberOfRowsDeleted = studentDAO.deleteAll();
 		System.out.println(numberOfRowsDeleted + " rows deleted from Student Table.");
 	}
 }
