@@ -1,4 +1,4 @@
-package com.springboot.demo.hibernate.entity;
+package com.springboot.demo.mycoolapp.hibernate.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -36,13 +36,11 @@ public class Student {
 	}
 
 	/**
-	 * @param id
 	 * @param firstName
 	 * @param lastName
 	 * @param email
 	 */
-	public Student(int id, String firstName, String lastName, String email) {
-		this.id = id;
+	public Student(String firstName, String lastName, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

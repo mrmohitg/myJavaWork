@@ -274,5 +274,65 @@ You can define your own CUSTOM generation strategy :-)
 * Create implementation of org.hibernate.id.IdentifierGenerator
 * Override the method : public Serializable generate(...)
 
+Student Data Access Object
+* Responsible for interfacing with the database
+* This is common design pattern Data Access Object (DAO)
+	
+CREDDemoApp		<--->		Student DAO		<--->		Database
 
+Methods List
+save(...)
+findById(...)
+findAll()
+findByLastName(...)
+update(...)
+delete(...)
+deleteAll()
 
+* Our DAO needs a JPA Entity Manager
+* JPA Entity Manager is the main component for saving / retrieving entities
+
+Student DAO		<--->		Entity Manager		<--->		Database
+
+JPA Entity Manager
+* Our JPA Entity Manager needs a Data Source
+* The Data Source defines database connection info
+* JPA Entity Manager and Data Source are automatically created by Spring Boot
+	- Based on the file: application.properties (JDBC URL, user id, password, etc)
+* We can autowire / inject the JPA Entity Manager into our Student DAO
+
+Student DAO		<--->		Entity Manager		<--->		DataSource		<--->		Database
+
+What about JpaRepository?
+* Spring Data JPA has a JpaRepository interface, This provides JPA database access with minimal coding
+
+Which one EntityManager or JpaRepository?
+EntityManager
+* If you need low-level control and flexibility, use EntityManager
+* Need low-level control over the database operations and want to write custom queries
+* Provide low-level access to JPA and work directly with JPA entities
+* Complex queries that required advanced feature such as native SQL queries or stored procedure calls
+* When you have custom requirements that are not easily handled by higher-level abstractions
+
+JpaRepository
+* If you want high-level of abstraction, use JpaRepository
+* Provides commonly used CRUD operations out of the box, reducing the amount of code you need to write
+* Additional features such as pagination, sorting
+* Generate queries based on method names
+* Can also create custom queries using @Query 
+
+Spring @Transactional
+* Spring provides an @transactional annotation 
+* Auto magically begin and end a transaction for your JPA code, this Spring magic happens behind the scenes
+
+Specialized Annotation for DAO's
+* Spring provides the @Repository annotation
+
+										@Component
+							^			 	^				^	
+							|				|				|	
+					@RestController		@Repository		   ...
+					
+* Applied to DAO implementations
+* Spring will automatically register the DAO implementation thanks to component-scanning
+* Spring also provides translation of any JDBC related exceptions 
