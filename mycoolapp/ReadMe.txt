@@ -336,3 +336,9 @@ Specialized Annotation for DAO's
 * Applied to DAO implementations
 * Spring will automatically register the DAO implementation thanks to component-scanning
 * Spring also provides translation of any JDBC related exceptions 
+
+Changing Index of MySQL Auto Increment
+* ALTER TABLE student_tracker.student AUTO_INCREMENT=3000
+
+Reset Auto Increment starting from 1
+* TRUNCATE student_tracker.student
