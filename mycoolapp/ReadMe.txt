@@ -382,3 +382,7 @@ JPQL - Select Clause
 e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Student s", Student.class);	
 e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Student s WHERE s.email LIKE '%mohit@gmail.com'", Student.class);
 e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Student s WHERE s.lastName=:theData", Student.class);
+
+Update
+entityManager.merge(...);
+int numberOfRowsUpdated = entityManager.createQuery("UPDATE Student SET lastName = 'Tester'").executeUpdate();

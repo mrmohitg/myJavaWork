@@ -28,6 +28,7 @@ public class MycoolappApplication {
 			readStudent(studentDAO);
 			queryForStudents(studentDAO);
 			queryForStudentByFirstName(studentDAO);
+			updateStudent(studentDAO);
 		};
 	}
 
@@ -78,19 +79,37 @@ public class MycoolappApplication {
 		Student student = studentDAO.findById(tempStudent.getId());
 		System.out.println(student.getFirstName() + " " + student.getLastName());
 	}
-	
+
 	private void queryForStudents(StudentDAO studentDAO) {
 		List<Student> students = studentDAO.findAll();
-		for(Student student : students) {
-			System.out.println(student.getFirstName() + " " + student.getLastName() + "'s email id is "+ student.getEmail());
-		}
-	}
-	
-	private void queryForStudentByFirstName(StudentDAO studentDAO) {
-		List<Student> students = studentDAO.findByFirstName("Mohit");
-		for(Student student : students) {
-			System.out.println(student.getFirstName() + " " + student.getLastName() + "'s email id is "+ student.getEmail());
+		for (Student student : students) {
+			System.out.println(
+					student.getFirstName() + " " + student.getLastName() + "'s email id is " + student.getEmail());
 		}
 	}
 
+	private void queryForStudentByFirstName(StudentDAO studentDAO) {
+		List<Student> students = studentDAO.findByFirstName("Mohit");
+		for (Student student : students) {
+			System.out.println(
+					student.getFirstName() + " " + student.getLastName() + "'s email id is " + student.getEmail());
+		}
+	}
+
+	private void updateStudent(StudentDAO studentDAO) {
+		// create a student object
+		System.out.println("Creating the new student object ...");
+		Student tempStudent = new Student("Nishnat", "Gupta", "nishantgupta@gmail.com");
+
+		// save the student object
+		System.out.println("Saving the student ...");
+		studentDAO.save(tempStudent);
+		Student student = studentDAO.findById(tempStudent.getId());
+		student.setFirstName("Indu");
+		student.setLastName("Gupta");
+		student.setEmail("indugupta@gmail.com");
+		studentDAO.update(student);
+		
+		
+	}
 }
