@@ -1,6 +1,7 @@
 package com.springboot.demo.mycoolapp;
 
-import java.util.List;import org.hibernate.internal.build.AllowSysOut;
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
