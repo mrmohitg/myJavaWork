@@ -248,7 +248,31 @@ Setting up Project with Spring Initializer
 	- Spring Data JPA : spring-boot-starter-data-jpa 
 * DB connection info from application.properties 
 
+JPA Development Process
+* Annotate Java Class
+* Develop Java Code to perform database operations
 
+Entity Class 
+Entity Class is a Java class that is mapped to a database table. It Must be annotated with @Entity this class can have other constructors but must have a public or protected no-argsument constructor
+ 
+Map Class to database table using these Annotations
+@Entity
+@Table
+@Id
+@Column
+@GeneratedValue
+
+ID Generation Strategies
+		Name								Description
+GenerationType.AUTO			Pick an appropriate strategy for the particular database
+GenerationType.IDENTITY		Assign primary keys using database identity column
+GenerationType.SEQUENCE		Assign primary keys using a database sequence
+GenerationType.TABLE		Assign primary keys using an underlying database table to ensure uniqueness		
+GenerationType.UUID			Assign primary keys using a globally unique identifier (UUID) to ensure uniqueness
+
+You can define your own CUSTOM generation strategy :-)
+* Create implementation of org.hibernate.id.IdentifierGenerator
+* Override the method : public Serializable generate(...)
 
 
 
