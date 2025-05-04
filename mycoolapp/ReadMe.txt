@@ -345,3 +345,40 @@ Reset Auto Increment starting from 1
 
 Retrieving an Object
 * findById(...)
+
+JPA Query Language (JPQL)
+* Query Language for retrieving objects
+* Similar in concepts to SQL
+	- where, like, order by, join, in, etc... 
+* JPQL is based on entity name and entity fields instead of table name and table fields
+
+e.g. Retrieving all objects
+	TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student", Student.class);
+	List<Student> students = theQuery.getResultList();
+
+e.g. Retrieving Students having lastName = 'Gupta'
+	TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student WHERE lastName='Gupta'", Student.class);
+	List<Student> students = theQuery.getResultList();
+  
+e.g. Retrieving Students using OR predicate:
+	TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student WHERE lastName='Gupta' OR 'Garg'", Student.class);
+	List<Student> students = theQuery.getResultList();
+
+e.g. Retrieving Students using LIKE predicate:
+	TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student WHERE email LIKE '%mohit@gmail.com'", Student.class);
+	List<Student> students = theQuery.getResultList();
+
+JPQL - Named Parameters
+	public List<Student> findByLastName(String lastName){
+		TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student WHERE lastName=:theData", Student.class);
+		theQuery.setParameter("theData", theLastName);
+		return thQuery.getResultList();
+	}
+	
+JPQL - Select Clause
+* The query examples so far did not specify a "select" clause
+* The Hibernate implementation is lenient and allows Hibernate Query Language (HQL)
+* For strict JPQL, the "select" clause is required
+e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Student s", Student.class);	
+e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Student s WHERE s.email LIKE '%mohit@gmail.com'", Student.class);
+e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Student s WHERE s.lastName=:theData", Student.class);

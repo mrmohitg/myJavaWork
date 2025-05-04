@@ -1,5 +1,6 @@
 package com.springboot.demo.mycoolapp;
 
+import java.util.List;import org.hibernate.internal.build.AllowSysOut;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +25,8 @@ public class MycoolappApplication {
 			createStudent(studentDAO);
 			createMultipleStudent(studentDAO);
 			readStudent(studentDAO);
+			queryForStudents(studentDAO);
+			queryForStudentByFirstName(studentDAO);
 		};
 	}
 
@@ -46,21 +49,15 @@ public class MycoolappApplication {
 
 		System.out.println("Creating the new student objects ...");
 		Student tempStudent = new Student("Anurag", "Gupta", "anurag@gmail.com");
-
 		studentDAO.save(tempStudent);
 
 		System.out.println("Saved student. Generated id " + tempStudent.getId());
-
 		Student tempStudent1 = new Student("Chhavi", "Gupta", "chhavi@gmail.com");
-
 		studentDAO.save(tempStudent1);
 
 		System.out.println("Saved student. Generated id " + tempStudent1.getId());
-
 		Student tempStudent2 = new Student("Priyanka", "Gupta", "priyanka@gmail.com");
-
 		studentDAO.save(tempStudent2);
-
 		System.out.println("Saved student. Generated id " + tempStudent2.getId());
 
 	}
@@ -79,6 +76,20 @@ public class MycoolappApplication {
 		System.out.println("Saved student. Generated id " + tempStudent.getId());
 		Student student = studentDAO.findById(tempStudent.getId());
 		System.out.println(student.getFirstName() + " " + student.getLastName());
+	}
+	
+	private void queryForStudents(StudentDAO studentDAO) {
+		List<Student> students = studentDAO.findAll();
+		for(Student student : students) {
+			System.out.println(student.getFirstName() + " " + student.getLastName() + "'s email id is "+ student.getEmail());
+		}
+	}
+	
+	private void queryForStudentByFirstName(StudentDAO studentDAO) {
+		List<Student> students = studentDAO.findByFirstName("Mohit");
+		for(Student student : students) {
+			System.out.println(student.getFirstName() + " " + student.getLastName() + "'s email id is "+ student.getEmail());
+		}
 	}
 
 }
