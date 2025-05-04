@@ -19,11 +19,11 @@ public class MycoolappApplication {
 
 	@Bean
 	CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
-		return runner -> 
-		{
+		return runner -> {
 			System.out.println("Hibernate Setup");
 			createStudent(studentDAO);
 			createMultipleStudent(studentDAO);
+			readStudent(studentDAO);
 		};
 	}
 
@@ -41,7 +41,7 @@ public class MycoolappApplication {
 		System.out.println("Saved student. Generated id " + tempStudent.getId());
 
 	}
-	
+
 	private void createMultipleStudent(StudentDAO studentDAO) {
 
 		System.out.println("Creating the new student objects ...");
@@ -50,19 +50,35 @@ public class MycoolappApplication {
 		studentDAO.save(tempStudent);
 
 		System.out.println("Saved student. Generated id " + tempStudent.getId());
-		
+
 		Student tempStudent1 = new Student("Chhavi", "Gupta", "chhavi@gmail.com");
 
 		studentDAO.save(tempStudent1);
 
 		System.out.println("Saved student. Generated id " + tempStudent1.getId());
-		
+
 		Student tempStudent2 = new Student("Priyanka", "Gupta", "priyanka@gmail.com");
 
 		studentDAO.save(tempStudent2);
 
 		System.out.println("Saved student. Generated id " + tempStudent2.getId());
 
+	}
+
+	private void readStudent(StudentDAO studentDAO) {
+
+		// create a student object
+		System.out.println("Creating the new student object ...");
+		Student tempStudent = new Student("Yashoraj", "Gupta", "yashorajgupta@gmail.com");
+
+		// save the student object
+		System.out.println("Saving the student ...");
+		studentDAO.save(tempStudent);
+
+		// display id of the saved student
+		System.out.println("Saved student. Generated id " + tempStudent.getId());
+		Student student = studentDAO.findById(tempStudent.getId());
+		System.out.println(student.getFirstName() + " " + student.getLastName());
 	}
 
 }

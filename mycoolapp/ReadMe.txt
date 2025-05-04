@@ -342,3 +342,6 @@ Changing Index of MySQL Auto Increment
 
 Reset Auto Increment starting from 1
 * TRUNCATE student_tracker.student
+
+Retrieving an Object
+* findById(...)
