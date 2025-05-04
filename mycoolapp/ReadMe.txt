@@ -386,3 +386,8 @@ e.g. TypedQuery<Student> theQuery = entityManager.createQuery("select s FROM Stu
 Update
 entityManager.merge(...);
 int numberOfRowsUpdated = entityManager.createQuery("UPDATE Student SET lastName = 'Tester'").executeUpdate();
+
+Delete
+entityManager.remove(...);
+int numberOfRowsDeleted = entityManager.createQuery("DELETE FROM Student WHERE firstName = 'Nikhil'").executeUpdate();
+int numberOfRowsDeleted = entityManager.createQuery("DELETE FROM Student").executeUpdate();

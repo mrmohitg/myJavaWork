@@ -29,6 +29,8 @@ public class MycoolappApplication {
 			queryForStudents(studentDAO);
 			queryForStudentByFirstName(studentDAO);
 			updateStudent(studentDAO);
+			deleteStudent(studentDAO);
+			deleteAllStudent(studentDAO);
 		};
 	}
 
@@ -109,7 +111,15 @@ public class MycoolappApplication {
 		student.setLastName("Gupta");
 		student.setEmail("indugupta@gmail.com");
 		studentDAO.update(student);
-		
-		
+	}
+	
+	private void deleteStudent(StudentDAO studentDAO) {
+		Student student = studentDAO.findById(3);
+		studentDAO.delete(student.getId());
+	}
+	
+	private void deleteAllStudent(StudentDAO studentDAO) {
+		int numberOfRowsDeleted =  studentDAO.deleteAll();
+		System.out.println(numberOfRowsDeleted + " rows deleted from Student Table.");
 	}
 }
