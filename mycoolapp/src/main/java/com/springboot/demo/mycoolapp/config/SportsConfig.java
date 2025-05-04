@@ -1,4 +1,4 @@
-package com.springboot.demo.config;
+package com.springboot.demo.mycoolapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
