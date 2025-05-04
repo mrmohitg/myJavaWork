@@ -23,6 +23,7 @@ public class MycoolappApplication {
 		{
 			System.out.println("Hibernate Setup");
 			createStudent(studentDAO);
+			createMultipleStudent(studentDAO);
 		};
 	}
 
@@ -30,7 +31,7 @@ public class MycoolappApplication {
 
 		// create a student object
 		System.out.println("Creating the new student object ...");
-		Student tempStudent = new Student("Mohit", "Gupta", "mohit@gmail.com");
+		Student tempStudent = new Student("Mohit", "Gupta", "mohitgupta@gmail.com");
 
 		// save the student object
 		System.out.println("Saving the student ...");
@@ -38,6 +39,29 @@ public class MycoolappApplication {
 
 		// display id of the saved student
 		System.out.println("Saved student. Generated id " + tempStudent.getId());
+
+	}
+	
+	private void createMultipleStudent(StudentDAO studentDAO) {
+
+		System.out.println("Creating the new student objects ...");
+		Student tempStudent = new Student("Anurag", "Gupta", "anurag@gmail.com");
+
+		studentDAO.save(tempStudent);
+
+		System.out.println("Saved student. Generated id " + tempStudent.getId());
+		
+		Student tempStudent1 = new Student("Chhavi", "Gupta", "chhavi@gmail.com");
+
+		studentDAO.save(tempStudent1);
+
+		System.out.println("Saved student. Generated id " + tempStudent1.getId());
+		
+		Student tempStudent2 = new Student("Priyanka", "Gupta", "priyanka@gmail.com");
+
+		studentDAO.save(tempStudent2);
+
+		System.out.println("Saved student. Generated id " + tempStudent2.getId());
 
 	}
 

@@ -1,6 +1,5 @@
 package com.springboot.demo.mycoolapp.hibernate.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.springboot.demo.mycoolapp.hibernate.entity.Student;
@@ -17,7 +16,6 @@ public class StudentDAOImpl implements StudentDAO {
 	/**
 	 * @param entityManager
 	 */
-	@Autowired
 	public StudentDAOImpl(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
