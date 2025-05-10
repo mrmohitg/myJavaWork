@@ -8,7 +8,6 @@ public class Player {
 	
 	public Player() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Player(String firstName, String lastName) {

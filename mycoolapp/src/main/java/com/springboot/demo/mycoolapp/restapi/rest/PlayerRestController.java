@@ -3,6 +3,9 @@ package com.springboot.demo.mycoolapp.restapi.rest;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,7 +58,28 @@ public class PlayerRestController {
 	
 	@GetMapping("/footballers/{playerId}")
 	public Player getPlayer(@PathVariable  int playerId) {
+		if(playerId<0 || playerId >=players.size()) {
+			throw(new PlayerNotFoundException("Player id "+ playerId+" not found "));
+		}
 		return players.get(playerId);
+	}
+	
+	@ExceptionHandler
+	public ResponseEntity<PlayerErrorResponse> handleException(PlayerNotFoundException exc){
+		PlayerErrorResponse playerErrorResponse = new PlayerErrorResponse();
+		playerErrorResponse.setStatus(HttpStatus.NOT_FOUND.value());
+		playerErrorResponse.setMessage(exc.getMessage());
+		playerErrorResponse.setTimeStamp(System.currentTimeMillis());
+		return new ResponseEntity<>(playerErrorResponse, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler
+	public ResponseEntity<PlayerErrorResponse> handleException(Exception exc){
+		PlayerErrorResponse playerErrorResponse = new PlayerErrorResponse();
+		playerErrorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
+		playerErrorResponse.setMessage(exc.getMessage());
+		playerErrorResponse.setTimeStamp(System.currentTimeMillis());
+		return new ResponseEntity<>(playerErrorResponse, HttpStatus.BAD_REQUEST);
 	}
 	
 }

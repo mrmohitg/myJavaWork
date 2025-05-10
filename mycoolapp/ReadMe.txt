@@ -529,3 +529,31 @@ Path Variables
 * Retrieve a single player by id 
 GET	/mycoolapp/player/footballers/{playerId}	Retrieve a single player
 
+Spring REST - Exception Handling
+* Bad Player Id of 9999 is giving Internal Server Error with the status as 500
+* But it should give proper message i.e. Player not found - 9999 with the status as 404
+ 
+Development Process
+1. Create a custom error response class
+2. Create a custom exception class
+3. Update REST service to throw exception if player is not found
+4. Add a exception handler method using @ExceptionHandler
+
+Step 1: Create a custom error response class
+* The custom error response class will be sent back to client as JSON
+* We will define as Java Class (POJO)
+* Jackson will handle converting it to JSON
+
+Step 2: Create a custom exception class
+* The custom player exception will used by our REST service
+* In our code, if we can't find player, then we'll throw an exception
+* Need to define a custom player exception class
+	- PlayerNotFoundException
+
+Step 3: Update REST service to throw exception if player is not found
+
+Step 4: Add a exception handler method using @ExceptionHandler
+* Define exception handler method(s) with @ExceptionHandler annotation
+* Exception handler will return a ResponseEntity
+* ResponseEntity is a wrapper for the HTTP response object
+* ResponseEntity provides fine-grained control to specify:
