@@ -495,3 +495,31 @@ Hit this URL through Postman to see Sample JSON Response
 https://jsonplaceholder.typicode.com/users
 
 Spring Rest Controller
+						/test/hello
+REST Client			------------------>			REST Service
+					<------------------	
+						Hello World!
+
+Web Browser vs Postman
+* For simple REST testing for GET request Web Browser and Postman are similar
+* For advanced REST testing like POST and PUT etc, Postman has much better support. POSTing JSON data, setting content type or passing HTTP request headers, authentication etc.
+
+Java JSON Data Binding
+* Data binding is the process of converting JSON data to a Java POJO
+					Data Binding
+	JSON 			------------>				Java POJO
+					<------------
+
+Jackson Data Binding
+* By default, Jackson will call appropriate getter/setter method
+
+JSON to Java POJO
+* Convert JSON to Java POJO... call setter methods on POJO
+
+Java POJO to JSON
+* Convert Java POJO to JSON... call getter method on POJO
+
+Spring and Jackson Support
+* When building Spring REST application Spring will automatically handle Jackson Integration.
+* JSON data being passed to REST controller is converted to POJO
+* Java object being returned from REST controller is converted to JSON

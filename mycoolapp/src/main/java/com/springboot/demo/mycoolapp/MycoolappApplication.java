@@ -116,7 +116,9 @@ public class MycoolappApplication {
 
 	private void deleteStudent(StudentDAO studentDAO) {
 		Student student = studentDAO.findById(3);
-		studentDAO.delete(student.getId());
+		if(student!=null) {
+			studentDAO.delete(student.getId());
+		}
 	}
 
 	private void deleteAllStudent(StudentDAO studentDAO) {
