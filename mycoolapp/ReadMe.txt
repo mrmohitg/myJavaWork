@@ -421,3 +421,77 @@ Don't do this(spring.jpa.hibernate.dll-auto=create) on Production database! beca
 -spring.jpa.hibernate.ddl-auto=create
 *Automatic table generation is useful for
 	- Database integration testing with in-memory databases
+	
+REST APIs - REST Web Services
+Application Architecture
+
+									city
+	My Weather App (client)		----------->		Weather Service(external - provided by External Third Party Server)  
+								<-----------
+							    weather report
+
+Q. How will we connect to the Weather Service?
+A. We can make REST API calls over HTTP. REST is REpresentational State Transfer. Lightweight approach for communicating between applications
+
+Q. What programming language do we use?
+A. REST is language independent. The client application can use ANY programming language and the Server application can use ANY programming language
+
+Q. What is the data format?
+A. REST applications can use any data format. Commonly see XML and JSON. JSON stands for JavaScript Object Notation.
+
+Currency Converter App
+
+								  $ -> ₹, 100$ 
+	My Currency App				--------------->		Currency Service(external)  
+								<---------------
+							       ₹6478.52 
+
+JSON Basics
+Q. What is JSON?
+A. JavaScript Object Notation is a lightweight data format for storing and exchanging data... in plain text. It is also language independent. e.g.
+
+{
+"id":14,
+"firstName":"Mohit",
+"lastName":"Gupta"
+}
+
+REST over HTTP
+* Most common use of REST is over HTTP
+* Leverage HTTP methods for CRUD operations
+	HTTP Method			CRUD Operation
+	POST				Create a new entity
+	GET					Read a list of entities or single entity
+	PUT					Update an existing entity
+	DELETE				Delete an existing entity
+
+HTTP Messages
+HTTP Request Message
+	* Request Line : The HTTP command
+	* Header Variables : Request Metadata
+	* Message Body : Contents of message
+	
+HTTP Response Message
+	* Response Line : Server Protocol and Status Code
+	* Header Variables : Response Metadata
+	* Message Body : Contents of Message
+
+HTTP Response - Status Codes
+Code Range		Description			e.g.
+100 - 199		Informational
+200 - 299		Successful
+300 - 399	 	Redirection
+400 - 499		Client Error 		401 Authentication Required, 404 File Not Found
+500 - 599		Server Error		500	Internal Server Error
+
+MIME Content Types
+* MIME stands for Multipurpose Internet Mail-Extention, The message format is described by MIME content type
+* Basic Syntax : type/sub-type e.g. text/html, text/plain, application/json, application/xml
+
+Client Tool
+PostMan and CURL
+
+Hit this URL through Postman to see Sample JSON Response
+https://jsonplaceholder.typicode.com/users
+
+Spring Rest Controller
