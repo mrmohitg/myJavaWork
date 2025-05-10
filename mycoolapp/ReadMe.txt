@@ -557,3 +557,21 @@ Step 4: Add a exception handler method using @ExceptionHandler
 * Exception handler will return a ResponseEntity
 * ResponseEntity is a wrapper for the HTTP response object
 * ResponseEntity provides fine-grained control to specify:
+
+Global Exception Handlers - @ControllerAdvice
+* Exception handler code is only for the specific REST controller
+* Can't be reused by other controllers :-(
+* We need global exception handlers
+	- Promote reuse
+	- Centralizes exception handling
+
+Spring @ControllerAdvice
+* @ControllerAdvice is similar to an interceptor / filter
+* Pre-process requests to controllers
+* Post-process responses to handle exceptions
+* Perfect for global exception handling
+
+					/mycoolapp/player/footballers/{playerId}
+	REST Client		----------------------------------------->		Controller Advice	-->		REST Service
+								<----------							(Exception Handler)	<--		ThrowException
+
