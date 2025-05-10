@@ -575,3 +575,40 @@ Spring @ControllerAdvice
 	REST Client		----------------------------------------->		Controller Advice	-->		REST Service
 								<----------							(Exception Handler)	<--		ThrowException
 
+Spring REST API Design
+API Design Process
+1. Review API requirements
+2. Identify main resources / entity
+3. Use HTTP methods to assign action on resource
+
+1. Review API requirements 
+Create a REST API for the Player Directory
+* REST client should be able to 
+	- Get list of players
+	- Get a single player by id
+	- Add a new player
+	- Update a player
+	- Delete a player
+
+2. Identify main resources / entity
+* To identify main resource / entity, look for the most prominent "noun"
+* For our project it's 'Player'
+* Convention is to use plural form of resource / entity : players
+	/api/players
+
+3. Use HTTP methods to assign action on resource
+	HTTP Method		Endpoint					CRUD Action
+	POST			/api/players				Create a new player
+	GET				/api/players				Read a list of players
+	GET				/api/players/{playerId}		Read a single player
+	PUT				/api/players				Update an existing player
+	DELETE			/api/players/{playerId}		Delete an existing player
+	
+Anti-Pattens
+* Do Not Do This ... these are REST anti-patterns, bad practice
+/api/playersList
+/api/deletePlayer
+/api/addPlayer
+/api/updatePlayer
+Don't include actions in the end point instead use HTTP methods to assign actions
+
