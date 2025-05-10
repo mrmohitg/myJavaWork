@@ -1,16 +1,16 @@
 package com.springboot.demo.mycoolapp.restapi.entity;
 
-public class Player {
+public class FootballPlayer {
 	
 	private String firstName;
 
 	private String lastName;
 	
-	public Player() {
+	public FootballPlayer() {
 		super();
 	}
 	
-	public Player(String firstName, String lastName) {
+	public FootballPlayer(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

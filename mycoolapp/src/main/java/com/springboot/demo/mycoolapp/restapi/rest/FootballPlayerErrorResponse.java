@@ -1,6 +1,6 @@
 package com.springboot.demo.mycoolapp.restapi.rest;
 
-public class PlayerErrorResponse {
+public class FootballPlayerErrorResponse {
 	
 	private int status;
 	
@@ -8,11 +8,11 @@ public class PlayerErrorResponse {
 	
 	private long timeStamp;
 
-	public PlayerErrorResponse() {
+	public FootballPlayerErrorResponse() {
 		super();
 	}
 
-	public PlayerErrorResponse(int status, String message, long timeStamp) {
+	public FootballPlayerErrorResponse(int status, String message, long timeStamp) {
 		super();
 		this.status = status;
 		this.message = message;

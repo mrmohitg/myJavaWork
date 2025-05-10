@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class PlayerRestExceptionHandler {
+public class FootballPlayerRestExceptionHandler {
 
 	@ExceptionHandler
-	public ResponseEntity<PlayerErrorResponse> handleException(PlayerNotFoundException exc){
-		PlayerErrorResponse playerErrorResponse = new PlayerErrorResponse();
+	public ResponseEntity<FootballPlayerErrorResponse> handleException(FootballPlayerNotFoundException exc){
+		FootballPlayerErrorResponse playerErrorResponse = new FootballPlayerErrorResponse();
 		playerErrorResponse.setStatus(HttpStatus.NOT_FOUND.value());
 		playerErrorResponse.setMessage(exc.getMessage());
 		playerErrorResponse.setTimeStamp(System.currentTimeMillis());
@@ -18,8 +18,8 @@ public class PlayerRestExceptionHandler {
 	}
 	
 	@ExceptionHandler
-	public ResponseEntity<PlayerErrorResponse> handleException(Exception exc){
-		PlayerErrorResponse playerErrorResponse = new PlayerErrorResponse();
+	public ResponseEntity<FootballPlayerErrorResponse> handleException(Exception exc){
+		FootballPlayerErrorResponse playerErrorResponse = new FootballPlayerErrorResponse();
 		playerErrorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
 		playerErrorResponse.setMessage(exc.getMessage());
 		playerErrorResponse.setTimeStamp(System.currentTimeMillis());
