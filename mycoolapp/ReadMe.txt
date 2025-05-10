@@ -523,3 +523,9 @@ Spring and Jackson Support
 * When building Spring REST application Spring will automatically handle Jackson Integration.
 * JSON data being passed to REST controller is converted to POJO
 * Java object being returned from REST controller is converted to JSON
+
+Spring REST - Path Variables
+Path Variables
+* Retrieve a single player by id 
+GET	/mycoolapp/player/footballers/{playerId}	Retrieve a single player
+
