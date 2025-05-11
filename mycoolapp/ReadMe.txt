@@ -733,3 +733,61 @@ Then in the Postman we need to add a Headers
 
 Rest Controller Method - DELETE 
 /mycoolapp/footballService/playersService/102	
+
+Spring Data JPA in Spring Boot
+
+	Player Rest Controller	<-->		Player Service		<-->		PlayerDAO 		<-->		Database					   
+																	(Spring Data JPA)
+
+The Problem
+* We saw how to create a DAO for Player
+* What if we need to create a DAO for another entity?
+	- Customer, Student, Product, Book ... etc
+* Do we have to repeat all of the same code again???
+
+Creating DAO
+* You may have noticed a pattern with creating DAOs i.e. Most of the code is the same only difference is the entity type and primary key
+
+	@Override
+	public Player findById(int id) {
+		return entityManager.find(Player.class, id);
+	}								^			^	
+									|			|
+							 (Entity Type)(Primary Key)	
+							 
+I which we could tell Spring:
+	Create a DAO for me, Plug in my entity type and primary key Give me all of the basic CRUD features for free
+	
+My Wish Diagram	
+	Entity: Player		Primary Key: Integer
+				findAll()
+				findById(...)
+				save(...)
+				deleteById(...)
+				...others...
+Spring Data JPA is the solution!!! 		https://spring.io/projects/spring-data-jpa
+* Create a DAO and just plug in your entity type and primary key
+* Spring will give you a CRUD implementation for Free... like MAGIC!!
+* Help to minimize boiler-plate DAO code ... yaay!!
+* More than 70% reduction in code, depending on use case
+
+JpaRepository
+* Spring Data JPA provides the interface: JpaRepository
+* Exposes methods (some by inheritance from parents)
+	- findAll()
+	- findById(...)
+	- save(...)
+	- deleteById(...)
+
+Development Process
+1. Extend JpaRepository interface
+2. Use your Repository in your application
+	No need for implementation class
+
+Advanced Features
+* Extending and adding custom queries with JPQL
+* Query Domain Specific Language (Query DSL)
+* Defining custom methods (low-level coding)
+
+				
+					
