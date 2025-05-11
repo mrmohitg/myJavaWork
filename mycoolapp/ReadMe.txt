@@ -640,4 +640,20 @@ Specialized Annotation for Services
 * @Service applied to Service implementation
 * Spring will automatically register the Service implementation through component scanning		
 
-/mycoolapp/footballService/playersService									
+/mycoolapp/footballService/playersService
+
+Spring Boot DAO : Find, Add, Update, Delete
+Service Layer - Best Practice
+* Best practice is to apply transactional boundaries at the service layer
+* It is the service layer's responsibility to manage transaction boundaries
+* For implementation code
+	- Apply @Transactional on service methods
+	- Remove @Transactional on DAO methods if they already exist
+	  
+Sending JSON to Spring REST Controller
+* When sending JSON data to Spring REST Controllers
+* For controller to process JSON data, need to set a HTTP request header
+	- Content-type: application/json
+* Need to configure REST client to send the correct HTTP request header 
+
+/mycoolapp/footballService/playersService/1							

@@ -24,4 +24,20 @@ public class PlayerDAOJpaImpl implements PlayerDAO{
 		TypedQuery<Player> theQuery = entityManager.createQuery("SELECT p FROM Player p",Player.class);
 		return theQuery.getResultList();
 	}
+
+	@Override
+	public Player findById(int id) {
+		return entityManager.find(Player.class, id);
+	}
+
+	@Override
+	public Player save(Player player) {
+		return entityManager.merge(player);
+	}
+
+	@Override
+	public void deleteById(int id) {
+		Player player = entityManager.find(Player.class, id);
+		entityManager.remove(player);
+	}
 }

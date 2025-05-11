@@ -3,6 +3,7 @@ package com.springboot.demo.mycoolapp.restapi.rest;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,12 +25,18 @@ public class PlayerRestServiceController {
 		this.playerService = playerService;
 	}
 
-
-
 	@GetMapping("/playersService")
-	public List<Player> findAllPlayer(){
+	public List<Player> getAllPlayer(){
 		return playerService.findAll();
 	}
 	
-
+	@GetMapping("/playersService/{playerId}")
+	public Player getSinglePlayer(@PathVariable int playerId){
+		Player player = playerService.findById(playerId);
+		if(player == null) {
+			throw new RuntimeException("Player id not found.");
+		}
+		return player;
+	}
+	
 }
