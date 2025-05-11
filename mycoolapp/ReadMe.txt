@@ -731,3 +731,5 @@ Then in the Postman we need to add a Headers
 	Key 			value
 	X-CSRF-TOKEN	YmYfCf2UDnchFithLY2UCFQp8wAXvK-MpqadNm_dqA8ApSshB14mPs2nb0EMdRlSSaCgOmdI3mIj3ZyhwJGoAAu_zm1kkkoV
 
+Rest Controller Method - DELETE 
+/mycoolapp/footballService/playersService/102	

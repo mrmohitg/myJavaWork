@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.security.web.csrf.CsrfToken;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,12 +24,10 @@ import jakarta.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/footballService")
 public class PlayerRestServiceController {
-	
+
 	public PlayerService playerService;
-	
+
 	private ObjectMapper objectMapper;
-	
-	
 
 	/**
 	 * @param playerService
@@ -41,40 +40,39 @@ public class PlayerRestServiceController {
 	}
 
 	@GetMapping("/playersService")
-	public List<Player> getAllPlayer(){
+	public List<Player> getAllPlayer() {
 		return playerService.findAll();
 	}
-	
+
 	@GetMapping("/playersService/{playerId}")
-	public Player getSinglePlayer(@PathVariable int playerId){
+	public Player getSinglePlayer(@PathVariable int playerId) {
 		Player player = playerService.findById(playerId);
-		if(player == null) {
+		if (player == null) {
 			throw new RuntimeException("Player not found.");
 		}
 		return player;
 	}
-	
+
 	@PostMapping("/playersService")
-	
+
 	public Player addPlayer(@RequestBody Player player) {
 		player.setId(0);
 		return playerService.save(player);
 	}
-	
+
 	@PutMapping("/playersService")
-	public Player updatePlayer(@RequestBody Player player){
+	public Player updatePlayer(@RequestBody Player player) {
 		return playerService.save(player);
 	}
-	
+
 	@PatchMapping("/playersService/{playerId}")
-	public Player partialUpdatePlayer(@PathVariable int playerId, @RequestBody Map<String,Object> patchPayload){
+	public Player partialUpdatePlayer(@PathVariable int playerId, @RequestBody Map<String, Object> patchPayload) {
 		Player tempPlayer = playerService.findById(playerId);
-		if(tempPlayer == null)
-		{
+		if (tempPlayer == null) {
 			throw new RuntimeException("Player not found.");
 		}
-		if(patchPayload.containsKey("id")) {
-			throw new RuntimeException("Player id not allowed in request body. "+playerId);
+		if (patchPayload.containsKey("id")) {
+			throw new RuntimeException("Player id not allowed in request body. " + playerId);
 		}
 		Player patchedPlayer = apply(patchPayload, tempPlayer);
 		return playerService.save(patchedPlayer);
@@ -86,9 +84,19 @@ public class PlayerRestServiceController {
 		tempPlayerNode.setAll(patchPayPayloadNode);
 		return objectMapper.convertValue(tempPlayerNode, Player.class);
 	}
-	
+
 	@GetMapping("/csrf-token")
 	public CsrfToken getCsrfToken(HttpServletRequest request) {
 		return (CsrfToken) request.getAttribute("_csrf");
+	}
+
+	@DeleteMapping("/playersService/{playerId}")
+	public String deletePlayer(@PathVariable int playerId) {
+		Player player = playerService.findById(playerId);
+		if (player == null) {
+			throw new RuntimeException("Player id not found. " +playerId);
+		}
+		playerService.deleteById(playerId);
+		return "Player "+player.getName()+" is deleted from the top 100 table.";
 	}
 }
