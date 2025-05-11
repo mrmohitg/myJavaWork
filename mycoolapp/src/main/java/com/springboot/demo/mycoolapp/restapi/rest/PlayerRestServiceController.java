@@ -2,14 +2,15 @@ package com.springboot.demo.mycoolapp.restapi.rest;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.demo.mycoolapp.restapi.dao.PlayerDAO;
 import com.springboot.demo.mycoolapp.restapi.entity.Player;
 import com.springboot.demo.mycoolapp.restapi.service.PlayerService;
 
@@ -44,6 +45,11 @@ public class PlayerRestServiceController {
 	@PostMapping("/playersService")
 	public Player addPlayer(@RequestBody Player player) {
 		player.setId(0);
+		return playerService.save(player);
+	}
+	
+	@PutMapping("/playersService")
+	public Player updatePlayer(@RequestBody Player player){
 		return playerService.save(player);
 	}
 }

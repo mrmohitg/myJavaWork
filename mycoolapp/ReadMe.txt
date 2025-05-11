@@ -656,4 +656,13 @@ Sending JSON to Spring REST Controller
 	- Content-type: application/json
 * Need to configure REST client to send the correct HTTP request header 
 
-/mycoolapp/footballService/playersService/1							
+/mycoolapp/footballService/playersService/1			
+
+@RequestBody
+{
+    "id": 101,
+    "name": "Thomas Müller",
+    "country": "Germany",
+    "caps": 131,
+    "goals": 46
+}
