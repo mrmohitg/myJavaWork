@@ -666,3 +666,68 @@ Sending JSON to Spring REST Controller
     "caps": 131,
     "goals": 46
 }
+
+Rest Controller Method Partial Updates - PATCH
+Problem with PUT
+				{
+					"id": 1,
+					"caps":192
+					"goals":113
+				}
+				PUT /mycoolapp/footballService/playersService/1		
+REST Client		---------------------------------------------->		Player REST Controller
+				<----------------------------------------------
+				{
+					"id": 1,
+    				"name": null,		X
+    				"country": null,	X
+    				"caps": 192,
+    				"goals": 113
+				}
+
+Partial Updates - Patch
+* For partial updates, need to use HTTP PATCH
+* Comparison
+	- PUT: Replace the entire resource
+	- PATCH: Modify only specified parts of resource (partial)
+* Benefits of PATCH 
+	- Efficiency: Reducing bandwidth by sending only partial changes
+	- Flexibility: Allows multiple partial updates in a single request
+
+Solution with PATCH
+				{
+					"id": 1,
+					"caps":192
+					"goals":113
+				}
+				PATCH /mycoolapp/footballService/playersService/1		
+REST Client		---------------------------------------------->		Player REST Controller
+				<----------------------------------------------
+				{
+					"id": 1,
+    				"name": "Lionel Messi",
+    				"country": "Argentina",
+    				"caps": 192,
+    				"goals": 113
+				}
+	
+Inject Helper Class: ObjectMapper
+* ObjectMapper is a helper class in the JAckson library for JSON processing
+* ObjectMapper provides following support
+	- Converts Java objects to JSON and vice-versa
+	- Allows merging of JSON nodes
+	- Provides type safety for conversions: Java <-> JSON
+* The ObjectMapper is pre-configured by Spring Boot
+
+For POST, PUT, PATCH, DELETE
+We have to generate a X-CSRF-TOKEN and then add in the Headers like this
+
+	@GetMapping("/csrf-token")
+	public CsrfToken getCsrfToken(HttpServletRequest request) {
+		return (CsrfToken) request.getAttribute("_csrf");
+	}
+	
+Then in the Postman we need to add a Headers
+	Key 			value
+	X-CSRF-TOKEN	YmYfCf2UDnchFithLY2UCFQp8wAXvK-MpqadNm_dqA8ApSshB14mPs2nb0EMdRlSSaCgOmdI3mIj3ZyhwJGoAAu_zm1kkkoV
+
