@@ -612,6 +612,8 @@ Anti-Pattens
 /api/updatePlayer
 Don't include actions in the end point instead use HTTP methods to assign actions
 
+/mycoolapp/football/players	
+
 Define Services with @Service
 
 	Player Rest Controller	<-->		Player Service		<-->			PlayerDAO 		<-->		Database					   
@@ -627,4 +629,15 @@ Integrate Multiple Data Sources
 Player Rest Controller		<--->		Player Service 		<--->		Skill DAO		<--->		Database
 															<--->		Payroll DAO		<--->	
 
-	
+Specialized Annotation for Services
+* Spring provides the @Service annotation
+
+											@Component
+							^					^					^
+							|					|					|
+					 @RestController		@Repository			@Service	
+
+* @Service applied to Service implementation
+* Spring will automatically register the Service implementation through component scanning		
+
+/mycoolapp/footballService/playersService									
