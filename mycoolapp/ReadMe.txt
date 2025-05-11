@@ -612,3 +612,19 @@ Anti-Pattens
 /api/updatePlayer
 Don't include actions in the end point instead use HTTP methods to assign actions
 
+Define Services with @Service
+
+	Player Rest Controller	<-->		Player Service		<-->			PlayerDAO 		<-->		Database					   
+
+Purpose of Service Layer
+* Service Facade design pattern
+* Intermediate layer for custom business logic
+* Integrate data from multiple sources (DAO/repository)
+
+Integrate Multiple Data Sources
+
+															<--->		Player DAO		<--->		
+Player Rest Controller		<--->		Player Service 		<--->		Skill DAO		<--->		Database
+															<--->		Payroll DAO		<--->	
+
+	
