@@ -854,12 +854,72 @@ HATEOAS - Hypermedia As The Engine Of Application State
  * Spring Data REST response using HATEOAS
  * For example REST response from: GET /players/3
  
- TODO Response
+ {
+    "name": "Mohit Gupta",
+    "company": "Sunlife",
+    "salary": 20,
+    "email": "mohit.k.gupta@sunlife.com",
+    "_links": {
+        "self": {
+            "href": "http://localhost:7070/mycoolapp/employee-api/employees/1"
+        },
+        "employee": {
+            "href": "http://localhost:7070/mycoolapp/employee-api/employees/1"
+        }
+    }
+ }
  
  * For a collection, meta-data includes page size, total elements, pages etc
  * For example REST response from: GET /players
  
- TODO Response
+ {
+    "_embedded": {
+        "employees": [
+            {
+                "name": "Mohit Gupta",
+                "company": "Sunlife",
+                "salary": 20,
+                "email": "mohit.k.gupta@sunlife.com",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:7070/mycoolapp/employee-api/employees/1"
+                    },
+                    "employee": {
+                        "href": "http://localhost:7070/mycoolapp/employee-api/employees/1"
+                    }
+                }
+            },
+            {
+                "name": "Vipul Gupta",
+                "company": "LG",
+                "salary": 10,
+                "email": "vipul.gupta@lg.com",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:7070/mycoolapp/employee-api/employees/2"
+                    },
+                    "employee": {
+                        "href": "http://localhost:7070/mycoolapp/employee-api/employees/2"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:7070/mycoolapp/employee-api/employees?page=0&size=20"
+        },
+        "profile": {
+            "href": "http://localhost:7070/mycoolapp/employee-api/profile/employees"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+ }
 	 
 Advanced Features of Spring Data REST
 * Pagination, Sorting and Searching
