@@ -789,5 +789,82 @@ Advanced Features
 * Query Domain Specific Language (Query DSL)
 * Defining custom methods (low-level coding)
 
-				
-					
+Spring Data REST in Spring Boot
+The Problem
+* We saw how to create a REST API for Player 
+* Need to create REST API for another entity?
+	- Customer, Student, Product, Book ...
+* Do we have to repeat all of the same code again???			
+
+I which we could tell Spring:
+ Create a REST API for me, Use my existing JpaRepository (entity, primary key)
+ and Give me all of the basic REST API CRUD features for free
+ 
+Spring Data REST is the solution!!! 		https://spring.io/projects/spring-data-rest
+ * Leverage your existing JpaRepository
+ * Spring will give you a REST CRUD implementation for free... like Magic!!
+ * Help to minimize boiler-plate REST code ... yaay!!
+ * No new coding required!
+ 
+REST API
+ * Spring Data REST will expose these end points for free!
+ 	HTTP Method								CRUD Action
+ 	POST 	/players					Create a new player
+ 	GET  	/players					Read a list of players
+ 	GET  	/players/{playerId}			Read a single player
+ 	PUT  	/players/{playerId}			Update an existing player
+ 	DELETE	/players/{playerId}			Delete an existing player
+Get all these REST end points for free.
+ 
+Spring Data REST - How does it works?
+ * Spring Data REST will scan your project for JpaRepository
+ * Expose REST APIs for each entity type for your JpaRepository
+ 
+REST End points
+ * By default, Spring Data REST will create end points based on entity type 
+ * Simple pluralized form
+ 	- First character of Entity type is lower case
+ 	- Then just adds an "s" to the entity
+ 	
+public interface CricketPlayerRepository extends JpaRepository<CricketPlayer, Integer>{}	---->	/cricketPlayers
+
+Development Process
+ 1. Add Spring Data REST to your Maven POM file. That's it... Absolutely No Coding required. Spring Data REST will scan for JpaRepository
+
+In a nut shell
+ For Spring Data REST, you only need 3 items
+ 1. Your entity: Player
+ 2. JpaRepository: PlayerRepository extends JpaRepository
+ 3. Maven POM dependency for: spring-boot-starter-data-rest 
+
+ Application Architecture
+ Before														(Spring Data JPA)
+ 	Player REST Controller	<--->	Player Service	<--->	Player Repository	<--->	Database
+ 
+ After
+ 	(Spring Data REST)				(Spring Data JPA)
+ 		/players			<--->	Player Repository		<--->	Database
+
+HATEOAS - Hypermedia As The Engine Of Application State 
+ * HATEOAS uses Hypertext Application Language (HAL) data format
+ * Spring Data REST end points a HATEOAS compliant
+ * Hypermedia-driven sites provide information to access REST interfaces
+ * Think of it as meta-data for REST data
+ 	https://spring.io/projects/spring-hateoas
+ * Spring Data REST response using HATEOAS
+ * For example REST response from: GET /players/3
+ 
+ TODO Response
+ 
+ * For a collection, meta-data includes page size, total elements, pages etc
+ * For example REST response from: GET /players
+ 
+ TODO Response
+	 
+Advanced Features of Spring Data REST
+* Pagination, Sorting and Searching
+* Extending and adding custom queries with JPQL
+* Query Domain Specific Language (Query DSL)
+
+  
+ 

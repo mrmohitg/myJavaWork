@@ -278,3 +278,34 @@ INSERT INTO `cricket_player` VALUES
 	(8,'Brian Lara','West Indies',430,53),
 	(9,'Joe Root','England',361,53),
 	(10,'Rohit Sharma','India',499,49)
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;	
+
+CREATE TABLE `employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `company` varchar(45) DEFAULT NULL,
+  `salary` int DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+--
+-- Data for table `employee`
+--
+
+INSERT INTO `employee` VALUES 
+	(1,'Mohit Gupta','Sunlife',20,'mohit.k.gupta@sunlife.com'),
+	(2,'Vipul Gupta','LG',10,'vipul.gupta@lg.com'),
+    (3,'Nikhil Gupta','Panasonic',50,'nikhil.gupta@panasonic.com'),
+    (4,'Nishant Gupta','Morgan Stanley',30,'nishant.gupta@morganstaley.com'),
+    (5,'Anurag Gupta','Adani',20,'anurag.gupta@adani.com'),
+    (6,'Arnav Rastogi','Thomson Digital',20,'arnav.rashtogi@thomsondigital.com'),
+    (7,'Harsh Gupta','Zoom',12,'harsh.gupta@zoom.com'),
+    (8,'Yash Gupta','Tech Mahindra',10,'yash.gupta@techm.com'),
+    (9,'Yajas Gupta','TCS',5,'yajas.gupta@tcs.com'),
+    (10,'Amay Gupta','HCL',2,'amay.gupta@hcl.com');
