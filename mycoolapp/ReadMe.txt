@@ -809,11 +809,11 @@ Spring Data REST is the solution!!! 		https://spring.io/projects/spring-data-res
 REST API
  * Spring Data REST will expose these end points for free!
  	HTTP Method								CRUD Action
- 	POST 	/players					Create a new player
- 	GET  	/players					Read a list of players
- 	GET  	/players/{playerId}			Read a single player
- 	PUT  	/players/{playerId}			Update an existing player
- 	DELETE	/players/{playerId}			Delete an existing player
+ 	POST 	/employees						Create a new employee
+ 	GET  	/employees						Read a list of employees
+ 	GET  	/employees/{employeeId}			Read a single employee
+ 	PUT  	/employees/{employeeId}			Update an existing employee
+ 	DELETE	/employees/{employeeId}			Delete an existing employee
 Get all these REST end points for free.
  
 Spring Data REST - How does it works?
@@ -826,24 +826,24 @@ REST End points
  	- First character of Entity type is lower case
  	- Then just adds an "s" to the entity
  	
-public interface CricketPlayerRepository extends JpaRepository<CricketPlayer, Integer>{}	---->	/cricketPlayers
+public interface EmployeeRepository extends JpaRepository<Employee, Integer>{}	---->	/employees
 
 Development Process
  1. Add Spring Data REST to your Maven POM file. That's it... Absolutely No Coding required. Spring Data REST will scan for JpaRepository
 
 In a nut shell
  For Spring Data REST, you only need 3 items
- 1. Your entity: Player
- 2. JpaRepository: PlayerRepository extends JpaRepository
+ 1. Your entity: Employee
+ 2. JpaRepository: EmployeeRepository extends JpaRepository
  3. Maven POM dependency for: spring-boot-starter-data-rest 
 
  Application Architecture
- Before														(Spring Data JPA)
- 	Player REST Controller	<--->	Player Service	<--->	Player Repository	<--->	Database
+ Before																(Spring Data JPA)
+ 	Employee REST Controller	<--->	Employee Service	<--->	Employee Repository	<--->	Database
  
  After
  	(Spring Data REST)				(Spring Data JPA)
- 		/players			<--->	Player Repository		<--->	Database
+ 		/employees			<--->	Employee Repository		<--->	Database
 
 HATEOAS - Hypermedia As The Engine Of Application State 
  * HATEOAS uses Hypertext Application Language (HAL) data format
@@ -852,7 +852,7 @@ HATEOAS - Hypermedia As The Engine Of Application State
  * Think of it as meta-data for REST data
  	https://spring.io/projects/spring-hateoas
  * Spring Data REST response using HATEOAS
- * For example REST response from: GET /players/3
+ * For example REST response from: GET /employees/3
  
  {
     "name": "Mohit Gupta",
@@ -870,7 +870,7 @@ HATEOAS - Hypermedia As The Engine Of Application State
  }
  
  * For a collection, meta-data includes page size, total elements, pages etc
- * For example REST response from: GET /players
+ * For example REST response from: GET /employees
  
  {
     "_embedded": {
@@ -926,5 +926,8 @@ Advanced Features of Spring Data REST
 * Extending and adding custom queries with JPQL
 * Query Domain Specific Language (Query DSL)
 
-  
+For POST, PUT, PATCH and DELETE operations we have write EmployeeRESTServiceController for csrf-token
+ /mycoolapp/employees/csrf-token
+and then do all the above operations with the generated token
+
  
