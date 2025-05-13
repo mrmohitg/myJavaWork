@@ -930,4 +930,54 @@ For POST, PUT, PATCH and DELETE operations we have write EmployeeRESTServiceCont
  /mycoolapp/employees/csrf-token
 and then do all the above operations with the generated token
 
- 
+Spring Data REST Configuration, Pagination and Sorting
+* By default Spring Data REST will create end points based on entity type
+* Simply pluralized form
+	- First character of Entity type is lower case 
+ 	- Then just adds an "s" to the entity
+public interface EmployeeRepository extends JpaRepository<Employee, Integer>{}	---->	/employees
+
+Pluralized Form
+* Spring Data REST pluralized form is very simple just adds an "s" to the entity 
+* But The English language is very complex! Spring Data REST does not handle these special cases like
+	Singular		Plural
+	Goose			Geese
+	Person			People
+	Syllabus		Syllabi
+
+Problem 
+* Spring Data REST does not handle complex pluralized forms so in this case you need to specify plural name
+* What if we want to expose a different resource name?
+	- Instead of /employees ... use /members
+
+Solution
+* Specify plural name / path with an annotation 
+	@RepositoryRestResource(path="members")
+	public interface EmployeeRepository extends JpaRepository<Employee, Integer>{}
+	
+	/mycoolapp/employee-api/members
+
+Pagination
+* By default, Spring Data REST will return the first 20 elements
+* Page size = 20
+* You can navigate to the different pages of data using query param
+	http://localhost:7070/employee-api/employees?page=0 
+	http://localhost:7070/employee-api/employees?page=1 
+	/mycoolapp/employee-api/members?page=0&size=3
+
+Spring Data REST Configuration 
+* Following properties available: application.properties
+		Name						Description
+spring.data.rest.base-path	 		Base path used to expose repository resources
+spring.data.rest.default-page-size	Default size of pages
+spring.data.rest.max-page-size		Maximum size of pages
+
+Sorting
+* You can sort by the property names of your entity
+	- In our Employee example, we have 'Name', 'Salary', Company
+* Sort by Name (Ascending is default) 	http://localhost:7070/employee-api/employees?sort=name
+* Sort by Name, Descending				http://localhost:7070/employee-api/employees?sort=name,desc
+* Sort by Name then Company, Ascending	http://localhost:7070/employee-api/employees?sort=name,company,asc
+
+
+
