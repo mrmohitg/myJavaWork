@@ -978,6 +978,73 @@ Sorting
 * Sort by Name (Ascending is default) 	http://localhost:7070/employee-api/employees?sort=name
 * Sort by Name, Descending				http://localhost:7070/employee-api/employees?sort=name,desc
 * Sort by Name then Company, Ascending	http://localhost:7070/employee-api/employees?sort=name,company,asc
+	/mycoolapp/employee-api/members?sort=name
+	/mycoolapp/employee-api/members?sort=name,desc
 
+Documentation REST APIs with OpenAPI and Swagger
+* There is a REST API out there but we don't have any documentation
+* We have to review the source code to  find end points: @GetMapping etc
+* Then use Postman and CURL to call the REST API
 
+My Wish
+* I wish we could tell our application:
+	- At run-time, generate API documentation
+	- Inspect API end points based on Spring configurations, annotations etc.
+	- Provide a web UI for accessing end points  
 
+Springdoc To The Rescue (www.springdoc.org)
+* Springdoc is separate open-source project
+* Generates API documentation
+* Inspects API end points based on Spring configurations, annotations etc.
+* Provides a web UI for accessing end points
+* No need for Postman
+
+Springdoc - Swagger Web UI
+* Springdoc provides a Swagger web UI for accessing endpoints
+
+Documenting REST APIs
+* OpenAPI is an industry standard format for documenting APIs (www.openapis.org)
+* Swagger UI is a browser-based UI for interacting with your API powered by Springdoc-OpenAPI
+
+Development Process
+1. Add Maven dependency for Springdoc
+2. Access Swagger UI
+3. Retrieve API end points as JSON or YAML
+
+Add Maven dependency for Springdoc
+<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.8.6</version>
+</dependency>
+
+Access the Swagger UI
+* By default, Swagger UI is available at:
+	- http://localhost:7070/swagger-ui/index.html
+
+Configure Custom Path for Swagger UI
+ * Can configure a custom path in application.properties
+	#configure custom path
+	springdoc.swagger-ui.path=/my-fun-ui.html 
+
+Retrieve API end points as JSON or YAML
+* Docs for API end points available as JSON or YAML
+* Useful for integration with other development tools
+* Client SDK generation, API mocking, contract testing, etc
+* JSON or YAML is language independent
+* Can be processed by Python, Javascript, Go, C# etc
+* By default, JSON docs available here
+	- http://localhost:7070/v3/api-docs
+* YAML docs available here
+	- http://localhost:7070/v3/api-docs.yaml
+* Web browser will download the YAML file
+* You can view it with any text editor 
+
+Configure Custome Path for API docs
+* Can configure a custom path in application.properties
+	# configure custom path
+	springdoc.api-docs.path=/my-api-docs
+* Access API Docs at 
+	- http://localhost:7070/my-api-docs
+	- http://localhost:7070/my-api-docs.yalm
