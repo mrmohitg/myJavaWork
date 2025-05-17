@@ -309,3 +309,34 @@ INSERT INTO `employee` VALUES
     (8,'Yash Gupta','Tech Mahindra',10,'yash.gupta@techm.com'),
     (9,'Yajas Gupta','TCS',5,'yajas.gupta@tcs.com'),
     (10,'Amay Gupta','HCL',2,'amay.gupta@hcl.com');
+    
+--
+-- Table structure for table `politician`
+--
+
+DROP TABLE IF EXISTS `politician`;	
+
+CREATE TABLE `politician` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  `salary` int DEFAULT NULL,
+  `position` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+--
+-- Data for table `politician`
+--
+
+INSERT INTO `politician` VALUES 
+	(1,'Droupadi Murmu','Center',200000,'President'),
+	(2,'Jagdeep Dhankhar','Center',100000,'Vice President'),
+    (3,'Narender Modi','Center',50000,'Prime Minister'),
+    (4,'Rajnath Singh','Center',30000,'Ministry of Defence'),
+    (5,'Amit Shah','Center',20000,'Ministry of Home Affairs'),
+    (6,'Nitin Jairam Gadkari','Center',10000,'Ministry of Road Transport and Highways'),
+    (7,'Jagat Prakash Nadda','Center',5000,'Ministry of Health and Family Welfare'),
+    (8,' Shivraj Singh Chouhan','Center',2500,'Ministry of Agriculture & Farmers Welfare'),
+    (9,'Nirmala Sitharaman','Center',1250,'Ministry of Finance'),
+    (10,'Subrahmanyam Jaishankar','Center',625,'Ministry of External Affairs');

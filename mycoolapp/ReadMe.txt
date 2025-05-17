@@ -1041,10 +1041,69 @@ Retrieve API end points as JSON or YAML
 * Web browser will download the YAML file
 * You can view it with any text editor 
 
-Configure Custome Path for API docs
+Configure Custom Path for API docs
 * Can configure a custom path in application.properties
 	# configure custom path
 	springdoc.api-docs.path=/my-api-docs
 * Access API Docs at 
 	- http://localhost:7070/my-api-docs
-	- http://localhost:7070/my-api-docs.yalm
+	- http://localhost:7070/my-api-docs.yaml
+
+Spring Boot REST API Security Overview
+* Secure Spring Boot REST APIs
+* Define user and roles
+* Protect URLs based on role
+* Store users, passwords and roles in DB (plain-text -> encrypted)
+
+Spring Security Model
+* Spring Security defines a framework for security
+* Implemented using Servlet filters in the background
+* Two methods of securing an application: declarative and programmatic
+
+Spring Security with Servlet Filters
+* Servlet Filters are used to pre-process / post-process web requests
+* Servlet Filters can route web requests based on security logic
+* Spring provides a bulk of security functionality with servlet filters 
+
+Security Concepts
+* Authentication
+	- Check user id and password with credentials stored in application / database
+* Authorization
+	- Check to see if user has an authorized role
+
+Declarative Security
+* Define application's security constraints in configuration
+	- All Java config: @Configuration
+* Provides separation of concerns between application code and security
+
+Programmatic Security
+* Spring Security provides an API for custom application coding
+* Provides grater customization for specific application requirements
+
+Enabling Spring Security
+* Edit pom.xml and add spring-boot-starter-security
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency> 
+* This will automatically secure all end points for application
+
+Secure End points
+* Now when you access your application
+* Spring Security will prompt for login with a login form, By default user name is 'user' and generated password will be available in the application's console logs. 	
+
+Spring Security Configuration
+* You can override default user name and generated password in application.properties
+	spring.security.user.name=scott
+	spring.security.user.password=tiger
+
+Authentication and Authorization
+* In-memory
+* JDBC
+* LDAP
+* Custom / Pluggable
+* Others...
+
+
+
+ 
