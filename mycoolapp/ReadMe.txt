@@ -1104,6 +1104,41 @@ Authentication and Authorization
 * Custom / Pluggable
 * Others...
 
+Configuring Basic Security
+	UserId		Password		Roles
+	john		test123			EMPLOYEE
+	mary		test123			EMPLOYEE, MANAGER
+	susan		test123			EMPLOYEE, MANAGER, ADMIN
 
+Development Process
+1. Create Spring Security Configuration (@Configuration)
+2. Add users, passwords and roles
+
+Spring Security Password Storage
+* In Spring Security, passwords are stored using a specific format
+	{id}encodedPassword
+	
+	ID			Description
+	noop		Plain text passwords
+	bcrypt		BCrypt password hashing
+	
+Password Example
+	{noop}test123
+	
+Through Postman we can access these end points
+	/mycoolapp/employee-api/politicians
+	Username modi
+	Password test123
+	
+	/mycoolapp/employee-api/politicians
+	Username amit
+	Password test123
+	
+	/mycoolapp/employee-api/politicians
+	Username rajnath
+	Password test123
+
+
+		
 
  
