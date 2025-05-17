@@ -1138,7 +1138,46 @@ Through Postman we can access these end points
 	Username rajnath
 	Password test123
 
+Restrict Access Based on Roles
 
-		
+HTTP Method		End Point							CRUD Action			Role
+GET				/api/politicians					Read all			EMPLOYEE
+GET				/api/politicians/{politicianID}		Read single			EMPLOYEE
+POST			/api/politicians					Create				MANAGER
+PUT				/api/politicians					Update				MANAGER
+DELETE			/api/politicians/{politicianID}		Delete				ADMIN			
 
- 
+Restricting Access to Roles
+* General Syntax
+	requestMatcher(<< add path to match on >>).hasRole(<< authorize role >>)
+	requestMatcher(<< add HTTP METHOD to match on >>, << add path to match on >>).hasRole(<< authorize role >>)
+	requestMatcher(<< add HTTP METHOD to match on >>, << add path to match on >>).hasAnyRole(<< list of authorized roles >>)
+	
+Authorize Requests for EMPLOYEE role
+	requestMatcher(HttpMethod.GET,"/api/politicians").hasRole("EMPLOYEE")
+	requestMatcher(HttpMethod.GET,"/api/politicians/**").hasRole("EMPLOYEE")
+	
+Authorize Requests for MANAGER role
+	requestMatcher(HttpMethod.POST,"/api/politicians").hasRole("MANAGER")
+	requestMatcher(HttpMethod.PUT,"/api/politicians").hasRole("MANAGER")
+	
+Authorize Requests for ADMIN role
+	requestMatcher(HttpMethod.DELETE,"/api/politicians/**").hasRole("ADMIN")
+	
+We just have to write all the above conditions together.
+
+Cross-Site Request Forgery (CSRF)
+* Spring Security can protect against CSRF attacks
+* Embed additional authentication data / token into all HTML forms
+* On subsequent requests, web application will verify token before processing
+* Primary use case is traditional web applications (HTML forms etc...) 
+
+When to use CSRF Protection?
+* The Spring Security team recommends
+	- Use CSRF protection for any normal browser web requests
+	- Traditional web application with HTML forms to add / modify data
+* If you are building a REST API for non-browser clients
+	- You may want to disable CSRF protection
+* In general, not required for state less REST APIs
+	- That use POST, PUT, DELETE and /or PATCH
+
