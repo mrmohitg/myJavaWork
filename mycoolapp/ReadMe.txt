@@ -1248,3 +1248,58 @@ Create JDBC properties file
 	spring.datasource.password=springstudent
 	
 Update Spring Security Configuration to use JDBC
+
+Spring Boot REST API Security - BCrypt Encryption
+Password Storage
+* The best practice is store passwords in an encrypted format
+	username	password						enabled
+	amit		{bcrypt}asdfa224asfHHS			1
+	rajnath		{bcrypt}asdfa224asfHHS			1
+	modi		{bcrypt}asdfa224asfHHS			1
+
+Spring Security Team Recommendation
+* Spring Security recommends using the popular bcrypt algorithm
+* bcrypt
+	- Performs one way encrypted hashing
+	- Adds a random salt to the password for additional protection
+	- Includes support to defeat brute force attacks
+
+How to Get a Bcrypt Password
+* You have a plaintext password and you want to encrypt using bcrypt
+	- Option 1: Use a website utility to perform the encryption
+	- Option 2: Write Java code to perform the encryption
+
+How to get a Bcrypt password - Web site
+* Visit https://www.bcryptcalculator.com/
+* Enter your plain text password
+* The web site will generate a bcrypt password for you.
+
+Enter a password for hashing : test123
+Password hash result : $2a$10$9j5Q1pVEmoICGZqOYUw/OeGW9MbnvZyec5bux4sfYCXmpgViU6jni
+
+Development Process
+1. Run SQL Script that contains encrypted passwords
+2. Modify DDL for password field, length should be 68
+	That's it.. no need to change Java source code :-)
+
+Spring Security Password Storage
+* In Spring Security, passwords are stored using a specific format
+	{bcrypt}encodedPassword
+	
+	Note* : Password column must be at least 68 char wide
+	 {bcrypt} 			- 8 chars
+	 encodedPassword	- 60 chars
+
+Spring Security Login Process
+
+					User enter plain text password
+	REST Client --------------------------------------	Spring Security 		--------->		Database
+				<-------------------------------------		Filters				----------
+
+1. Retrieve password from database for the user
+2. Read the encoding algorithm id (bcrypt etc)
+3. For case of bcrypt, encrypt plain text password from login form (using salt from database password)
+4. compare encrypted password from login form WITH encrypted password from database
+5. If there is a match, login successful
+6. If no match, login Not successful
+	Note: The password from database is never decrypted because bcrypt is a one-way encryption algorithm

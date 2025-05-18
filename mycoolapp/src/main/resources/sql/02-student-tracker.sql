@@ -389,5 +389,29 @@ INSERT INTO `authorities` VALUES
     ('rajnath','ROLE_EMPLOYEE'),
     ('rajnath','ROLE_MANAGER'),
     ('modi','ROLE_ADMIN'),
-    ('modi','ROLE_ADMIN'),
-    ('modi','ROLE_ADMIN');
+    ('modi','ROLE_MANAGER'),
+    ('modi','ROLE_EMPLOYEE');
+
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;	 
+
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(68) NOT NULL,
+  `enabled` tinyint NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `users` VALUES
+    ('modi','{bcrypt}$2a$10$quP.ArdwiQTIaqwOCfaHOOodk/c9EL4Ux.UaZnjZxKpstRWiU8lE2',1),
+    ('rajnath','{bcrypt}$2a$10$hqbdhJXfh7nJZiUYj52NDOeWNNToBptqHyG8mZ8P38rZkUbjjNLnG',1),
+    ('amit','{bcrypt}$2a$10$MlUIOlZG6ck5nc5rdOQXKenZ4daR8qdUu6Z14Ika.9j6I1fBMSUtK',1);
+    
+INSERT INTO `users` VALUES
+    ('gadkari','{noop}test123',1),
+    ('nadda','{noop}test123',1),
+    ('shivraj','{noop}test123',1);
