@@ -36,7 +36,7 @@ public class PoliticianSecurityConfig {
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.authorizeHttpRequests(authCustomizer  -> authCustomizer.requestMatchers(API_POLITICIANS).permitAll()
-				.requestMatchers(EMPLOYEE_API_POLITICIANS).hasRole(EMPLOYEE)
+				.requestMatchers(EMPLOYEE_API_POLITICIANS).hasRole(ADMIN)
 				.requestMatchers(API_POLITICIANS).hasRole(MANAGER)
 				.requestMatchers(API_POLITICIANS).hasAuthority(MANAGER)
 				.requestMatchers(EMPLOYEE_API_POLITICIANS).hasRole(ADMIN));
