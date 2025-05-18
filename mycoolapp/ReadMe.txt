@@ -1194,4 +1194,57 @@ As a result, need to modify the security configuration
 	requestMatcher(HttpMethod.GET,"/api/politicians/**").hasRole("EMPLOYEE")
 
 Restrict Access Based on Roles Patch - Partial Updates
+
+Spring Security User Accounts Stored in Database
+
+Database Access
+* So far, our user accounts were hard coded in Java source code
+* We want to add database access
+
+Recall our User Roles
+	UserId		Password		Roles
+	amit		test123			EMPLOYEE
+	rajnath		test123			EMPLOYEE, MANAGER
+	modi		test123			EMPLOYEE, MANAGER, ADMIN
+
+Database Support in Spring Security
+* Spring Security can read user account info from database
+* By default, you have to follow Spring Security's predefined table schemas
+
+		Spring Security 	JDBC Code		<------->		Database
+
+Customize Database Access with Spring Security
+* Can also customize the table schemas
+* Useful if you have custom tables specific to your project / custom
+* You will be responsible for developing the code to access the data.
+	- JDBC, JPA/Hibernate etc...
+
+Development Process
+1. Develop SQL Script to set up database tables
+2. Add database support to Maven POM file
+3. Create JDBC properties file
+4. Update Spring Security Configuration to use JDBC
+
+Default Spring Security Database Schema
+
+	users								authorities
+	username VARCHAR(50)			-	username VARCHAR(50)
+	password VARCHAR(50)-------------	authority VARCHAR(50)
+	enabled TINYINT(1) 				-	
+
+Develop SQL Script to set up database tables
 	
+Add database support to Maven POM file
+	<dependency>
+		<groupId>com.mysql</groupId>
+		<artifactId>mysql-connector-j</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+
+Create JDBC properties file
+	#JDBC Properties
+	spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
+	spring.datasource.username=springstudent
+	spring.datasource.password=springstudent
+	
+Update Spring Security Configuration to use JDBC

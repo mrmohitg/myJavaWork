@@ -1,17 +1,17 @@
 package com.springboot.demo.mycoolapp.restsecurity.config;
 
-import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.web.SecurityFilterChain;
+//import org.springframework.security.config.Customizer;
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+//import org.springframework.security.core.userdetails.User;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+//import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class PoliticianSecurityConfig {
-
+/*
 	private static final String EMPLOYEE_API_POLITICIANS = "/employee-api/politicians/**";
 	private static final String API_POLITICIANS = "/employee-api/politicians";
 	private static final String ADMIN = "ADMIN";
@@ -19,6 +19,8 @@ public class PoliticianSecurityConfig {
 	private static final String EMPLOYEE = "EMPLOYEE";
 	private static final String NOOP_TEST123 = "{noop}test123";
 
+	
+	
 	@Bean
 	InMemoryUserDetailsManager userDetailsManager() {
 
@@ -48,4 +50,5 @@ public class PoliticianSecurityConfig {
 		return httpSecurity.build();
 	}
 
+*/
 }

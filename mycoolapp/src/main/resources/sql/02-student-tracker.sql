@@ -340,3 +340,54 @@ INSERT INTO `politician` VALUES
     (8,' Shivraj Singh Chouhan','Center',2500,'Ministry of Agriculture & Farmers Welfare'),
     (9,'Nirmala Sitharaman','Center',1250,'Ministry of Finance'),
     (10,'Subrahmanyam Jaishankar','Center',625,'Ministry of External Affairs');
+    
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;	
+
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(55) NOT NULL,
+  `enabled` tinyint NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Data for table `users`
+--
+
+INSERT INTO `users` VALUES
+    ('modi','{noop}test123',1),
+    ('rajnath','{noop}test123',1),
+    ('amit','{noop}test123',1);
+    
+--
+-- Table structure for table `authorities`
+--
+
+DROP TABLE IF EXISTS `authorities`;	
+
+CREATE TABLE `authorities` (
+  `username` varchar(50) NOT NULL,
+  `authority` varchar(55) NOT NULL,
+  
+  UNIQUE KEY  `authorities_idx_1` (`username`, `authority`),
+  
+  CONSTRAINT `authorities_ibfk_1`
+  FOREIGN KEY (`username`)
+  REFERENCES `users` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Data for table `users`
+--
+
+INSERT INTO `authorities` VALUES
+    ('amit','ROLE_EMPLOYEE'),
+    ('rajnath','ROLE_EMPLOYEE'),
+    ('rajnath','ROLE_MANAGER'),
+    ('modi','ROLE_ADMIN'),
+    ('modi','ROLE_ADMIN'),
+    ('modi','ROLE_ADMIN');
