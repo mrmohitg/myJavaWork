@@ -9,8 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-import io.swagger.v3.oas.models.PathItem.HttpMethod;
-
 @Configuration
 public class PoliticianSecurityConfig {
 
