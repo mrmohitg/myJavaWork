@@ -1303,3 +1303,28 @@ Spring Security Login Process
 5. If there is a match, login successful
 6. If no match, login Not successful
 	Note: The password from database is never decrypted because bcrypt is a one-way encryption algorithm
+	
+Spring Security Custom Tables
+Custom Tables
+* What if we have our own custom tables?
+* Our own custom column names?
+
+	members							roles
+	user_id VARCHAR(50)			-	user_id VARCHAR(50)
+	pw CHAR(68)		-------------	role VARCHAR(50)
+	active TINYINT(1) 			-	
+	
+This is all custom Nothing matches with default Spring Security table schema
+
+For Security Schema Customization
+* Tell Spring how to query your custom tables
+* Provide query to find user by user name
+* Provide query to find authorities / roles by user name
+
+Development Process
+1. Create our custom tables with SQL
+2. Update Spring Security Configuration
+	- Provide query to find user by user name
+	- Provide query to find authorities / roles by user name
+	
+	

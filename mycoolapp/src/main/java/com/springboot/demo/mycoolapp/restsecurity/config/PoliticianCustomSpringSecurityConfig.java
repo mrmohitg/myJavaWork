@@ -1,19 +1,19 @@
 package com.springboot.demo.mycoolapp.restsecurity.config;
 
-//import javax.sql.DataSource;
+import javax.sql.DataSource;
 
-//import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-//import org.springframework.security.config.Customizer;
-//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-//import org.springframework.security.provisioning.JdbcUserDetailsManager;
-//import org.springframework.security.provisioning.UserDetailsManager;
-//import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 
 @Configuration
-public class PoliticianSpringSecurityConfig {
-/*
+public class PoliticianCustomSpringSecurityConfig {
+
 	private static final String EMPLOYEE_API_POLITICIANS = "/employee-api/politicians/**";
 	private static final String API_POLITICIANS = "/employee-api/politicians";
 	private static final String ADMIN = "ADMIN";
@@ -21,7 +21,13 @@ public class PoliticianSpringSecurityConfig {
 	
 	@Bean
 	UserDetailsManager userDetailsManager(DataSource datasource) {
-		return new JdbcUserDetailsManager(datasource);
+		JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(datasource);
+		
+		jdbcUserDetailsManager.setUsersByUsernameQuery("SELECT user_id, pw, active FROM members WHERE user_id=?");
+		
+		jdbcUserDetailsManager.setAuthoritiesByUsernameQuery("SELECT user_id, role FROM roles WHERE user_id=?");
+		
+		return jdbcUserDetailsManager;
 	}
 
 	@Bean
@@ -38,5 +44,5 @@ public class PoliticianSpringSecurityConfig {
 
 		return httpSecurity.build();
 	}
-*/
+
 }

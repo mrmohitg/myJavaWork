@@ -446,3 +446,57 @@ INSERT INTO `authorities` VALUES
     ('shivraj','ROLE_ADMIN'),
     ('shivraj','ROLE_MANAGER'),
     ('shivraj','ROLE_EMPLOYEE');
+    
+--
+-- Table structure for table `members`
+--
+
+DROP TABLE IF EXISTS `members`;	 
+
+CREATE TABLE `members` (
+  `user_id` varchar(50) NOT NULL,
+  `pw` varchar(68) NOT NULL,
+  `active` tinyint NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `members` VALUES
+    ('modi','{bcrypt}$2a$10$quP.ArdwiQTIaqwOCfaHOOodk/c9EL4Ux.UaZnjZxKpstRWiU8lE2',1),
+    ('rajnath','{bcrypt}$2a$10$hqbdhJXfh7nJZiUYj52NDOeWNNToBptqHyG8mZ8P38rZkUbjjNLnG',1),
+    ('amit','{bcrypt}$2a$10$MlUIOlZG6ck5nc5rdOQXKenZ4daR8qdUu6Z14Ika.9j6I1fBMSUtK',1);
+    
+INSERT INTO `members` VALUES
+    ('gadkari','{noop}test123',1),
+    ('nadda','{noop}test123',1),
+    ('shivraj','{noop}test123',1);
+    
+DROP TABLE IF EXISTS `roles`;	
+
+CREATE TABLE `roles` (
+  `user_id` varchar(50) NOT NULL,
+  `role` varchar(55) NOT NULL,
+  
+  UNIQUE KEY  `roles_idx_1` (`user_id`, `role`),
+  
+  CONSTRAINT `roles_ibfk_1`
+  FOREIGN KEY (`user_id`)
+  REFERENCES `members` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Data for table `roles`
+--
+
+INSERT INTO `roles` VALUES
+    ('amit','ROLE_EMPLOYEE'),
+    ('rajnath','ROLE_EMPLOYEE'),
+    ('rajnath','ROLE_MANAGER'),
+    ('modi','ROLE_ADMIN'),
+    ('modi','ROLE_MANAGER'),
+    ('modi','ROLE_EMPLOYEE'),
+    ('gadkari','ROLE_EMPLOYEE'),
+    ('nadda','ROLE_EMPLOYEE'),
+    ('nadda','ROLE_MANAGER'),
+    ('shivraj','ROLE_ADMIN'),
+    ('shivraj','ROLE_MANAGER'),
+    ('shivraj','ROLE_EMPLOYEE');
