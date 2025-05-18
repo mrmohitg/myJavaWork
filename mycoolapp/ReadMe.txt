@@ -1145,7 +1145,9 @@ GET				/api/politicians					Read all			EMPLOYEE
 GET				/api/politicians/{politicianID}		Read single			EMPLOYEE
 POST			/api/politicians					Create				MANAGER
 PUT				/api/politicians					Update				MANAGER
-DELETE			/api/politicians/{politicianID}		Delete				ADMIN			
+PATCH			/api/politicians/{politicianID}		Partial Update		MANAGER
+DELETE			/api/politicians/{politicianID}		Delete				ADMIN	
+		
 
 Restricting Access to Roles
 * General Syntax
@@ -1181,3 +1183,15 @@ When to use CSRF Protection?
 * In general, not required for state less REST APIs
 	- That use POST, PUT, DELETE and /or PATCH
 
+403 ERROR with PUT REQUEST - Spring Data REST
+	403 ERROR - PUT 
+
+This is a non-issue if using code provided for this lecture @RestController
+When using Spring Data REST for PUT requests the ID is on the URL
+	/api/politicians/{politicianId}
+As a result, need to modify the security configuration
+	requestMatcher(HttpMethod.GET,"/api/politicians").hasRole("EMPLOYEE")
+	requestMatcher(HttpMethod.GET,"/api/politicians/**").hasRole("EMPLOYEE")
+
+Restrict Access Based on Roles Patch - Partial Updates
+	
