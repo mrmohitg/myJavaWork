@@ -1376,3 +1376,45 @@ Additional Features of Thymeleaf (www.thymeleaf.org)
 * CSS and JavaScript integration
 * Template layouts and fragments
 
+Spring MVC with Thymeleaf and CSS
+Using CSS with Thymeleaf Templates
+* You have the option of using
+	- Local CSS files as part of your project
+	- Referencing remote CSS files
+
+Development Process
+1. Create CSS file
+2. Reference CSS in Thymeleaf template
+3. Apply CSS style
+
+Create CSS file
+* Spring Boot will look for static resources in the directory
+	- src/main/resources/static/css/demo.css
+		.funny{
+			font-style: italic;
+			color: green
+		}
+
+Reference CSS in Thymeleaf template
+* In HTML file in the head section
+	<link rel="stylesheet" th:href"@{/css/demo.css}" />
+
+Apply CSS style
+* In HTML file in the body section
+	<p th:text="'Time on the server is '+${theDate}" class="funny" />
+
+Other search directories
+* Spring Boot will search following directories for static resources: (Search order: top-down)
+	/src/main/resources
+	1. /META-INF/resources
+	2. /resources
+	3. /static
+	4. /public 
+
+3rd party CSS Libraries - Bootstrap
+* Local Installation
+* Download Bootstrap file(s) and add to /static/css directory
+	- <link rel="stylesheet" th:href"@{/css/bootstrap.min.css}" />
+* Remote Files
+	- <link rel="stylesheet" href"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css}" />
+
