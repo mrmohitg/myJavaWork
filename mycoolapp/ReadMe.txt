@@ -1327,4 +1327,52 @@ Development Process
 	- Provide query to find user by user name
 	- Provide query to find authorities / roles by user name
 	
+Spring MVC with Thymeleaf - Overview
+What is Thymeleaf?
+* Thymeleaf is a Java templating engine
+* Commonly used to generate the HTML views for web applications
+* However , it is a general purpose templating engine
+* Can use Thymeleaf outside of web applications 
+
+What is a Thymeleaf template?
+* Can be an HTML page with some Thymeleaf expressions
+* Include dynamic content from Thymeleaf expressions
+
+		HTML code
+	Thymeleaf expressions			<- can access Java code, objects Spring beans
+
+Where is the Thymeleaf template processed?
+* In a web application, Thymeleaf is processed on the server
+* Results included in HTML returned to browser
+
+
+						----->			Spring MVC Controller
+		Web Browser								|
+												|
+						<-----				Thymeleaf Template    	
+
+Development Process
+1. Add Thymeleaf to Maven POM file
+2. Develop Spring MVC Controller
+3. Create Thymeleaf template
+
+Add Thymeleaf to Maven POM file
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
+
+Develop Spring MVC Controller
+	src/main/resources/templates/helloworld.html
 	
+Where to place Thymeleaf template?
+* In Spring Boot, your Thymeleaf template files go in src/main/resources/templates
+* For web applications, Thymeleaf templates have a .html extension	
+
+Create Thymeleaf template
+
+Additional Features of Thymeleaf (www.thymeleaf.org)
+* Looping and conditionals
+* CSS and JavaScript integration
+* Template layouts and fragments
+
